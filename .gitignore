@@ -1,0 +1,35 @@
+# Archivos de respaldo y temporales
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Archivos de Quartus específicos
+db/
+incremental_db/
+output_files/
+quartz/
+quartus/
+
+# Archivos de simulación y resultados
+*.vcd
+*.wlf
+
+# Archivos de configuración de Quartus
+*.qsf
+*.qpf
+*.sdc
+
+# Archivos generados automáticamente
+*.rpt
+*.jdi
+*.sof
+*.pof
+*.rbf
+*.hex
+
+# Directorios de herramientas
+/tools/
+
+# Books
+Book/

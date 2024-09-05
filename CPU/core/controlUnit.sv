@@ -3,7 +3,7 @@ module controlUnit (
 	 output logic [15:0] control_signals // salida concatenada
 );
 	logic wre;	// write register enable
-	vector_wre = 1'b0; // write register enableV
+	logic vector_wre = 1'b0; // write register enableV
 	logic [3:0] aluOp;	// operacion que debe realizar la ALU
 	logic write_memory_enable ; // indica si la operacion escribe o no en la memoria
 	logic load; // indica si la operacion carga datos desde memoria

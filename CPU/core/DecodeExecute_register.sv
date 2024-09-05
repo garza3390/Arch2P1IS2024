@@ -8,7 +8,7 @@ module DecodeExecute_register (
 	input logic [3:0] rs2_decode,
 	input logic [3:0] rd_decode,
     output logic wre_execute,
-    output logic vector_wre_execute;
+    output logic vector_wre_execute,
     output logic write_memory_enable_execute,
     output logic [1:0] select_writeback_data_mux_execute,
     output logic [3:0] aluOp_execute,

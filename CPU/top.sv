@@ -164,18 +164,21 @@ module top (
       	.rd3(rd3)
 	);
 	// Instancia del banco de registros vectorial
-	VectorRegFile vector_regfile (
+	Regfile_vector vector_instance (
 		.clk(clk),
-		.reset(reset),
 		.wre(vector_wre_writeback),
+		.a1(instruction_decode[3:0]),
+      	.a2(instruction_decode[7:4]),
+      	.a3(rd_writeback),
 		.rd1(vector_rd1),   // Read data 1
 		.rd2(vector_rd2),   // Read data 2
 		.rd3(vector_writeback_data)   // Write data
 	);
+	logic [15:0] ram_data_test [0:7];
 	// Instancia del MemoryLoader
     MemoryLoader memory_loader_instance (
         .clk(clk),
-        .memory(ram_data),  // Pasamos los 8 datos de la RAM
+        .memory(ram_data_test),  // Pasamos los 8 datos de la RAM
         .data_out(vector_data) // Salida de 128 bits para procesamiento vectorial
     );
 	// Instancia del comparador de branch
@@ -294,7 +297,7 @@ module top (
       	.data_from_memory_out(data_from_memory_writeback),
       	.calc_data_out(alu_result_writeback),
       	.wre_writeback(wre_writeback),
-		.vector_wre_writeback(vector_wre_writeback,)
+		.vector_wre_writeback(vector_wre_writeback),
       	.select_writeback_data_mux_writeback(select_writeback_data_mux_writeback),
 		.rs1_writeback(rs1_writeback),
      	.rs2_writeback(rs2_writeback),

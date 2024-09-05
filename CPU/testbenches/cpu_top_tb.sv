@@ -42,6 +42,14 @@ module cpu_top_tb;
 	logic [15:0] alu_src_A;
 	logic [15:0] alu_src_B;
 	logic [15:0] alu_result_execute;
+	logic [15:0] alu_result_vectorial_1_execute;
+	logic [15:0] alu_result_vectorial_2_execute;
+	logic [15:0] alu_result_vectorial_3_execute;
+	logic [15:0] alu_result_vectorial_4_execute;
+	logic [15:0] alu_result_vectorial_5_execute;
+	logic [15:0] alu_result_vectorial_6_execute;
+	logic [15:0] alu_result_vectorial_7_execute;
+	logic [15:0] alu_result_vectorial_8_execute;
 	// mux's de la alu
 	logic [15:0] srcA_execute;
 	logic [15:0] srcB_execute;
@@ -70,9 +78,22 @@ module cpu_top_tb;
 	logic [1:0] select_writeback_data_mux_writeback;
 	// Banco de registros vectorial
 	logic [127:0] vector_writeback_data;
+	logic [127:0] vector_data;
 	logic vector_wre_writeback;
 	logic [127:0] vector_rd1;
 	logic [127:0] vector_rd2;
+	logic [127:0] srcA_vector_execute;
+	logic [127:0] srcB_vector_execute;
+	//Direcciones de dato vectorial
+	logic [15:0] address_data_1;
+	logic [15:0] address_data_2;
+	logic [15:0] address_data_3;
+	logic [15:0] address_data_4;
+	logic [15:0] address_data_5;
+	logic [15:0] address_data_6;
+	logic [15:0] address_data_7;
+	logic [15:0] address_data_8;
+
 	// Instancia del sumador del PC
 	adder pc_add (
 		.a(pc_mux_output),
@@ -171,13 +192,28 @@ module cpu_top_tb;
 		.rd2(vector_rd2),   // Read data 2
 		.rd3(vector_writeback_data)   // Write data
 	);
-	logic [15:0] ram_data_test [0:7];
 	// Instancia del MemoryLoader
-   MemoryLoader memory_loader_instance (
-      .clk(clk),
-      .memory(ram_data_test),  // Pasamos los 8 datos de la RAM
-      .data_out(vector_data) // Salida de 128 bits para procesamiento vectorial
-    );
+   MemoryLoader MemoryLoader_instance(
+		.clk(clk),
+		.memory_base(16'b0), 
+		.alu_result_vectorial_1_execute(alu_result_vectorial_1_execute),
+		.alu_result_vectorial_2_execute(alu_result_vectorial_2_execute),
+		.alu_result_vectorial_3_execute(alu_result_vectorial_3_execute),
+		.alu_result_vectorial_4_execute(alu_result_vectorial_4_execute),
+		.alu_result_vectorial_5_execute(alu_result_vectorial_5_execute),
+		.alu_result_vectorial_6_execute(alu_result_vectorial_6_execute),
+		.alu_result_vectorial_7_execute(alu_result_vectorial_7_execute),
+		.alu_result_vectorial_8_execute(alu_result_vectorial_8_execute),
+		.address_data_1(address_data_1),
+		.address_data_2(address_data_2),
+		.address_data_3(address_data_3),
+		.address_data_4(address_data_4),
+		.address_data_5(address_data_5),
+		.address_data_6(address_data_6),
+		.address_data_7(address_data_7),
+		.address_data_8(address_data_8),
+		.data_vectorial_out(vector_data)
+	);
 	// Instancia del comparador de branch
 	comparator_branch comparator_instance (
 		.opCode(instruction_decode[15:12]),
@@ -192,6 +228,8 @@ module cpu_top_tb;
       .nop_mux_output_in(nop_mux_output),
       .srcA_in(rd1),
       .srcB_in(rd2),
+		.srcA_vector_in(vector_rd1),
+		.srcB_vector_in(vector_rd2),
       .rs1_decode(instruction_decode[3:0]),
       .rs2_decode(instruction_decode[7:4]),
       .rd_decode(instruction_decode[11:8]),
@@ -202,6 +240,8 @@ module cpu_top_tb;
       .aluOp_execute(aluOp_execute),
       .srcA_out(srcA_execute),
       .srcB_out(srcB_execute),
+		.srcA_vector_out(srcA_vector_execute),
+      .srcB_vector_out(srcB_vector_execute),
       .rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
       .rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
       .rd_execute(rd_execute),
@@ -224,11 +264,67 @@ module cpu_top_tb;
       .out(alu_src_B)
 	);
 	// Instancia de la ALU
-	ALU ALU_instance (
+	ALU ALU_escalar (
 		.aluOp(aluOp_execute),       
       .srcA(alu_src_A),
       .srcB(alu_src_B),
       .result(alu_result_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_1 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[15:0]),
+      .srcB(srcB_vector_execute[15:0]),
+      .result(alu_result_vectorial_1_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_2 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[31:16]),
+      .srcB(srcB_vector_execute[31:16]),
+      .result(alu_result_vectorial_2_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_3 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[47:32]),
+      .srcB(srcB_vector_execute[47:32]),
+      .result(alu_result_vectorial_3_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_4 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[63:48]),
+      .srcB(srcB_vector_execute[63:48]),
+      .result(alu_result_vectorial_4_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_5 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[79:64]),
+      .srcB(srcB_vector_execute[79:64]),
+      .result(alu_result_vectorial_5_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_6 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[95:80]),
+      .srcB(srcB_vector_execute[95:80]),
+      .result(alu_result_vectorial_6_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_7 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[111:96]),
+      .srcB(srcB_vector_execute[111:96]),
+      .result(alu_result_vectorial_7_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_8 (
+		.aluOp(aluOp_execute),       
+      .srcA(srcA_vector_execute[127:112]),
+      .srcB(srcB_vector_execute[127:112]),
+      .result(alu_result_vectorial_8_execute)
 	);
 	// Instancia del módulo forwarding_unit
    forwarding_unit forwarding_unit_instance (

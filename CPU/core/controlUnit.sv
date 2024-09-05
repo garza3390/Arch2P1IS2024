@@ -3,6 +3,7 @@ module controlUnit (
 	 output logic [15:0] control_signals // salida concatenada
 );
 	logic wre;	// write register enable
+	vector_wre = 1'b0; // write register enableV
 	logic [3:0] aluOp;	// operacion que debe realizar la ALU
 	logic write_memory_enable ; // indica si la operacion escribe o no en la memoria
 	logic load; // indica si la operacion carga datos desde memoria
@@ -12,16 +13,26 @@ module controlUnit (
 		case (opCode)		  
 			// nop/stall
 			4'b0000: begin
-			   load = 1'b0;
+			   	load = 1'b0;
 				wre = 1'b0;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b0;
 				select_writeback_data_mux = 2'b00;
 				aluOp = 4'b0000;
 			end
-			// add
+			// add.V
+			4'b0010: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable = 1'b0;
+				select_writeback_data_mux = 2'b01;
+				aluOp =4'b0001;
+			end	
 			4'b0001: begin
 				load = 1'b0;
 				wre = 1'b1;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b0;
 				select_writeback_data_mux = 2'b01;
 				aluOp =4'b0001;
@@ -30,6 +41,7 @@ module controlUnit (
 			4'b1010: begin
 				load = 1'b0;
 				wre = 1'b0;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b1;
 				select_writeback_data_mux = 2'b00;
 				aluOp =4'b0000;
@@ -38,6 +50,7 @@ module controlUnit (
 			4'b1001: begin
 				load = 1'b1;
 				wre = 1'b1;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b0;
 				select_writeback_data_mux = 2'b00;
 				aluOp =4'b0001;
@@ -46,6 +59,7 @@ module controlUnit (
 			4'b0100: begin
 				load = 1'b0;
 				wre = 1'b0;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b0;
 				select_writeback_data_mux = 2'b00;
 				aluOp =4'b0000;
@@ -53,11 +67,12 @@ module controlUnit (
 			default: begin
 				load = 1'b0;
 				wre = 1'b0;
+				vector_wre = 1'b0;
 				write_memory_enable = 1'b0;
 				select_writeback_data_mux = 2'b00;
 				aluOp =4'b0000;
 			end
 		endcase
-		control_signals = {7'b0, load, wre, write_memory_enable, select_writeback_data_mux, aluOp};
+		control_signals = {6'b0, vector_wre, load, wre, write_memory_enable, select_writeback_data_mux, aluOp};
 	end
 endmodule

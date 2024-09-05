@@ -47,6 +47,7 @@ module top (
 	logic [15:0] srcB_execute;
 	// registro Execute-Memory
 	logic wre_memory, wre_execute;
+	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory;
 	logic write_memory_enable_memory;
 	logic [15:0] alu_result_memory;
@@ -67,6 +68,11 @@ module top (
 	logic [3:0] rs2_writeback; // entrada a la unidad de adelantamiento
 	logic [3:0] rd_writeback;
 	logic [1:0] select_writeback_data_mux_writeback;
+	// Banco de registros vectorial
+	logic [127:0] vector_writeback_data;
+	logic vector_wre_writeback;
+	logic [127:0] vector_rd1;
+	logic [127:0] vector_rd2;
 //////////////////////////////////////////////////////////////////////////////
 	assign pc_offset = 16'b0000000000000001;// Inicialización
 //////////////////////////////////////////////////////////////////////////////
@@ -86,53 +92,53 @@ module top (
 	// Instancia del registro del PC
 	PC_register pc_reg (
 		.clk(clk),
-      .reset(reset),
-      .nop(select_nop_mux),
-      .address_in(pc_incremented),
-      .address_out(pc_address)
+      	.reset(reset),
+      	.nop(select_nop_mux),
+      	.address_in(pc_incremented),
+      	.address_out(pc_address)
 	);
 	// Instancia de la memoria ROM
 	ROM rom_memory (
 		.address(pc_mux_output),
-      .clock(clk),
-      .q(instruction_fetch)
+      	.clock(clk),
+      	.q(instruction_fetch)
 	);
 	// Instancia del registro FetchDecode
 	FetchDecode_register FetchDecode_register_instance (
 		.clk(clk),
-      .reset(reset),
-      .flush(flush),
+      	.reset(reset),
+      	.flush(flush),
 		.nop(select_nop_mux),
-      .pc(pc_address),
-      .instruction_in(instruction_fetch),
-      .pc_decode(pc_decode),
-      .instruction_out(instruction_decode)
+      	.pc(pc_address),
+      	.instruction_in(instruction_fetch),
+      	.pc_decode(pc_decode),
+      	.instruction_out(instruction_decode)
 	);
 	// Instancia de la unidad de detección de riesgos
 	hazard_detection_unit u_hazard_detection (
 		.opcode(instruction_decode[15:12]),
 		.rd_load_execute(rd_execute),
-      .load_instruction(load_instruction),
+      	.load_instruction(load_instruction),
 		.regfile_data_1(rd1),
 		.regfile_data_2(rd2),
-      .rs1_decode(instruction_decode[3:0]),
-      .rs2_decode(instruction_decode[7:4]),
-      .rs1_execute(rs1_execute),
-      .rs2_execute(rs2_execute),
-      .nop(select_nop_mux),
+      	.rs1_decode(instruction_decode[3:0]),
+      	.rs2_decode(instruction_decode[7:4]),
+      	.rs1_execute(rs1_execute),
+      	.rs2_execute(rs2_execute),
+      	.nop(select_nop_mux),
 		.flush(flush)
 	); 
 	// Instancia de la unidad de control
 	controlUnit control_unit_instance (
 		.opCode(instruction_decode[15:12]),
-      .control_signals(control_signals)
+      	.control_signals(control_signals)
 	);
 	// Instancia del MUX de NOP
 	mux_2inputs mux_2inputs_nop (
 		.data0(control_signals),
-      .data1(16'b0),
-      .select(select_nop_mux),
-      .out(nop_mux_output)
+      	.data1(16'b0),
+      	.select(select_nop_mux),
+      	.out(nop_mux_output)
 	);
 	// Instancia del extensor de ceros
 	zeroExtend zero_extend_instance (
@@ -142,71 +148,87 @@ module top (
 	// Instancia del sumador de etiquetas de branch
 	adder branch_label_pc_add (
 		.a(pc_decode),
-      .b(extended_label),
-      .y(branch_address)
+      	.b(extended_label),
+      	.y(branch_address)
 	);
 	// Instancia del banco de registros
 	Regfile_scalar regfile_instance (
 		.clk(clk),
-      .wre(wre_writeback),
-      .a1(instruction_decode[3:0]),
-      .a2(instruction_decode[7:4]),
-      .a3(rd_writeback),
-      .wd3(writeback_data),
-      .rd1(rd1),
-      .rd2(rd2),
-      .rd3(rd3)
+		.wre(wre_writeback),
+		.a1(instruction_decode[3:0]),
+      	.a2(instruction_decode[7:4]),
+      	.a3(rd_writeback),
+      	.wd3(writeback_data),
+      	.rd1(rd1),
+      	.rd2(rd2),
+      	.rd3(rd3)
 	);
+	// Instancia del banco de registros vectorial
+	VectorRegFile vector_regfile (
+		.clk(clk),
+		.reset(reset),
+		.wre(vector_wre_writeback),
+		.rd1(vector_rd1),   // Read data 1
+		.rd2(vector_rd2),   // Read data 2
+		.rd3(vector_writeback_data)   // Write data
+	);
+	// Instancia del MemoryLoader
+    MemoryLoader memory_loader_instance (
+        .clk(clk),
+        .memory(ram_data),  // Pasamos los 8 datos de la RAM
+        .data_out(vector_data) // Salida de 128 bits para procesamiento vectorial
+    );
 	// Instancia del comparador de branch
 	comparator_branch comparator_instance (
 		.opCode(instruction_decode[15:12]),
-      .rs1_value(rd1),
-      .rs2_value(rd2),
-      .select_pc_mux(select_pc_mux)
+      	.rs1_value(rd1),
+      	.rs2_value(rd2),
+      	.select_pc_mux(select_pc_mux)
 	);
 	// Instancia del registro DecodeExecute
 	DecodeExecute_register DecodeExecute_register_instance (
 		.clk(clk),
-      .reset(reset),
-      .nop_mux_output_in(nop_mux_output),
-      .srcA_in(rd1),
-      .srcB_in(rd2),
-      .rs1_decode(instruction_decode[3:0]),
-      .rs2_decode(instruction_decode[7:4]),
-      .rd_decode(instruction_decode[11:8]),
-      .wre_execute(wre_execute),
-      .write_memory_enable_execute(write_memory_enable_execute),
-      .select_writeback_data_mux_execute(select_writeback_data_mux_execute),
-      .aluOp_execute(aluOp_execute),
-      .srcA_out(srcA_execute),
-      .srcB_out(srcB_execute),
-      .rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
-      .rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
-      .rd_execute(rd_execute),
+      	.reset(reset),
+      	.nop_mux_output_in(nop_mux_output),
+      	.srcA_in(rd1),
+      	.srcB_in(rd2),
+      	.rs1_decode(instruction_decode[3:0]),
+      	.rs2_decode(instruction_decode[7:4]),
+      	.rd_decode(instruction_decode[11:8]),
+      	.wre_execute(wre_execute),
+		.vector_wre_execute(vector_wre_execute),
+      	.write_memory_enable_execute(write_memory_enable_execute),
+      	.select_writeback_data_mux_execute(select_writeback_data_mux_execute),
+      	.aluOp_execute(aluOp_execute),
+      	.srcA_out(srcA_execute),
+      	.srcB_out(srcB_execute),
+      	.rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
+      	.rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
+      	.rd_execute(rd_execute),
 		.load_instruction(load_instruction)
 	);
 	// Instancia del MUX de forwarding A
 	mux_3inputs mux_alu_forward_A (
 		.data0(srcA_execute),
-      .data1(writeback_data),
-      .data2(alu_result_memory),
-      .select(select_forward_mux_A),
-      .out(alu_src_A)
+      	.data1(writeback_data),
+      	.data2(alu_result_memory),
+      	.select(select_forward_mux_A),
+      	.out(alu_src_A)
 	);
 	// Instancia del MUX de forwarding B
 	mux_3inputs mux_alu_forward_B (
 		.data0(srcB_execute),
-      .data1(writeback_data),
-      .data2(alu_result_memory),
-      .select(select_forward_mux_B),
-      .out(alu_src_B)
+      	.data1(writeback_data),
+      	.data2(alu_result_memory),
+      	.select(select_forward_mux_B),
+      	.out(alu_src_B)
 	);
 	// Instancia de la ALU
 	ALU ALU_instance (
 		.aluOp(aluOp_execute),       
-      .srcA(alu_src_A),
-      .srcB(alu_src_B),
-      .result(alu_result_execute)
+      	.srcA(alu_src_A),
+      	.srcB(alu_src_B),
+      	.result(alu_result_execute)
 	);
 	// Instancia del módulo forwarding_unit
     forwarding_unit forwarding_unit_instance (
@@ -227,58 +249,62 @@ module top (
 	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
-      .reset(reset),
-      .wre_execute(wre_execute),
-      .select_writeback_data_mux_execute(select_writeback_data_mux_execute),
-      .write_memory_enable_execute(write_memory_enable_execute),
+      	.reset(reset),
+      	.wre_execute(wre_execute),
+		.vector_wre_execute(vector_wre_execute),
+      	.select_writeback_data_mux_execute(select_writeback_data_mux_execute),
+      	.write_memory_enable_execute(write_memory_enable_execute),
 		.rs1_execute(rs1_execute),
-      .rs2_execute(rs1_execute),
-      .ALUresult_in(alu_result_execute),
-      .srcA_execute(srcA_execute),
-      .srcB_execute(alu_src_B),
-      .rd_execute(rd_execute),
-      .wre_memory(wre_memory),
-      .select_writeback_data_mux_memory(select_writeback_data_mux_memory),
-      .write_memory_enable_memory(write_memory_enable_memory),
+      	.rs2_execute(rs1_execute),
+      	.ALUresult_in(alu_result_execute),
+      	.srcA_execute(srcA_execute),
+      	.srcB_execute(alu_src_B),
+      	.rd_execute(rd_execute),
+      	.wre_memory(wre_memory),
+		.vector_wre_memory(vector_wre_memory),
+      	.select_writeback_data_mux_memory(select_writeback_data_mux_memory),
+      	.write_memory_enable_memory(write_memory_enable_memory),
 		.rs1_memory(rs1_memory),
-      .rs2_memory(rs2_memory),
-      .ALUresult_out(alu_result_memory),
-      .srcA_memory(srcA_memory),
-      .srcB_memory(srcB_memory),
-      .rd_memory(rd_memory)
+      	.rs2_memory(rs2_memory),
+      	.ALUresult_out(alu_result_memory),
+      	.srcA_memory(srcA_memory),
+      	.srcB_memory(srcB_memory),
+      	.rd_memory(rd_memory)
 	);
 	// Instancia de la RAM
 	RAM RAM_instance(
 		.address(srcA_memory),
-      .clock(clk),
-      .data(srcB_memory),
-      .wren(write_memory_enable_memory),  
-      .q(data_from_memory)
-		);
+      	.clock(clk),
+      	.data(srcB_memory),
+      	.wren(write_memory_enable_memory),  
+      	.q(data_from_memory)
+	);
 	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
-      .reset(reset),
-      .wre_memory(wre_memory),
-      .select_writeback_data_mux_memory(select_writeback_data_mux_memory),
+      	.reset(reset),
+      	.wre_memory(wre_memory),
+		.vector_wre_memory(vector_wre_memory),
+      	.select_writeback_data_mux_memory(select_writeback_data_mux_memory),
 		.rs1_memory(rs1_memory),
-      .rs2_memory(rs2_memory),
-      .rd_memory(rd_memory), 
-      .data_from_memory_in(data_from_memory),
-      .calc_data_in(alu_result_memory),
-      .data_from_memory_out(data_from_memory_writeback),
-      .calc_data_out(alu_result_writeback),
-      .wre_writeback(wre_writeback),
-      .select_writeback_data_mux_writeback(select_writeback_data_mux_writeback),
+      	.rs2_memory(rs2_memory),
+      	.rd_memory(rd_memory), 
+      	.data_from_memory_in(data_from_memory),
+      	.calc_data_in(alu_result_memory),
+      	.data_from_memory_out(data_from_memory_writeback),
+      	.calc_data_out(alu_result_writeback),
+      	.wre_writeback(wre_writeback),
+		.vector_wre_writeback(vector_wre_writeback,)
+      	.select_writeback_data_mux_writeback(select_writeback_data_mux_writeback),
 		.rs1_writeback(rs1_writeback),
-      .rs2_writeback(rs2_writeback),
-      .rd_writeback(rd_writeback)
+     	.rs2_writeback(rs2_writeback),
+      	.rd_writeback(rd_writeback)
 	);
 	// Instancia del MUX de writeback
 	mux_2inputs mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
-      .data1(alu_result_writeback),
-      .select(select_writeback_data_mux_writeback),
-      .out(writeback_data)
-		);
+      	.data1(alu_result_writeback),
+      	.select(select_writeback_data_mux_writeback),
+      	.out(writeback_data)
+	);
 endmodule

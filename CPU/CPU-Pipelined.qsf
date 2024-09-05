@@ -78,6 +78,9 @@ set_global_assignment -name EDA_TEST_BENCH_NAME cpu_top_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id cpu_top_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME cpu_top_tb -section_id cpu_top_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/cpu_top_tb.sv -section_id cpu_top_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_vector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/MemoryLoader.sv
 set_global_assignment -name SYSTEMVERILOG_FILE top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/PC_register.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs.sv
@@ -103,4 +106,3 @@ set_global_assignment -name SYSTEMVERILOG_FILE core/hazard_detection_unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/forwarding_unit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbenches/cpu_top_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/zeroExtend.sv
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

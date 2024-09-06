@@ -76,24 +76,14 @@ module cpu_top_tb;
 	logic [3:0] rs2_writeback; // entrada a la unidad de adelantamiento
 	logic [3:0] rd_writeback;
 	logic [1:0] select_writeback_data_mux_writeback;
-	// Banco de registros vectorial
-	logic [127:0] vector_writeback_data;
-	logic [127:0] vector_data;
+		// vectorial
 	logic vector_wre_writeback;
-	logic [127:0] vector_rd1;
-	logic [127:0] vector_rd2;
-	logic [127:0] srcA_vector_execute;
-	logic [127:0] srcB_vector_execute;
-	//Direcciones de dato vectorial
-	logic [15:0] address_data_1;
-	logic [15:0] address_data_2;
-	logic [15:0] address_data_3;
-	logic [15:0] address_data_4;
-	logic [15:0] address_data_5;
-	logic [15:0] address_data_6;
-	logic [15:0] address_data_7;
-	logic [15:0] address_data_8;
-
+	logic [127:0] vector_rd1, vector_rd2;
+	logic [127:0] srcA_vector_execute, srcB_vector_execute;
+	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data;
+	logic [127:0] vector_data_from_memory, vector_data_from_memory_writeback;
+	logic [7:0] address_data_vector;
+//////////////////////////////////////////////////////////////////////////////
 	// Instancia del sumador del PC
 	adder pc_add (
 		.a(pc_mux_output),
@@ -182,7 +172,7 @@ module cpu_top_tb;
       .rd3(rd3)
 	);
 	// Instancia del banco de registros vectorial
-	Regfile_vector vector_regfile (
+	Regfile_vector vector_instance (
 		.clk(clk),
 		.wre(vector_wre_writeback),
 		.a1(instruction_decode[3:0]),
@@ -192,10 +182,9 @@ module cpu_top_tb;
 		.rd2(vector_rd2),   // Read data 2
 		.rd3(vector_writeback_data)   // Write data
 	);
-	// Instancia del MemoryLoader
    MemoryLoader MemoryLoader_instance(
 		.clk(clk),
-		.memory_base(16'b0), 
+		.memory_base(8'b0), 
 		.alu_result_vectorial_1_execute(alu_result_vectorial_1_execute),
 		.alu_result_vectorial_2_execute(alu_result_vectorial_2_execute),
 		.alu_result_vectorial_3_execute(alu_result_vectorial_3_execute),
@@ -204,14 +193,7 @@ module cpu_top_tb;
 		.alu_result_vectorial_6_execute(alu_result_vectorial_6_execute),
 		.alu_result_vectorial_7_execute(alu_result_vectorial_7_execute),
 		.alu_result_vectorial_8_execute(alu_result_vectorial_8_execute),
-		.address_data_1(address_data_1),
-		.address_data_2(address_data_2),
-		.address_data_3(address_data_3),
-		.address_data_4(address_data_4),
-		.address_data_5(address_data_5),
-		.address_data_6(address_data_6),
-		.address_data_7(address_data_7),
-		.address_data_8(address_data_8),
+		.address_data_vector(address_data_vector),
 		.data_vectorial_out(vector_data)
 	);
 	// Instancia del comparador de branch
@@ -261,16 +243,15 @@ module cpu_top_tb;
       .data1(writeback_data),
       .data2(alu_result_memory),
       .select(select_forward_mux_B),
-      .out(alu_src_B)
+     	.out(alu_src_B)
 	);
 	// Instancia de la ALU
-	ALU ALU_escalar (
+	ALU ALU_escalar(
 		.aluOp(aluOp_execute),       
       .srcA(alu_src_A),
       .srcB(alu_src_B),
       .result(alu_result_execute)
 	);
-	// Instancia de la ALU
 	ALU ALU_vectorial_1 (
 		.aluOp(aluOp_execute),       
       .srcA(srcA_vector_execute[15:0]),
@@ -328,7 +309,7 @@ module cpu_top_tb;
 	);
 	// Instancia del módulo forwarding_unit
    forwarding_unit forwarding_unit_instance (
-		.rs1_execute(rs1_execute),
+      .rs1_execute(rs1_execute),
       .rs2_execute(rs2_execute),
       .rs1_memory(rs1_memory),
       .rs2_memory(rs2_memory),
@@ -345,36 +326,45 @@ module cpu_top_tb;
 	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
-      .reset(reset),
-      .wre_execute(wre_execute),
+     	.reset(reset),
+     	.wre_execute(wre_execute),
+		.vector_address_data_execute(address_data_vector_execute),
+		.vector_data_execute(vector_data_execute),
 		.vector_wre_execute(vector_wre_execute),
-      .select_writeback_data_mux_execute(select_writeback_data_mux_execute),
-      .write_memory_enable_execute(write_memory_enable_execute),
+     	.select_writeback_data_mux_execute(select_writeback_data_mux_execute),
+     	.write_memory_enable_execute(write_memory_enable_execute),
 		.rs1_execute(rs1_execute),
-      .rs2_execute(rs1_execute),
-      .ALUresult_in(alu_result_execute),
-      .srcA_execute(srcA_execute),
-      .srcB_execute(alu_src_B),
-      .rd_execute(rd_execute),
-      .wre_memory(wre_memory),
+     	.rs2_execute(rs1_execute),
+     	.ALUresult_in(alu_result_execute),
+     	.srcA_execute(srcA_execute),
+     	.srcB_execute(alu_src_B),
+     	.rd_execute(rd_execute),
+     	.wre_memory(wre_memory),
 		.vector_wre_memory(vector_wre_memory),
-      .select_writeback_data_mux_memory(select_writeback_data_mux_memory),
-      .write_memory_enable_memory(write_memory_enable_memory),
+		.vector_data_memory(vector_data_memory),
+		.vector_address_data_memory(address_data_vector_memory),
+     	.select_writeback_data_mux_memory(select_writeback_data_mux_memory),
+     	.write_memory_enable_memory(write_memory_enable_memory),
 		.rs1_memory(rs1_memory),
-      .rs2_memory(rs2_memory),
-      .ALUresult_out(alu_result_memory),
-      .srcA_memory(srcA_memory),
-      .srcB_memory(srcB_memory),
-      .rd_memory(rd_memory)
+     	.rs2_memory(rs2_memory),
+     	.ALUresult_out(alu_result_memory),
+     	.srcA_memory(srcA_memory),
+     	.srcB_memory(srcB_memory),
+     	.rd_memory(rd_memory)
 	);
 	// Instancia de la RAM
 	RAM RAM_instance(
-		.address(srcA_memory),
+		.address_a(srcA_memory),
+		.address_b(address_data_vector_memory),
       .clock(clk),
-      .data(srcB_memory),
-      .wren(write_memory_enable_memory),  
-      .q(data_from_memory)
+      .data_a(srcB_memory),
+		.data_b(vector_data_memory),
+      .wren_a(write_memory_enable_memory),
+		.wren_b(vector_wre_memory),
+      .q_a(data_from_memory),
+		.q_b(vector_data_from_memory)
 	);
+	
 	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
@@ -386,8 +376,10 @@ module cpu_top_tb;
       .rs2_memory(rs2_memory),
       .rd_memory(rd_memory), 
       .data_from_memory_in(data_from_memory),
+		.vector_data_from_memory_in(vector_data_from_memory),
       .calc_data_in(alu_result_memory),
       .data_from_memory_out(data_from_memory_writeback),
+		.vector_data_from_memory_out(vector_data_from_memory_writeback),
       .calc_data_out(alu_result_writeback),
       .wre_writeback(wre_writeback),
 		.vector_wre_writeback(vector_wre_writeback),

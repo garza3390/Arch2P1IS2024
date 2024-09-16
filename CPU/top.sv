@@ -12,8 +12,7 @@ module top (
 	logic [1:0] select_pc_mux;   // esta señal de control viene del comparador entre rs1 y rs2
 	logic [15:0] branch_address;
 	// registro Fetch-Decode
-	logic [15:0] instruction_fetch;
-	logic [15:0] instruction_decode;
+	logic [19:0] instruction_fetch, instruction_decode;
 	logic [1:0] flush;
 	// unidad de control
 	logic [15:0] control_signals;
@@ -21,11 +20,9 @@ module top (
 	logic [15:0] nop_mux_output;
 	logic [1:0] select_nop_mux;
 	// banco de registros
-	logic [15:0] writeback_data;
+	logic [7:0] writeback_data;
 	logic wre_writeback;
-	logic [15:0] rd1;
-	logic [15:0] rd2;
-	logic [15:0] rd3;
+	logic [7:0] rd1,rd2,rd3;
 	// extensor de signo
 	logic [15:0] extended_label;
 	// sumador branch
@@ -34,55 +31,53 @@ module top (
 	logic write_memory_enable_execute;
 	logic [1:0] select_writeback_data_mux_execute;
 	logic [3:0] aluOp_execute;
-	logic [3:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
-	logic [3:0] rs2_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
-	logic [3:0] rd_execute; 
+	logic [4:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
+	logic [4:0] rs2_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
+	logic [4:0] rd_execute; 
 	logic load_instruction;
 	// alu
-	logic [15:0] alu_src_A;
-	logic [15:0] alu_src_B;
-	logic [15:0] alu_result_execute;
-	logic [15:0] alu_result_vectorial_1_execute;
-	logic [15:0] alu_result_vectorial_2_execute;
-	logic [15:0] alu_result_vectorial_3_execute;
-	logic [15:0] alu_result_vectorial_4_execute;
-	logic [15:0] alu_result_vectorial_5_execute;
-	logic [15:0] alu_result_vectorial_6_execute;
-	logic [15:0] alu_result_vectorial_7_execute;
-	logic [15:0] alu_result_vectorial_8_execute;
+	logic [7:0] alu_src_A;
+	logic [7:0] alu_src_B;
+	logic [7:0] alu_result_execute;
+	logic [7:0] vector_alu_result_1_execute, vector_alu_result_2_execute, vector_alu_result_3_execute, 
+					vector_alu_result_4_execute, vector_alu_result_5_execute, vector_alu_result_6_execute,
+					vector_alu_result_7_execute, vector_alu_result_8_execute, vector_alu_result_9_execute,
+					vector_alu_result_10_execute, vector_alu_result_11_execute, vector_alu_result_12_execute,
+					vector_alu_result_13_execute, vector_alu_result_14_execute, vector_alu_result_15_execute,
+					vector_alu_result_16_execute;
 	// mux's de la alu
-	logic [15:0] srcA_execute;
-	logic [15:0] srcB_execute;
+	logic [7:0] srcA_execute;
+	logic [7:0] srcB_execute;
 	// registro Execute-Memory
 	logic wre_memory, wre_execute;
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory;
 	logic write_memory_enable_memory;
-	logic [15:0] alu_result_memory;
-	logic [15:0] srcA_memory;
-	logic [15:0] srcB_memory;
-	logic [3:0] rs1_memory; // entrada a la unidad de adelantamiento
-	logic [3:0] rs2_memory; // entrada a la unidad de adelantamiento
-	logic [3:0] rd_memory;
+	logic [7:0] alu_result_memory;
+	logic [7:0] srcA_memory;
+	logic [7:0] srcB_memory;
+	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
+	logic [4:0] rs2_memory; // entrada a la unidad de adelantamiento
+	logic [4:0] rd_memory;
 	// unidad de adelantamiento
 	logic [2:0] select_forward_mux_A;
 	logic [2:0] select_forward_mux_B;
 	// memoria de datos
-	logic [15:0] data_from_memory;
+	logic [7:0] data_from_memory;
 	// registro Memory-Writeback
-	logic [15:0] data_from_memory_writeback;
-	logic [15:0] alu_result_writeback;
-	logic [3:0] rs1_writeback; // entrada a la unidad de adelantamiento
-	logic [3:0] rs2_writeback; // entrada a la unidad de adelantamiento
-	logic [3:0] rd_writeback;
+	logic [7:0] data_from_memory_writeback;
+	logic [7:0] alu_result_writeback;
+	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
+	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
+	logic [4:0] rd_writeback;
 	logic [1:0] select_writeback_data_mux_writeback;
 	// vectorial
 	logic vector_wre_writeback;
-	logic [127:0] vector_rd1, vector_rd2;
-	logic [127:0] srcA_vector_execute, srcB_vector_execute;
+	logic [7:0] vector_rd1, vector_rd2, vector_rd3, vector_rd_writeback;
+	logic [127:0] vector_srcA_execute, vector_srcB_execute;
 	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data;
 	logic [127:0] vector_data_from_memory, vector_data_from_memory_writeback;
-	logic [7:0] address_data_vector;
+	logic [11:0] vector_address_data;
 //////////////////////////////////////////////////////////////////////////////
 	assign pc_offset = 16'b0000000000000001;// Inicialización
 //////////////////////////////////////////////////////////////////////////////
@@ -126,13 +121,13 @@ module top (
 	);
 	// Instancia de la unidad de detección de riesgos
 	hazard_detection_unit u_hazard_detection (
-		.opcode(instruction_decode[15:12]),
+		.opcode(instruction_decode[19:15]),
 		.rd_load_execute(rd_execute),
       .load_instruction(load_instruction),
 		.regfile_data_1(rd1),
 		.regfile_data_2(rd2),
-      .rs1_decode(instruction_decode[3:0]),
-      .rs2_decode(instruction_decode[7:4]),
+      .rs1_decode(instruction_decode[4:0]),
+      .rs2_decode(instruction_decode[9:5]),
       .rs1_execute(rs1_execute),
       .rs2_execute(rs2_execute),
       .nop(select_nop_mux),
@@ -140,7 +135,7 @@ module top (
 	); 
 	// Instancia de la unidad de control
 	controlUnit control_unit_instance (
-		.opCode(instruction_decode[15:12]),
+		.opCode(instruction_decode[19:15]),
       .control_signals(control_signals)
 	);
 	// Instancia del MUX de NOP
@@ -152,7 +147,7 @@ module top (
 	);
 	// Instancia del extensor de ceros
 	zeroExtend zero_extend_instance (
-		.label(instruction_decode[11:8]),
+		.label(instruction_decode[14:10]),
 		.ZeroExtLabel(extended_label) 
 	); 
 	// Instancia del sumador de etiquetas de branch
@@ -165,8 +160,8 @@ module top (
 	Regfile_scalar regfile_instance (
 		.clk(clk),
 		.wre(wre_writeback),
-		.a1(instruction_decode[3:0]),
-      .a2(instruction_decode[7:4]),
+		.a1(instruction_decode[4:0]),
+      .a2(instruction_decode[9:5]),
       .a3(rd_writeback),
       .wd3(writeback_data),
       .rd1(rd1),
@@ -177,30 +172,39 @@ module top (
 	Regfile_vector vector_instance (
 		.clk(clk),
 		.wre(vector_wre_writeback),
-		.a1(instruction_decode[3:0]),
-      .a2(instruction_decode[7:4]),
-      .a3(rd_writeback),
+		.a1(instruction_decode[4:0]),
+      .a2(instruction_decode[9:5]),
+      .a3(vector_rd_writeback),
+		.wd3(vector_writeback_data),
 		.rd1(vector_rd1),   // Read data 1
 		.rd2(vector_rd2),   // Read data 2
-		.rd3(vector_writeback_data)   // Write data
+		.rd3(vector_rd3)   // Read data 2
 	);
    MemoryLoader MemoryLoader_instance(
 		.clk(clk),
-		.memory_base(8'b0), 
-		.alu_result_vectorial_1_execute(alu_result_vectorial_1_execute),
-		.alu_result_vectorial_2_execute(alu_result_vectorial_2_execute),
-		.alu_result_vectorial_3_execute(alu_result_vectorial_3_execute),
-		.alu_result_vectorial_4_execute(alu_result_vectorial_4_execute),
-		.alu_result_vectorial_5_execute(alu_result_vectorial_5_execute),
-		.alu_result_vectorial_6_execute(alu_result_vectorial_6_execute),
-		.alu_result_vectorial_7_execute(alu_result_vectorial_7_execute),
-		.alu_result_vectorial_8_execute(alu_result_vectorial_8_execute),
-		.address_data_vector(address_data_vector),
+		.memory_base(12'b0), 
+		.vector_alu_result_1_execute(vector_alu_result_1_execute),
+		.vector_alu_result_2_execute(vector_alu_result_2_execute),
+		.vector_alu_result_3_execute(vector_alu_result_3_execute),
+		.vector_alu_result_4_execute(vector_alu_result_4_execute),
+		.vector_alu_result_5_execute(vector_alu_result_5_execute),
+		.vector_alu_result_6_execute(vector_alu_result_6_execute),
+		.vector_alu_result_7_execute(vector_alu_result_7_execute),
+		.vector_alu_result_8_execute(vector_alu_result_8_execute),
+		.vector_alu_result_9_execute(vector_alu_result_9_execute),
+		.vector_alu_result_10_execute(vector_alu_result_10_execute),
+		.vector_alu_result_11_execute(vector_alu_result_11_execute),
+		.vector_alu_result_12_execute(vector_alu_result_12_execute),
+		.vector_alu_result_13_execute(vector_alu_result_13_execute),
+		.vector_alu_result_14_execute(vector_alu_result_14_execute),
+		.vector_alu_result_15_execute(vector_alu_result_15_execute),
+		.vector_alu_result_16_execute(vector_alu_result_17_execute),
+		.address_data_vector(vector_address_data),
 		.data_vectorial_out(vector_data)
 	);
 	// Instancia del comparador de branch
 	comparator_branch comparator_instance (
-		.opCode(instruction_decode[15:12]),
+		.opCode(instruction_decode[19:15]),
       .rs1_value(rd1),
       .rs2_value(rd2),
       .select_pc_mux(select_pc_mux)
@@ -214,9 +218,9 @@ module top (
       .srcB_in(rd2),
 		.srcA_vector_in(vector_rd1),
 		.srcB_vector_in(vector_rd2),
-      .rs1_decode(instruction_decode[3:0]),
-      .rs2_decode(instruction_decode[7:4]),
-      .rd_decode(instruction_decode[11:8]),
+      .rs1_decode(instruction_decode[4:0]),
+      .rs2_decode(instruction_decode[9:5]),
+      .rd_decode(instruction_decode[14:10]),
       .wre_execute(wre_execute),
 		.vector_wre_execute(vector_wre_execute),
       .write_memory_enable_execute(write_memory_enable_execute),
@@ -224,8 +228,8 @@ module top (
       .aluOp_execute(aluOp_execute),
       .srcA_out(srcA_execute),
       .srcB_out(srcB_execute),
-		.srcA_vector_out(srcA_vector_execute),
-      .srcB_vector_out(srcB_vector_execute),
+		.srcA_vector_out(vector_srcA_execute),
+      .srcB_vector_out(vector_srcB_execute),
       .rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
       .rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
       .rd_execute(rd_execute),
@@ -256,58 +260,113 @@ module top (
 	);
 	ALU ALU_vectorial_1 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[15:0]),
-      .srcB(srcB_vector_execute[15:0]),
+      .srcA(vector_srcA_execute[7:0]),
+      .srcB(vector_srcB_execute[7:0]),
       .result(alu_result_vectorial_1_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_2 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[31:16]),
-      .srcB(srcB_vector_execute[31:16]),
+      .srcA(vector_srcA_execute[15:8]),
+      .srcB(vector_srcB_execute[15:8]),
       .result(alu_result_vectorial_2_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_3 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[47:32]),
-      .srcB(srcB_vector_execute[47:32]),
+      .srcA(vector_srcA_execute[23:16]),
+      .srcB(vector_srcB_execute[23:16]),
       .result(alu_result_vectorial_3_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_4 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[63:48]),
-      .srcB(srcB_vector_execute[63:48]),
+      .srcA(vector_srcA_execute[31:24]),
+      .srcB(vector_srcB_execute[31:24]),
       .result(alu_result_vectorial_4_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_5 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[79:64]),
-      .srcB(srcB_vector_execute[79:64]),
+      .srcA(vector_srcA_execute[39:32]),
+      .srcB(vector_srcB_execute[39:32]),
       .result(alu_result_vectorial_5_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_6 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[95:80]),
-      .srcB(srcB_vector_execute[95:80]),
+      .srcA(vector_srcA_execute[47:40]),
+      .srcB(vector_srcB_execute[47:40]),
       .result(alu_result_vectorial_6_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_7 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[111:96]),
-      .srcB(srcB_vector_execute[111:96]),
+      .srcA(vector_srcA_execute[55:48]),
+      .srcB(vector_srcB_execute[55:48]),
       .result(alu_result_vectorial_7_execute)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_8 (
 		.aluOp(aluOp_execute),       
-      .srcA(srcA_vector_execute[127:112]),
-      .srcB(srcB_vector_execute[127:112]),
+      .srcA(vector_srcA_execute[63:56]),
+      .srcB(vector_srcB_execute[63:56]),
       .result(alu_result_vectorial_8_execute)
+	);
+	ALU ALU_vectorial_9 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[71:64]),
+      .srcB(vector_srcB_execute[71:64]),
+      .result(alu_result_vectorial_9_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_10 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[79:72]),
+      .srcB(vector_srcB_execute[79:72]),
+      .result(alu_result_vectorial_10_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_11 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[87:80]),
+      .srcB(vector_srcB_execute[87:80]),
+      .result(alu_result_vectorial_11_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_12 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[95:88]),
+      .srcB(vector_srcB_execute[95:88]),
+      .result(alu_result_vectorial_12_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_13 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[103:96]),
+      .srcB(vector_srcB_execute[103:96]),
+      .result(alu_result_vectorial_13_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_14 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[111:104]),
+      .srcB(vector_srcB_execute[111:104]),
+      .result(alu_result_vectorial_14_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_15 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[119:112]),
+      .srcB(vector_srcB_execute[119:112]),
+      .result(alu_result_vectorial_15_execute)
+	);
+	// Instancia de la ALU
+	ALU ALU_vectorial_16 (
+		.aluOp(aluOp_execute),       
+      .srcA(vector_srcA_execute[127:120]),
+      .srcB(vector_srcB_execute[127:120]),
+      .result(alu_result_vectorial_16_execute)
 	);
 	// Instancia del módulo forwarding_unit
    forwarding_unit forwarding_unit_instance (
@@ -330,7 +389,7 @@ module top (
 		.clk(clk),
      	.reset(reset),
      	.wre_execute(wre_execute),
-		.vector_address_data_execute(address_data_vector_execute),
+		.vector_address_data_execute(vector_address_data_execute),
 		.vector_data_execute(vector_data_execute),
 		.vector_wre_execute(vector_wre_execute),
      	.select_writeback_data_mux_execute(select_writeback_data_mux_execute),
@@ -344,7 +403,7 @@ module top (
      	.wre_memory(wre_memory),
 		.vector_wre_memory(vector_wre_memory),
 		.vector_data_memory(vector_data_memory),
-		.vector_address_data_memory(address_data_vector_memory),
+		.vector_address_data_memory(vector_address_data_memory),
      	.select_writeback_data_mux_memory(select_writeback_data_mux_memory),
      	.write_memory_enable_memory(write_memory_enable_memory),
 		.rs1_memory(rs1_memory),
@@ -357,7 +416,7 @@ module top (
 	// Instancia de la RAM
 	RAM RAM_instance(
 		.address_a(srcA_memory),
-		.address_b(address_data_vector_memory),
+		.address_b(vector_address_data_memory),
       .clock(clk),
       .data_a(srcB_memory),
 		.data_b(vector_data_memory),

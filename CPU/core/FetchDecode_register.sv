@@ -4,19 +4,19 @@ module FetchDecode_register (
     input logic [1:0] flush,
 	 input logic [1:0] nop,
     input logic [15:0] pc,
-    input logic [15:0] instruction_in,
+    input logic [19:0] instruction_in,
     output logic [15:0] pc_decode,
-    output logic [15:0] instruction_out
+    output logic [19:0] instruction_out
 );
 
     // Registros de almacenamiento de 16 bits
-    logic [15:0] instruction_out_reg;
+    logic [19:0] instruction_out_reg;
     logic [15:0] pc_decode_reg;
 
     // Proceso de escritura en los registros
     always_ff @(posedge clk) begin
         if (reset) begin
-            instruction_out_reg <= 16'b0; // Inicializar el registro de instrucción a 0 cuando se activa el reset
+            instruction_out_reg <= 20'b0; // Inicializar el registro de instrucción a 0 cuando se activa el reset
             pc_decode_reg <= 16'b0; // Inicializar el registro del PC a 0 cuando se activa el reset
         end 
 		  if (flush == 2'b00) begin
@@ -30,7 +30,7 @@ module FetchDecode_register (
 				end
         end 
 		  else begin
-            instruction_out_reg <= 16'b0; // Si flush es 1, la salida de la instrucción es 0
+            instruction_out_reg <= 20'b0; // Si flush es 1, la salida de la instrucción es 0
             pc_decode_reg <= pc; 
 				
         end

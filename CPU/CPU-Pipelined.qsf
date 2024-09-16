@@ -74,35 +74,40 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME cpu_top_tb -section_id cp
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name MIF_FILE memory/RAM.mif
-set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_vector.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/MemoryLoader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/shiftRows.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/shiftRows_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE top.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/PC_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/FetchDecode_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/ROM_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/Fetch_Stage_tb.sv
 set_global_assignment -name MIF_FILE memory/ROM.mif
-set_global_assignment -name QIP_FILE memory/ROM.qip
-set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_scalar.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/controlUnit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/DecodeExecute_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/ALU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/ExecuteMemory_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/MemoryWriteback_register.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/Add_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/signExtend.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/comparator_branch.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/mux_3inputs.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/hazard_detection_unit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/forwarding_unit.sv
+set_global_assignment -name MIF_FILE memory/RAM.mif
 set_global_assignment -name SYSTEMVERILOG_FILE testbenches/cpu_top_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/zeroExtend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/signExtend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_vector.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_scalar.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/PC_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/mux_3inputs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/MemoryWriteback_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/MemoryLoader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/hazard_detection_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/forwarding_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/FetchDecode_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/ExecuteMemory_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/DecodeExecute_register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/controlUnit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/comparator_branch.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/adder.sv
+set_global_assignment -name QIP_FILE memory/ROM.qip
+set_global_assignment -name SOURCE_FILE memory/ROM.cmp
 set_global_assignment -name QIP_FILE memory/RAM.qip
+set_global_assignment -name SOURCE_FILE memory/RAM.cmp
+set_global_assignment -name EDA_TEST_BENCH_NAME shiftRows_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftRows_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftRows_tb -section_id shiftRows_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Fetch_Stage_tb.sv -section_id Fetch_Stage_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/ROM_tb.sv -section_id ROM_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Add_tb.sv -section_id Add_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/cpu_top_tb.sv -section_id cpu_top_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/shiftRows_tb.sv -section_id shiftRows_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

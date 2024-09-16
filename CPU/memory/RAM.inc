@@ -16,16 +16,16 @@
 
 FUNCTION RAM 
 (
-	address_a[11..0],
-	address_b[8..0],
+	address_a[15..0],
+	address_b[11..0],
 	clock,
-	data_a[15..0],
+	data_a[7..0],
 	data_b[127..0],
 	wren_a,
 	wren_b
 )
 
 RETURNS (
-	q_a[15..0],
+	q_a[7..0],
 	q_b[127..0]
 );

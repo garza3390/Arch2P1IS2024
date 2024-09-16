@@ -2,58 +2,58 @@ module ExecuteMemory_register (
    input logic clk,
    input logic reset,
    input logic wre_execute,
-	input logic [7:0] vector_address_data_execute,
+	input logic [11:0] vector_address_data_execute,
 	input logic [127:0] vector_data_execute,
    input logic vector_wre_execute,
    input logic select_writeback_data_mux_execute,
    input logic write_memory_enable_execute,
 	input logic [3:0] rs1_execute,
    input logic [3:0] rs2_execute,
-   input logic [15:0] ALUresult_in,
-   input logic [15:0] srcA_execute,
-   input logic [15:0] srcB_execute,
-   input logic [15:0] rd_execute,
+   input logic [7:0] ALUresult_in,
+   input logic [7:0] srcA_execute,
+   input logic [7:0] srcB_execute,
+   input logic [4:0] rd_execute,
    output logic wre_memory,
 	output logic [127:0] vector_data_memory,
-	output logic [7:0] vector_address_data_memory,
+	output logic [11:0] vector_address_data_memory,
    output logic vector_wre_memory,
    output logic select_writeback_data_mux_memory,
    output logic write_memory_enable_memory,
 	output logic [3:0] rs1_memory,
    output logic [3:0] rs2_memory,
-   output logic [15:0] ALUresult_out,
-   output logic [15:0] srcA_memory,
-   output logic [15:0] srcB_memory,
-   output logic [15:0] rd_memory
+   output logic [7:0] ALUresult_out,
+   output logic [7:0] srcA_memory,
+   output logic [7:0] srcB_memory,
+   output logic [4:0] rd_memory
 );
     // Registros internos
-	logic [3:0] rs1;
-	logic [3:0] rs2;
-   logic [15:0] ALUresult;
+	logic [4:0] rs1;
+	logic [4:0] rs2;
+   logic [7:0] ALUresult;
    logic wre;
-	logic [7:0] vector_address_data;
+	logic [11:0] vector_address_data;
 	logic [127:0] vector_data;
    logic vector_wre;
    logic select_writeback_data_mux;
    logic write_memory_enable;
-   logic [15:0] srcA;
-   logic [15:0] srcB;
-   logic [15:0] rd;
+   logic [7:0] srcA;
+   logic [7:0] srcB;
+   logic [4:0] rd;
    // Proceso de escritura en el registro
    always_ff @(posedge clk) begin
 		if (reset) begin
-			rs1 <= 16'b0;
-			rs2 <= 16'b0;
-         ALUresult <= 16'b0;
+			rs1 <= 5'b0;
+			rs2 <= 5'b0;
+         ALUresult <= 8'b0;
          wre <= 1'b0;
-			vector_address_data <= 8'b0;
-			vector_data <= 127'b0;
+			vector_address_data <= 12'b0;
+			vector_data <= 128'b0;
          vector_wre <= 1'b0;
          select_writeback_data_mux <= 1'b0;
          write_memory_enable <= 1'b0;
-         srcA <= 16'b0;
-         srcB <= 16'b0;
-         rd <= 16'b0;
+         srcA <= 8'b0;
+         srcB <= 8'b0;
+         rd <= 5'b0;
 		end else begin
 			rs1 <= rs1_execute;
 			rs2 <= rs2_execute;

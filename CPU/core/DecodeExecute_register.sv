@@ -2,34 +2,34 @@ module DecodeExecute_register (
    input logic clk,
    input logic reset,
    input logic [15:0] nop_mux_output_in,	 
-   input logic [15:0] srcA_in,
-   input logic [15:0] srcB_in,
-	input logic [127:0] srcA_vector_in,
-   input logic [127:0] srcB_vector_in,
-	input logic [3:0] rs1_decode,
-	input logic [3:0] rs2_decode,
-	input logic [3:0] rd_decode,
+   input logic [7:0] srcA_in,
+   input logic [7:0] srcB_in,
+	input logic [7:0] srcA_vector_in,
+   input logic [7:0] srcB_vector_in,
+	input logic [4:0] rs1_decode,
+	input logic [4:0] rs2_decode,
+	input logic [4:0] rd_decode,
    output logic wre_execute,
    output logic vector_wre_execute,
    output logic write_memory_enable_execute,
    output logic [1:0] select_writeback_data_mux_execute,
    output logic [3:0] aluOp_execute,
-   output logic [15:0] srcA_out,
-   output logic [15:0] srcB_out,
-	output logic [127:0] srcA_vector_out,
-   output logic [127:0] srcB_vector_out,
-	output logic [3:0] rs1_execute,
-	output logic [3:0] rs2_execute,
-	output logic [3:0] rd_execute,
+   output logic [7:0] srcA_out,
+   output logic [7:0] srcB_out,
+	output logic [7:0] srcA_vector_out,
+   output logic [7:0] srcB_vector_out,
+	output logic [4:0] rs1_execute,
+	output logic [4:0] rs2_execute,
+	output logic [4:0] rd_execute,
 	output logic load_instruction
 );
-   logic [15:0] srcA;
-   logic [15:0] srcB;
-	logic [15:0] srcA_vector;
-   logic [15:0] srcB_vector;
-	logic [3:0] rs1;
-	logic [3:0] rs2;
-	logic [3:0] rd;
+   logic [7:0] srcA;
+   logic [7:0] srcB;
+	logic [7:0] srcA_vector;
+   logic [7:0] srcB_vector;
+	logic [4:0] rs1;
+	logic [4:0] rs2;
+	logic [4:0] rd;
 	logic load;
    always_ff @(posedge clk) begin
 		if (reset) begin
@@ -37,14 +37,14 @@ module DecodeExecute_register (
          write_memory_enable_execute <= 1'b0;
          select_writeback_data_mux_execute <= 2'b00;
          aluOp_execute <= 4'b0;
-         srcA <= 16'b0;
-         srcB <= 16'b0;
-			srcA_vector <= 16'b0;
-         srcB_vector <= 16'b0;
-			rs1 <= 4'b0;
-			rs2 <= 4'b0;
-			rd <= 4'b0;
-			load <= 4'b0;
+         srcA <= 8'b0;
+         srcB <= 8'b0;
+			srcA_vector <= 8'b0;
+         srcB_vector <= 8'b0;
+			rs1 <= 5'b0;
+			rs2 <= 5'b0;
+			rd <= 5'b0;
+			load <= 5'b0;
       end else begin
          vector_wre_execute <= nop_mux_output_in[9];
          wre_execute <= nop_mux_output_in[7];

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, Text
 import subprocess
+
 def load_file_content(filepath):
     try:
         with open(filepath, 'r') as file:
@@ -9,6 +10,7 @@ def load_file_content(filepath):
         return f"Error: No se encontró el archivo {filepath}"
     except Exception as e:
         return f"Error al abrir {filepath}: {e}"
+    
 root = tk.Tk()
 root.title("AES Encryption Debugger")
 root.geometry("80x60+100+100")  # Para garantizar que los tamaños se adapten

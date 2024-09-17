@@ -1,6 +1,6 @@
 module hazard_detection_unit(
 	 input logic [4:0] opcode,
-    input logic [3:0] rd_load_execute,
+    input logic [4:0] rd_load_execute,
     input logic load_instruction,
 	 input logic [7:0] regfile_data_1,
 	 input logic [7:0] regfile_data_2,

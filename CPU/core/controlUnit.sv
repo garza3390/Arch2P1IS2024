@@ -1,5 +1,5 @@
 module controlUnit (
-    input logic [3:0] opCode,
+    input logic [4:0] opCode,
 	 output logic [15:0] control_signals // salida concatenada
 );
 	logic wre;	// write register enable

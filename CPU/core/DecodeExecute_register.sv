@@ -4,8 +4,8 @@ module DecodeExecute_register (
    input logic [15:0] nop_mux_output_in,	 
    input logic [7:0] srcA_in,
    input logic [7:0] srcB_in,
-	input logic [7:0] srcA_vector_in,
-   input logic [7:0] srcB_vector_in,
+	input logic [127:0] srcA_vector_in,
+   input logic [127:0] srcB_vector_in,
 	input logic [4:0] rs1_decode,
 	input logic [4:0] rs2_decode,
 	input logic [4:0] rd_decode,
@@ -16,8 +16,8 @@ module DecodeExecute_register (
    output logic [3:0] aluOp_execute,
    output logic [7:0] srcA_out,
    output logic [7:0] srcB_out,
-	output logic [7:0] srcA_vector_out,
-   output logic [7:0] srcB_vector_out,
+	output logic [127:0] srcA_vector_out,
+   output logic [127:0] srcB_vector_out,
 	output logic [4:0] rs1_execute,
 	output logic [4:0] rs2_execute,
 	output logic [4:0] rd_execute,
@@ -25,8 +25,8 @@ module DecodeExecute_register (
 );
    logic [7:0] srcA;
    logic [7:0] srcB;
-	logic [7:0] srcA_vector;
-   logic [7:0] srcB_vector;
+	logic [127:0] srcA_vector;
+   logic [127:0] srcB_vector;
 	logic [4:0] rs1;
 	logic [4:0] rs2;
 	logic [4:0] rd;

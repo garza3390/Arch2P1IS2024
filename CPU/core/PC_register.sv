@@ -1,7 +1,7 @@
 module PC_register (
     input logic clk, 
     input logic reset,
-    input logic nop,
+    input logic [1:0] nop,
     input logic [15:0] address_in,
     output logic [15:0] address_out
 );

@@ -1,7 +1,7 @@
 module comparator_branch (
     input logic [4:0] opCode,
-    input logic [15:0] rs1_value,
-    input logic [15:0] rs2_value,
+    input logic [7:0] rs1_value,
+    input logic [7:0] rs2_value,
     output logic [1:0] select_pc_mux
 );
 

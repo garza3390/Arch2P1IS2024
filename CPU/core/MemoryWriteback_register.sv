@@ -3,7 +3,7 @@ module MemoryWriteback_register (
 	input logic reset,
 	input logic wre_memory,
 	input logic vector_wre_memory,
-	input logic select_writeback_data_mux_memory,
+	input logic [1:0] select_writeback_data_mux_memory,
 	input logic [4:0] rs1_memory,
 	input logic [4:0] rs2_memory,
 	input logic [4:0] rd_memory, 
@@ -15,7 +15,7 @@ module MemoryWriteback_register (
 	output logic [7:0] calc_data_out,
    output logic wre_writeback,
 	output logic vector_wre_writeback,
-	output logic select_writeback_data_mux_writeback,
+	output logic [1:0] select_writeback_data_mux_writeback,
 	output logic [4:0] rs1_writeback,
 	output logic [4:0] rs2_writeback,
 	output logic [4:0] rd_writeback

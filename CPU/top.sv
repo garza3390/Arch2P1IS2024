@@ -20,9 +20,9 @@ module top (
 	logic [15:0] nop_mux_output;
 	logic [1:0] select_nop_mux;
 	// banco de registros
-	logic [7:0] writeback_data;
+	logic [15:0] writeback_data;
 	logic wre_writeback;
-	logic [7:0] rd1,rd2,rd3;
+	logic [15:0] rd1,rd2,rd3;
 	// extensor de signo
 	logic [15:0] extended_label;
 	// sumador branch
@@ -450,6 +450,7 @@ module top (
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
+	
 	// Instancia del MUX de writeback
 	mux_2inputs_8bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),

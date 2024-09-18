@@ -8,611 +8,611 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/simulation/modelsim
+Z0 dC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/simulation/modelsim
 vadder_16
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1726609732
+Z2 !s110 1726629410
 !i10b 1
 !s100 7D?YT?WoBiTT8N@aKlLJY0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IE<XAYodBl:fajAj8;0FdH1
+IUlg4BI<ARPb5XN9<N3LFn2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1726605808
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_16.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_16.sv
+Z5 w1726626080
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv
 !i122 18
-Z5 L0 1 7
-Z6 OV;L;2020.1;71
+Z6 L0 1 7
+Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1726609732.000000
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_16.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_16.sv|
+Z8 !s108 1726629410.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv|
 !i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core
-Z10 tCvgOpt 0
+Z9 o-sv -work work
+Z10 !s92 -sv -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core}
+Z11 tCvgOpt 0
 vadder_8bits
 R1
 R2
 !i10b 1
 !s100 7AAjinc5^h:?^=<[XBU?N0
 R3
-IcFUk4O[QWaBJ9MDB;g@?@0
+IM0XTe3fW7Td5ZmaUSR4_D0
 R4
 S1
 R0
-w1726606284
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_8bits.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_8bits.sv
-!i122 19
 R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv
+!i122 19
 R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_8bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/adder_8bits.sv|
-!i113 1
 R8
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv|
+!i113 1
 R9
 R10
+R11
 vALU
 R1
-R2
+Z12 !s110 1726629409
 !i10b 1
 !s100 91zNKe4gcm>bB7DKe7d:71
 R3
-IQBLa[kG`SgY0lmW<RJlIQ1
+IiRGU8dllLX1``Yd7?VDk_0
 R4
 S1
 R0
-w1726606305
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ALU.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ALU.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv
 !i122 17
-Z11 L0 1 23
-R6
+Z13 L0 1 23
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ALU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ALU.sv|
+Z14 !s108 1726629409.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@a@l@u
 vcomparator_branch
 R1
-R2
+R12
 !i10b 1
-!s100 UGNAf8NCWzYKQ9kDffzIP3
+!s100 Z1ajhjVzMfAclKnBD1ZL?0
 R3
-I1ez92dAPnd3Z_5X`_=lYZ2
+Ia^4CC0JTHD70cRI5In1eB3
 R4
 S1
 R0
-w1726604026
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/comparator_branch.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/comparator_branch.sv
+w1726628178
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv
 !i122 16
 L0 1 25
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/comparator_branch.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/comparator_branch.sv|
+R14
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vcontrolUnit
 R1
-R2
+Z15 !s110 1726629408
 !i10b 1
 !s100 2F1g93>BQlDmQCP=_@Tb[1
 R3
-I>zAkBnf;goQMTJh1GjBR@1
+IJnoVzW4;S;O^dE3DlO@l[1
 R4
 S1
 R0
-w1726606533
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/controlUnit.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/controlUnit.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv
 !i122 15
 L0 1 78
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/controlUnit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/controlUnit.sv|
+Z16 !s108 1726629408.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv|
 !i113 1
-R8
 R9
 R10
+R11
 ncontrol@unit
 vcpu_top_tb
 R1
-Z12 !s110 1726609733
+!s110 1726629412
 !i10b 1
-!s100 3Ck_zP^zNRNSc[Q5nzY_V2
+!s100 iOmFOSWJc4I_6?k9^UUbY2
 R3
-Ifll>C9A2g5LZ:3kIP6<iI2
+Inc@=[2oo[gUb>P@ZQbAk13
 R4
 S1
 R0
-w1726609676
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv
+w1726629223
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv
 !i122 22
-L0 2 473
-R6
+L0 2 482
+R7
 r1
 !s85 0
 31
-Z13 !s108 1726609733.000000
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
+!s108 1726629412.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
 !i113 1
-R8
-!s92 -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches
-R10
+R9
+!s92 -sv -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches}
+R11
 vDecodeExecute_register
 R1
-R2
+R15
 !i10b 1
-!s100 79dAdz`4D?b4RbAbA?2o>1
+!s100 n5ASg@z=B9eUfnN_JZTl`1
 R3
-IG4DSd4_^Jjz1dE`DiJTh41
+I]Pi`MdknPc;9O3mcRhfXz1
 R4
 S1
 R0
-w1726609497
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv
+w1726628550
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv
 !i122 14
 L0 1 72
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
+R16
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@decode@execute_register
 vExecuteMemory_register
 R1
-R2
+R15
 !i10b 1
 !s100 _QQUOB[5Uo8o474Hg9T?^0
 R3
-I[bUeKCPHh`6`>^9DF;XZA3
+IXOeG]bzdh1Qcc0Ua>?cjd0
 R4
 S1
 R0
-w1726609262
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv
 !i122 13
 L0 1 85
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
+Z17 !s108 1726629407.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@execute@memory_register
 vFetchDecode_register
 R1
-R2
+Z18 !s110 1726629407
 !i10b 1
 !s100 TGYNG44c^Ie>ke@b@672b0
 R3
-I:mb?Vm8;UJmjY^8dz^8?]2
+IAk>fRoCZjK@>Y96i9^eSG1
 R4
 S1
 R0
-Z14 w1726601682
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/FetchDecode_register.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/FetchDecode_register.sv
+Z19 w1726530057
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv
 !i122 12
 L0 1 43
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
+R17
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@fetch@decode_register
 vforwarding_unit
 R1
-R2
+R18
 !i10b 1
 !s100 0U>_MQ8_?:IjiDgTNgWdg1
 R3
-IdFkRXOdSDKE:gfCZNNgPE1
+I538nZoVaE]OFO6BQ3GNG31
 R4
 S1
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/forwarding_unit.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/forwarding_unit.sv
+R19
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv
 !i122 11
 L0 1 48
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
+R17
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vhazard_detection_unit
 R1
-R2
+Z20 !s110 1726629406
 !i10b 1
 !s100 N2Xz?d3Cf8ShIki5hAd8;2
 R3
-I8Q:`mbPGBQ<ZG<cQh>K4<2
+I`8fccPgiXzVnL_Y_4Poih3
 R4
 S1
 R0
-w1726606486
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
 !i122 10
 L0 1 32
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
+Z21 !s108 1726629406.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vMemoryLoader
 R1
-R2
+R20
 !i10b 1
 !s100 M9C;gS4U9YT<6P>E:fb]L1
 R3
-IZ`1oA4DH4_^<E`l3@GdTM2
+IRHe2NJl>NcNOJaRciTa<j2
 R4
 S1
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryLoader.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryLoader.sv
+R19
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv
 !i122 9
 L0 1 34
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
+R21
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@memory@loader
 vMemoryWriteback_register
 R1
-R2
+Z22 !s110 1726629405
 !i10b 1
 !s100 `^XIFe9DFFMm4Z7fooYV<1
 R3
-InYb01DH15BdYaYXC;bQj`3
+IWL^]<b?KP>G^LN9FCHB^G0
 R4
 S1
 R0
-w1726609026
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv
 !i122 8
 L0 1 59
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
+Z23 !s108 1726629405.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@memory@writeback_register
 vmux_2inputs_16bits
 R1
-R12
+Z24 !s110 1726629411
 !i10b 1
 !s100 XG5:0nWX6mD19jDg4fZJ^2
 R3
-IN5;kV8MW]kK<Yi2i<K<=h0
+IeeH9lBNACKHO;>USXS`T02
 R4
 S1
 R0
-w1726607724
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
 !i122 20
-Z15 L0 1 15
-R6
+Z25 L0 1 15
+R7
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
-!i113 1
 R8
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
+!i113 1
 R9
 R10
+R11
 vmux_2inputs_8bits
 R1
-R12
+R24
 !i10b 1
-!s100 eW?1n88K1B7A7@Ek`gbem1
+!s100 oH@RRz[?ZAV3z9Gkc`B?13
 R3
-I3BNO1=97oYVXUnEH0Y8>O2
+I6@9BdOhHY540zZ^Ke@Ljb3
 R4
 S1
 R0
-w1726607763
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv
+w1726628932
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv
 !i122 21
-R15
-R6
+R25
+R7
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv|
+!s108 1726629411.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vmux_3inputs
 R1
-R2
+R22
 !i10b 1
 !s100 R`bDbh]QkK;j;l2eLFAXY1
 R3
-IM5Ib5c>M?2[EC2d7QBIfO2
+In3WQT<>0OdW^ZXX`izT5:0
 R4
 S1
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_3inputs.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_3inputs.sv
+R19
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv
 !i122 7
 L0 1 18
-R6
+R7
 r1
 !s85 0
 31
-R7
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_3inputs.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_3inputs.sv|
+R23
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv|
 !i113 1
-R8
 R9
 R10
+R11
 vPC_register
 R1
-R2
+R22
 !i10b 1
 !s100 B>?_bQZYiPR3U>VcD]D4:0
 R3
-IH9kSD>B9QfN27G>4aKdJX2
+IdhM_1z2_SFmVj3J0e9Z1Q3
 R4
 S1
 R0
-w1726606463
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/PC_register.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/PC_register.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv
 !i122 6
 L0 1 28
-R6
+R7
 r1
 !s85 0
 31
-Z16 !s108 1726609731.000000
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/PC_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/PC_register.sv|
+Z26 !s108 1726629404.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@p@c_register
 vRAM
-Z17 !s110 1726609731
+Z27 !s110 1726629402
 !i10b 1
 !s100 zYCWJneEbk26j^LWPiQ=M3
 R3
-IgN3>ZHWRzTDQf36H6]fHQ3
+I_nE2oaH:EVnUZ]^Vbo93f3
 R4
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/RAM.v
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/RAM.v
+R19
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v
 !i122 1
 L0 40 91
-R6
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/RAM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/RAM.v|
+Z28 !s108 1726629402.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v|
 !i113 1
-Z18 o-vlog01compat -work work
-Z19 !s92 -vlog01compat -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory
-R10
+Z29 o-vlog01compat -work work
+Z30 !s92 -vlog01compat -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory}
+R11
 n@r@a@m
 vRegfile_scalar
 R1
-R17
+Z31 !s110 1726629404
 !i10b 1
-!s100 >R09dY_MSd@zD2OH<7L]i3
+!s100 zE^A3dm_h_YfaRDRiMPXA3
 R3
-IHe3SMf:hA6b9Pk6DdKk5T0
+I[Pa1Z4M^Po>zPC0dTNK`?1
 R4
 S1
 R0
-w1726606622
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_scalar.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_scalar.sv
+w1726628957
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv
 !i122 5
 L0 1 13
-R6
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
+R26
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@regfile_scalar
 vRegfile_vector
 R1
-R17
+R31
 !i10b 1
 !s100 ;loUIzZHnJ4h;BE6QjYh32
 R3
-IB1hVV>fR9V>bgio2468cB2
+IBaCFVK=^mVnnR0F6`oKjC2
 R4
 S1
 R0
-w1726604193
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_vector.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_vector.sv
+R5
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv
 !i122 4
-R11
-R6
+R13
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
+Z32 !s108 1726629403.000000
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
 !i113 1
-R8
 R9
 R10
+R11
 n@regfile_vector
 vROM
-R17
+R27
 !i10b 1
 !s100 H@`2l@PiDZlD=dEe72RCi3
 R3
-IYI]GN>Z6c9BeZgjl=bOnb2
+I?Ol6J36Ci4Dd936]3MJ]N2
 R4
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/ROM.v
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/ROM.v
+w1726531895
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v
 !i122 0
 L0 40 61
-R6
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/ROM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/memory/ROM.v|
+R28
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v|
 !i113 1
-R18
-R19
-R10
+R29
+R30
+R11
 n@r@o@m
 vtop
 R1
-R17
+Z33 !s110 1726629403
 !i10b 1
-!s100 RbNOc:9;YegAYcbX[7aak2
+!s100 :7d054g2XMoC1j][N1jA@1
 R3
-Ik0ZfQJV0MdKYk32DWJS:D1
+I3oF^?02J5G^km0L0j6R;22
 R4
 S1
 R0
-w1726608631
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv
+w1726628949
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv
 !i122 2
-L0 1 460
-R6
+L0 1 461
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv|
+R32
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv|
 !i113 1
-R8
-!s92 -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU
-R10
+R9
+!s92 -sv -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU}
+R11
 vzeroExtend
 R1
-R17
+R33
 !i10b 1
 !s100 5aolV5;7S3:MiS@[DIJ^<1
 R3
-I_zDG6P8X9GDVjUFag`FJO3
+Ik8VK87Jc35`XaFjKgjaAQ3
 R4
 S1
 R0
-R14
-8C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/zeroExtend.sv
-FC:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/zeroExtend.sv
+R19
+8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv
+FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv
 !i122 3
 L0 1 6
-R6
+R7
 r1
 !s85 0
 31
-R16
-!s107 C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/zeroExtend.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core|C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/zeroExtend.sv|
+R32
+!s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv|
 !i113 1
-R8
 R9
 R10
+R11
 nzero@extend

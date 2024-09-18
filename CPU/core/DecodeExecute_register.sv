@@ -2,8 +2,8 @@ module DecodeExecute_register (
    input logic clk,
    input logic reset,
    input logic [15:0] nop_mux_output_in,	 
-   input logic [7:0] srcA_in,
-   input logic [7:0] srcB_in,
+   input logic [15:0] srcA_in,
+   input logic [15:0] srcB_in,
 	input logic [127:0] srcA_vector_in,
    input logic [127:0] srcB_vector_in,
 	input logic [4:0] rs1_decode,
@@ -23,8 +23,8 @@ module DecodeExecute_register (
 	output logic [4:0] rd_execute,
 	output logic load_instruction
 );
-   logic [7:0] srcA;
-   logic [7:0] srcB;
+   logic [15:0] srcA;
+   logic [15:0] srcB;
 	logic [127:0] srcA_vector;
    logic [127:0] srcB_vector;
 	logic [4:0] rs1;
@@ -37,8 +37,8 @@ module DecodeExecute_register (
          write_memory_enable_execute <= 1'b0;
          select_writeback_data_mux_execute <= 2'b00;
          aluOp_execute <= 4'b0;
-         srcA <= 8'b0;
-         srcB <= 8'b0;
+         srcA <= 16'b0;
+         srcB <= 16'b0;
 			srcA_vector <= 8'b0;
          srcB_vector <= 8'b0;
 			rs1 <= 5'b0;

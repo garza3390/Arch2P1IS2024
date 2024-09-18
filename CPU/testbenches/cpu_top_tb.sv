@@ -20,9 +20,9 @@ module cpu_top_tb;
 	logic [15:0] nop_mux_output;
 	logic [1:0] select_nop_mux;
 	// banco de registros
-	logic [7:0] writeback_data;
+	logic [15:0] writeback_data;
 	logic wre_writeback;
-	logic [7:0] rd1,rd2,rd3;
+	logic [15:0] rd1,rd2,rd3;
 	// extensor de signo
 	logic [15:0] extended_label;
 	// sumador branch
@@ -54,7 +54,7 @@ module cpu_top_tb;
 	logic [1:0] select_writeback_data_mux_memory;
 	logic write_memory_enable_memory;
 	logic [7:0] alu_result_memory;
-	logic [15:0] srcA_memory;
+	logic [7:0] srcA_memory;
 	logic [7:0] srcB_memory;
 	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
 	logic [4:0] rs2_memory; // entrada a la unidad de adelantamiento
@@ -78,7 +78,14 @@ module cpu_top_tb;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute;
 	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data, vector_data_from_memory;
 	logic [11:0] vector_address_execute, vector_address_memory;
-	// Instancia del sumador del PC
+	
+	
+	
+	
+	
+	
+	
+		// Instancia del sumador del PC
 	adder_16 pc_add (
 		.a(pc_mux_output),
 		.b(pc_offset),
@@ -447,6 +454,7 @@ module cpu_top_tb;
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
+	
 	// Instancia del MUX de writeback
 	mux_2inputs_8bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
@@ -454,6 +462,7 @@ module cpu_top_tb;
       .select(select_writeback_data_mux_writeback),
       .out(writeback_data)
 	);
+	
 	// Proceso de prueba
 	always #10 clk = ~clk;
 	initial begin

@@ -2,6 +2,7 @@
 module cpu_top_tb;
 	logic clk;
 	logic reset;
+	
 	// registro PC
 	logic [15:0] pc_mux_output;
 	logic [15:0] pc_address;

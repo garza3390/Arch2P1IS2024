@@ -1,7 +1,7 @@
 import copy
 
-from ShiftRows import colocar_final
-from SubBytes import digitos_SBOX
+from encriptador.ShiftRows import colocar_final
+from encriptador.SubBytes import digitos_SBOX
 from operaciones import texto_a_matriz_hex, print_hex, fila_hex
 
 # Constantes de Rcon
@@ -30,7 +30,7 @@ def gensubkey(key, rep):
 
     #print("paso 1")
     keyg = copy.deepcopy(key[3])
-    fila_hex(keyg)
+    #fila_hex(keyg)
     colocar_final(keyg)
 
     #print("paso 2")

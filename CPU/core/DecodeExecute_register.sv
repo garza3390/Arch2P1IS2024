@@ -1,7 +1,7 @@
 module DecodeExecute_register (
    input logic clk,
    input logic reset,
-   input logic [15:0] nop_mux_output_in,	 
+   input logic [19:0] nop_mux_output_in,	 
    input logic [15:0] srcA_in,
    input logic [15:0] srcB_in,
 	input logic [127:0] srcA_vector_in,

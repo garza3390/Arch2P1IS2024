@@ -15,7 +15,7 @@ module top (
 	logic [19:0] instruction_fetch, instruction_decode;
 	logic [1:0] flush;
 	// unidad de control
-	logic [15:0] control_signals;
+	logic [19:0] control_signals;
 	// mux de la unidad de control
 	logic [15:0] nop_mux_output;
 	logic [1:0] select_nop_mux;
@@ -116,7 +116,7 @@ module top (
       .reset(reset),
       .flush(flush),
 		.nop(select_nop_mux),
-      .pc(pc_address),
+      .pc(pc_mux_output),
       .instruction_in(instruction_fetch),
       .pc_decode(pc_decode),
       .instruction_out(instruction_decode)
@@ -141,7 +141,7 @@ module top (
       .control_signals(control_signals)
 	);
 	// Instancia del MUX de NOP
-	mux_2inputs_16bits mux_2inputs_nop (
+	mux_2inputs_20bits mux_2inputs_nop (
 		.data0(control_signals),
       .data1(16'b0),
       .select(select_nop_mux),
@@ -302,7 +302,6 @@ module top (
       .q_a(data_from_memory),
 		.q_b(vector_data_from_memory)
 	);
-	
 	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
@@ -326,11 +325,17 @@ module top (
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
-	
 	// Instancia del MUX de writeback
 	mux_2inputs_8bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
       .data1(alu_result_writeback),
+      .select(select_writeback_data_mux_writeback),
+      .out(writeback_data)
+	);
+	// Instancia del MUX de writeback
+	mux_2inputs_128bits mux_vector_2inputs_writeback (
+		.data0(vector_writeback_data),
+      .data1(-----),
       .select(select_writeback_data_mux_writeback),
       .out(writeback_data)
 	);

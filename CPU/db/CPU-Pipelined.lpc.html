@@ -16,15 +16,31 @@
 <TH>Output only Bidir</TH>
 </TR>
 <TR >
+<TD >mux_vector_2inputs_writeback</TD>
+<TD >258</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >128</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
 <TD >mux_2inputs_writeback</TD>
 <TD >34</TD>
-<TD >16</TD>
+<TD >8</TD>
 <TD >0</TD>
+<TD >8</TD>
 <TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
+<TD >8</TD>
+<TD >8</TD>
+<TD >8</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -33,14 +49,14 @@
 </TR>
 <TR >
 <TD >MemoryWriteback_register_instance</TD>
-<TD >165</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >163</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >311</TD>
+<TD >16</TD>
+<TD >112</TD>
+<TD >16</TD>
+<TD >197</TD>
+<TD >16</TD>
+<TD >16</TD>
+<TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -162,13 +178,13 @@
 <TR >
 <TD >RAM_instance</TD>
 <TD >167</TD>
-<TD >8</TD>
+<TD >112</TD>
 <TD >0</TD>
-<TD >8</TD>
+<TD >112</TD>
 <TD >136</TD>
-<TD >8</TD>
-<TD >8</TD>
-<TD >8</TD>
+<TD >112</TD>
+<TD >112</TD>
+<TD >112</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -177,14 +193,14 @@
 </TR>
 <TR >
 <TD >ExecuteMemory_register_instance</TD>
-<TD >194</TD>
-<TD >17</TD>
+<TD >193</TD>
+<TD >263</TD>
 <TD >1</TD>
-<TD >17</TD>
-<TD >192</TD>
-<TD >17</TD>
-<TD >17</TD>
-<TD >17</TD>
+<TD >263</TD>
+<TD >191</TD>
+<TD >263</TD>
+<TD >263</TD>
+<TD >263</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -208,7 +224,23 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_16|u_adder</TD>
+<TD >ALU_vectorial_instance|MemoryLoader_instance</TD>
+<TD >141</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >140</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >ALU_vectorial_instance|ALU_vectorial_16|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -224,15 +256,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_16</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_16</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -240,7 +272,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_15|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_15|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -256,15 +288,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_15</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_15</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -272,7 +304,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_14|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_14|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -288,15 +320,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_14</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_14</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -304,7 +336,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_13|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_13|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -320,15 +352,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_13</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_13</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -336,7 +368,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_12|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_12|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -352,15 +384,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_12</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_12</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -368,7 +400,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_11|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_11|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -384,15 +416,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_11</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_11</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -400,7 +432,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_10|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_10|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -416,15 +448,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_10</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_10</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -432,7 +464,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_9|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_9|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -448,15 +480,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_9</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_9</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -464,7 +496,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_8|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_8|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -480,15 +512,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_8</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_8</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -496,7 +528,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_7|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_7|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -512,15 +544,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_7</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_7</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -528,7 +560,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_6|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_6|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -544,15 +576,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_6</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_6</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -560,7 +592,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_5|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_5|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -576,15 +608,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_5</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_5</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -592,7 +624,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_4|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_4|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -608,15 +640,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_4</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_4</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -624,7 +656,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_3|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_3|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -640,15 +672,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_3</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_3</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -656,7 +688,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_2|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_2|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -672,15 +704,15 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_2</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_2</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -688,7 +720,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_1|u_adder</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_1|u_adder</TD>
 <TD >16</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -704,15 +736,31 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >ALU_vectorial_1</TD>
-<TD >20</TD>
+<TD >ALU_vectorial_instance|ALU_vectorial_1</TD>
+<TD >36</TD>
+<TD >24</TD>
+<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
-<TD >8</TD>
 <TD >0</TD>
 <TD >0</TD>
+</TR>
+<TR >
+<TD >ALU_vectorial_instance</TD>
+<TD >260</TD>
+<TD >128</TD>
 <TD >0</TD>
+<TD >128</TD>
+<TD >128</TD>
+<TD >128</TD>
+<TD >128</TD>
+<TD >128</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -737,14 +785,14 @@
 </TR>
 <TR >
 <TD >ALU_escalar</TD>
-<TD >20</TD>
+<TD >36</TD>
+<TD >24</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >8</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >24</TD>
+<TD >16</TD>
+<TD >24</TD>
+<TD >24</TD>
+<TD >24</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -753,14 +801,14 @@
 </TR>
 <TR >
 <TD >mux_alu_forward_B</TD>
-<TD >27</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >51</TD>
 <TD >8</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >8</TD>
+<TD >16</TD>
+<TD >8</TD>
+<TD >8</TD>
+<TD >8</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -769,14 +817,14 @@
 </TR>
 <TR >
 <TD >mux_alu_forward_A</TD>
-<TD >27</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >51</TD>
 <TD >8</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
+<TD >8</TD>
+<TD >16</TD>
+<TD >8</TD>
+<TD >8</TD>
+<TD >8</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -785,14 +833,14 @@
 </TR>
 <TR >
 <TD >DecodeExecute_register_instance</TD>
-<TD >321</TD>
-<TD >256</TD>
-<TD >279</TD>
-<TD >256</TD>
-<TD >297</TD>
-<TD >256</TD>
-<TD >256</TD>
-<TD >256</TD>
+<TD >325</TD>
+<TD >0</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >320</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -809,22 +857,6 @@
 <TD >1</TD>
 <TD >1</TD>
 <TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >MemoryLoader_instance</TD>
-<TD >141</TD>
-<TD >12</TD>
-<TD >0</TD>
-<TD >12</TD>
-<TD >140</TD>
-<TD >12</TD>
-<TD >12</TD>
-<TD >12</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -897,14 +929,14 @@
 </TR>
 <TR >
 <TD >mux_2inputs_nop</TD>
-<TD >34</TD>
-<TD >16</TD>
+<TD >42</TD>
+<TD >20</TD>
 <TD >0</TD>
-<TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
-<TD >16</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -914,13 +946,13 @@
 <TR >
 <TD >control_unit_instance</TD>
 <TD >5</TD>
-<TD >10</TD>
-<TD >0</TD>
-<TD >10</TD>
-<TD >16</TD>
-<TD >10</TD>
-<TD >10</TD>
-<TD >10</TD>
+<TD >20</TD>
+<TD >5</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
+<TD >20</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>

@@ -246,7 +246,7 @@ module top (
       .result(alu_result_execute)
 	);
 	// Instancia de la ALU vectorial
-	ALU ALU_vectorial(
+	ALU_vectorial ALU_vectorial_instance(
 		.aluVectorOp(aluVectorOp_execute),       
       .srcA_vector(vector_srcA_execute),
       .srcB_vector(vector_srcB_execute),

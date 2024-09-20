@@ -32,113 +32,113 @@ module ALU_vectorial (
 	
 	ALU ALU_vectorial_1 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[7:0]),
-      .srcB(vector_srcB_execute[7:0]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[7:0]),
+      .srcB(srcB_vector[7:0]),
+      .result(vector_alu_result_1)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_2 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[15:8]),
-      .srcB(vector_srcB_execute[15:8]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[15:8]),
+      .srcB(srcB_vector[15:8]),
+      .result(vector_alu_result_2)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_3 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[23:16]),
-      .srcB(vector_srcB_execute[23:16]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[23:16]),
+      .srcB(srcB_vector[23:16]),
+      .result(vector_alu_result_3)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_4 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[31:24]),
-      .srcB(vector_srcB_execute[31:24]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[31:24]),
+      .srcB(srcB_vector[31:24]),
+      .result(vector_alu_result_4)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_5 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[39:32]),
-      .srcB(vector_srcB_execute[39:32]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[39:32]),
+      .srcB(srcB_vector[39:32]),
+      .result(vector_alu_result_5)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_6 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[47:40]),
-      .srcB(vector_srcB_execute[47:40]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[47:40]),
+      .srcB(srcB_vector[47:40]),
+      .result(vector_alu_result_6)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_7 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[55:48]),
-      .srcB(vector_srcB_execute[55:48]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[55:48]),
+      .srcB(srcB_vector[55:48]),
+      .result(vector_alu_result_7)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_8 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[63:56]),
-      .srcB(vector_srcB_execute[63:56]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[63:56]),
+      .srcB(srcB_vector[63:56]),
+      .result(vector_alu_result_8)
 	);
 	ALU ALU_vectorial_9 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[71:64]),
-      .srcB(vector_srcB_execute[71:64]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[71:64]),
+      .srcB(srcB_vector[71:64]),
+      .result(vector_alu_result_9)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_10 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[79:72]),
-      .srcB(vector_srcB_execute[79:72]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[79:72]),
+      .srcB(srcB_vector[79:72]),
+      .result(vector_alu_result_10)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_11 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[87:80]),
-      .srcB(vector_srcB_execute[87:80]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[87:80]),
+      .srcB(srcB_vector[87:80]),
+      .result(vector_alu_result_11)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_12 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[95:88]),
-      .srcB(vector_srcB_execute[95:88]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[95:88]),
+      .srcB(srcB_vector[95:88]),
+      .result(vector_alu_result_12)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_13 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[103:96]),
-      .srcB(vector_srcB_execute[103:96]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[103:96]),
+      .srcB(srcB_vector[103:96]),
+      .result(vector_alu_result_13)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_14 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[111:104]),
-      .srcB(vector_srcB_execute[111:104]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[111:104]),
+      .srcB(srcB_vector[111:104]),
+      .result(vector_alu_result_14)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_15 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[119:112]),
-      .srcB(vector_srcB_execute[119:112]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[119:112]),
+      .srcB(srcB_vector[119:112]),
+      .result(vector_alu_result_15)
 	);
 	// Instancia de la ALU
 	ALU ALU_vectorial_16 (
 		.aluOp(aluVectorOp),       
-      .srcA(vector_writeback_data[127:120]),
-      .srcB(vector_srcB_execute[127:120]),
-      .result(vector_alu_result)
+      .srcA(srcA_vector[127:120]),
+      .srcB(srcB_vector[127:120]),
+      .result(vector_alu_result_16)
 	);
 	
 	

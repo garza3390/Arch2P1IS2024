@@ -1,5 +1,5 @@
 Flow report for CPU-Pipelined
-Thu Sep 19 21:16:41 2024
+Thu Sep 19 22:33:01 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Flow Failed - Thu Sep 19 21:16:41 2024      ;
+; Flow Status                 ; Successful - Thu Sep 19 22:33:01 2024       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; CPU-Pipelined                               ;
 ; Top-level Entity Name       ; top                                         ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/19/2024 21:16:04 ;
+; Start date & time ; 09/19/2024 22:32:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU-Pipelined       ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 260148119377217.172680216304252        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 260148119377217.172680675701052        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ROM_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Fetch_Stage_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shiftRows_tb                      ;
@@ -132,8 +132,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:40     ; 1.0                     ; 4772 MB             ; 00:00:36                           ;
-; Total                  ; 00:00:40     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Elaboration ; 00:00:25     ; 1.0                     ; 4819 MB             ; 00:00:37                           ;
+; Total                  ; 00:00:25     ; --                      ; --                  ; 00:00:37                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

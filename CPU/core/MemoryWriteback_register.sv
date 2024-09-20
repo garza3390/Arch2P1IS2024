@@ -74,14 +74,14 @@ module MemoryWriteback_register (
     // Salidas del registro
    assign wre_writeback = wre;
 	assign vector_wre_writeback = vector_wre;
-	assign [1:0] select_writeback_data_mux_writeback = select_writeback_data_mux;
-	assign [1:0] select_writeback_vector_data_mux_writeback = select_writeback_vector_data_mux;
-	assign [15:0] data_from_memory_out = data_from_memory;
-	assign [127:0] vector_data_from_memory_out = vector_data_from_memory;
-	assign [15:0] calc_data_out = calc_data;
-	assign [15:0] calc_vector_out = calc_vector;
-	assign [4:0] rs1_writeback = rs1;
-	assign [4:0] rs2_writeback = rs2;
-	assign [4:0] rd_writeback = rd;
+	assign select_writeback_data_mux_writeback = select_writeback_data_mux;
+	assign select_writeback_vector_data_mux_writeback = select_writeback_vector_data_mux;
+	assign data_from_memory_out = data_from_memory;
+	assign vector_data_from_memory_out = vector_data_from_memory;
+	assign calc_data_out = calc_data;
+	assign calc_vector_out = calc_vector;
+	assign rs1_writeback = rs1;
+	assign rs2_writeback = rs2;
+	assign rd_writeback = rd;
     
 endmodule

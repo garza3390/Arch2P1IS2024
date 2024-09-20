@@ -29,6 +29,7 @@ module top (
 	logic [15:0] pc_decode;
 	// registro Decode-Execute
 	logic write_memory_enable_a_execute, write_memory_enable_b_execute;
+	logic write_memory_enable_a_memory, write_memory_enable_b_memory;
 	logic [1:0] select_writeback_data_mux_execute, select_writeback_vector_data_mux_execute;
 	logic [3:0] aluOp_execute;
 	logic [4:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
@@ -39,12 +40,7 @@ module top (
 	logic [7:0] alu_src_A;
 	logic [7:0] alu_src_B;
 	logic [7:0] alu_result_execute;
-	logic [7:0] vector_alu_result_1_execute, vector_alu_result_2_execute, vector_alu_result_3_execute, 
-					vector_alu_result_4_execute, vector_alu_result_5_execute, vector_alu_result_6_execute,
-					vector_alu_result_7_execute, vector_alu_result_8_execute, vector_alu_result_9_execute,
-					vector_alu_result_10_execute, vector_alu_result_11_execute, vector_alu_result_12_execute,
-					vector_alu_result_13_execute, vector_alu_result_14_execute, vector_alu_result_15_execute,
-					vector_alu_result_16_execute;
+	
 	// mux's de la alu
 	logic [15:0] srcA_execute;
 	logic [15:0] srcB_execute;
@@ -75,7 +71,7 @@ module top (
 	logic vector_wre_writeback;
 	logic [127:0] vector_rd1, vector_rd2, vector_rd3;
 	logic [4:0] vector_rd_writeback;
-	logic [127:0] vector_srcA_execute, vector_srcB_execute;
+	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
 	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data, vector_data_from_memory;
 	logic [11:0] vector_address_execute, vector_address_memory;
 	logic [127:0] alu_vector_result_execute;
@@ -114,6 +110,7 @@ module top (
       .clock(clk),
       .q(instruction_fetch)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del registro FetchDecode
 	FetchDecode_register FetchDecode_register_instance (
 		.clk(clk),
@@ -125,6 +122,7 @@ module top (
       .pc_decode(pc_decode),
       .instruction_out(instruction_decode)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia de la unidad de detección de riesgos
 	hazard_detection_unit u_hazard_detection (
 		.opcode(instruction_decode[19:15]),
@@ -156,8 +154,8 @@ module top (
 		.label(instruction_decode[14:10]),
 		.ZeroExtLabel(extended_label) 
 	); 
-	// Instancia del sumador de etiquetas de branch
-	adder_16 branch_label_pc_add (
+	// Instancia del restador de etiquetas de branch (para nuestro caso es restador pues para los loops debe devolverse a una posicion anterior)
+	substractor_branch branch_label_pc (
 		.a(pc_decode),
       .b(extended_label),
       .y(branch_address)
@@ -193,6 +191,7 @@ module top (
       .rs2_value(rd2),
       .select_pc_mux(select_pc_mux)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del registro DecodeExecute
 	DecodeExecute_register DecodeExecute_register_instance (
 		.clk(clk),
@@ -222,6 +221,7 @@ module top (
       .rd_execute(rd_execute),
 		.load_instruction(load_instruction)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del MUX de forwarding A
 	mux_3inputs mux_alu_forward_A (
 		.data0(srcA_execute),
@@ -268,6 +268,7 @@ module top (
       .select_forward_mux_A(select_forward_mux_A),
       .select_forward_mux_B(select_forward_mux_B)
     );
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
@@ -275,7 +276,7 @@ module top (
      	.wre_execute(wre_execute),
 		.vector_wre_execute(vector_wre_execute),
 		.ALUresult_in(alu_result_execute),
-		.ALUvectorResult_in(ALUvectorResult_in),
+		.ALUvectorResult_in(alu_vector_result_execute),
 		.select_writeback_data_mux_execute(select_writeback_data_mux_execute),
 		.select_writeback_vector_data_mux_execute(select_writeback_vector_data_mux_execute),
      	.write_memory_enable_a_execute(write_memory_enable_a_execute),
@@ -285,6 +286,7 @@ module top (
 		.srcA_execute(srcA_execute),
      	.srcB_execute(alu_src_B),
 		.rd_execute(rd_execute),
+		.vector_srcB_execute(vector_srcB_execute),
 	
      	.wre_memory(wre_memory),
 		.vector_wre_memory(vector_wre_memory),
@@ -298,15 +300,17 @@ module top (
      	.rs2_memory(rs2_memory),
 		.srcA_memory(srcA_memory),
      	.srcB_memory(srcB_memory),
-     	.rd_memory(rd_memory)
+     	.rd_memory(rd_memory),
+		.vector_srcB_memory(vector_srcB_memory)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia de la RAM
 	RAM RAM_instance(
 		.address_a(srcA_memory), // la direccion de memoria es la misma pero el dato necesario se maneja con las señales de control
 		.address_b(srcA_memory), 
       .clock(clk),
       .data_a(srcB_memory),
-		.data_b(-------),
+		.data_b(vector_srcB_memory),
       .wren_a(write_memory_enable_a_memory),
 		.wren_b(write_memory_enable_b_memory),
       .q_a(data_from_memory),

@@ -57,7 +57,7 @@ module DecodeExecute_register (
 			rs2 <= 5'b0;
 			rd <= 5'b0;
 			
-			load <= 5'b0;
+			load <= 1'b0;
 			wre <= 1'b0;
 			vector_wre <= 1'b0;
 			write_memory_enable_a <= 1'b0;

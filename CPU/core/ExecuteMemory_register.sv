@@ -14,6 +14,8 @@ module ExecuteMemory_register (
    input logic [15:0] srcA_execute,
    input logic [7:0] srcB_execute,
    input logic [4:0] rd_execute,
+	input logic [127:0] vector_srcB_execute,
+	
    output logic wre_memory,
 	output logic vector_wre_memory,
    output logic [15:0] ALUresult_out,
@@ -25,8 +27,9 @@ module ExecuteMemory_register (
 	output logic [4:0] rs1_memory,
    output logic [4:0] rs2_memory,
    output logic [15:0] srcA_memory,
-   output logic [7:0] srcB_memory,
-   output logic [4:0] rd_memory
+   output logic [15:0] srcB_memory,
+   output logic [4:0] rd_memory,
+	output logic [127:0] vector_srcB_memory
 );
 
     // Registros internos
@@ -43,6 +46,7 @@ module ExecuteMemory_register (
 	logic [15:0] srcA;
    logic [15:0] srcB;
    logic [4:0] rd;
+	logic [127:0] vector_srcB;
    
    // Proceso de escritura en el registro
    always_ff @(posedge clk) begin
@@ -60,6 +64,7 @@ module ExecuteMemory_register (
          srcA <= 16'b0;
          srcB <= 16'b0;
          rd <= 5'b0;
+			vector_srcB <= 128'b0;
 						
 		end else begin
 			wre <= wre_execute;
@@ -75,6 +80,7 @@ module ExecuteMemory_register (
          srcA <= srcA_execute;
          srcB <= srcB_execute;
          rd <= rd_execute;
+			vector_srcB <= vector_srcB_execute;
       end
 	end
 	
@@ -82,6 +88,7 @@ module ExecuteMemory_register (
 	assign wre_memory = wre;
 	assign vector_wre_memory = vector_wre;
    assign ALUresult_out = ALUresult;
+	assign ALUvectorResult_out = ALUvectorResult;
    assign select_writeback_data_mux_memory = select_writeback_data_mux;
 	assign select_writeback_vector_data_mux_memory = select_writeback_vector_data_mux;
    assign write_memory_enable_a_memory = write_memory_enable_a;
@@ -91,4 +98,5 @@ module ExecuteMemory_register (
 	assign srcA_memory = srcA;
    assign srcB_memory = srcB;
    assign rd_memory = rd;
+	assign vector_srcB_memory = vector_srcB;
 endmodule

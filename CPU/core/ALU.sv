@@ -7,7 +7,7 @@ module ALU (
 	// Variables para almacenar los resultados de las operaciones
 	logic [15:0] add_result, sub_result;
 	// Instanciar los módulos adder y subtractor
-	adder_8bits u_adder (
+	adder_16 u_adder (
 		.a(srcA),
 		.b(srcB),
 		.y(add_result)
@@ -15,9 +15,9 @@ module ALU (
 	// Selección de la operación basada en ALUop
 	always_comb begin
 		case (aluOp)
-			4'b0000: result = 8'b0; // nop/stall
+			4'b0000: result = 16'b0; // nop/stall
 			4'b0001: result = add_result; // Suma
-			default: result = 8'b0; // Manejo de caso inválido
+			default: result = 16'b0; // Manejo de caso inválido
       endcase
     end
 endmodule

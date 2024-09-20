@@ -4,7 +4,6 @@ module ALU_vectorial (
     input logic [127:0] srcB_vector, // Segundo operando
     output logic [127:0] result_vector // Resultado de la operación
 );
-	logic [127:0] result;
 	logic [7:0] vector_alu_result_1;
 	logic [7:0] vector_alu_result_2;
 	logic [7:0] vector_alu_result_3;
@@ -147,7 +146,6 @@ module ALU_vectorial (
 	
 	
 	MemoryLoader MemoryLoader_instance(
-		.clk(clk),
 		.memory_base(memory_base), 
 		.vector_alu_result_1_execute(vector_alu_result_1),
 		.vector_alu_result_2_execute(vector_alu_result_2),
@@ -174,9 +172,9 @@ module ALU_vectorial (
 	
 	always_comb begin
 		case (aluVectorOp)
-			4'b0000: result = 128'b0; // Si hay un nop/stall el resultado es cero
-			4'b0001: result = vector_data; // provisional, falta definir los resultados
-			default: result = 128'b0; // Manejo de caso inválido, resultado es cero
+			4'b0000: result_vector = 128'b0; // Si hay un nop/stall el resultado es cero
+			4'b0001: result_vector = vector_data; // provisional, falta definir los resultados
+			default: result_vector = 128'b0; // Manejo de caso inválido, resultado es cero
       endcase
     end
 endmodule

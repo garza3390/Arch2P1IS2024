@@ -20,7 +20,7 @@ module MemoryWriteback_register (
 	output logic [15:0] data_from_memory_out,
 	output logic [127:0] vector_data_from_memory_out,
 	output logic [15:0] calc_data_out,
-	output logic [15:0] calc_vector_out,
+	output logic [127:0] calc_vector_out,
 	output logic [4:0] rs1_writeback,
 	output logic [4:0] rs2_writeback,
 	output logic [4:0] rd_writeback

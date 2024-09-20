@@ -12,243 +12,271 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/memory {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:42 on Sep 17,2024
+# Start time: 01:15:36 on Sep 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v 
 # -- Compiling module ROM
 # 
 # Top level modules:
 # 	ROM
-# End time: 21:16:42 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:37 on Sep 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/memory {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:42 on Sep 17,2024
+# Start time: 01:15:37 on Sep 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 21:16:42 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:37 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:43 on Sep 17,2024
+# Start time: 01:15:37 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 21:16:43 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:37 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:43 on Sep 17,2024
+# Start time: 01:15:38 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv 
 # -- Compiling module zeroExtend
 # 
 # Top level modules:
 # 	zeroExtend
-# End time: 21:16:43 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:38 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:43 on Sep 17,2024
+# Start time: 01:15:38 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv 
 # -- Compiling module Regfile_vector
 # 
 # Top level modules:
 # 	Regfile_vector
-# End time: 21:16:44 on Sep 17,2024, Elapsed time: 0:00:01
+# End time: 01:15:38 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:44 on Sep 17,2024
+# Start time: 01:15:38 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv 
 # -- Compiling module Regfile_scalar
 # 
 # Top level modules:
 # 	Regfile_scalar
-# End time: 21:16:44 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:38 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:44 on Sep 17,2024
+# Start time: 01:15:39 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv 
 # -- Compiling module PC_register
 # 
 # Top level modules:
 # 	PC_register
-# End time: 21:16:45 on Sep 17,2024, Elapsed time: 0:00:01
+# End time: 01:15:39 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:45 on Sep 17,2024
+# Start time: 01:15:39 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv 
 # -- Compiling module mux_3inputs
-# ** Warning: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv(14): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	mux_3inputs
-# End time: 21:16:45 on Sep 17,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 01:15:39 on Sep 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:45 on Sep 17,2024
+# Start time: 01:15:39 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv 
 # -- Compiling module MemoryWriteback_register
 # 
 # Top level modules:
 # 	MemoryWriteback_register
-# End time: 21:16:45 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:39 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:46 on Sep 17,2024
+# Start time: 01:15:39 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv 
 # -- Compiling module MemoryLoader
 # 
 # Top level modules:
 # 	MemoryLoader
-# End time: 21:16:46 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:40 on Sep 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:46 on Sep 17,2024
+# Start time: 01:15:40 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv 
 # -- Compiling module hazard_detection_unit
 # 
 # Top level modules:
 # 	hazard_detection_unit
-# End time: 21:16:46 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:40 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:47 on Sep 17,2024
+# Start time: 01:15:40 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv 
 # -- Compiling module forwarding_unit
 # 
 # Top level modules:
 # 	forwarding_unit
-# End time: 21:16:47 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:40 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:47 on Sep 17,2024
+# Start time: 01:15:40 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv 
 # -- Compiling module FetchDecode_register
 # 
 # Top level modules:
 # 	FetchDecode_register
-# End time: 21:16:47 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:40 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:47 on Sep 17,2024
+# Start time: 01:15:41 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv 
 # -- Compiling module ExecuteMemory_register
 # 
 # Top level modules:
 # 	ExecuteMemory_register
-# End time: 21:16:48 on Sep 17,2024, Elapsed time: 0:00:01
+# End time: 01:15:41 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:48 on Sep 17,2024
+# Start time: 01:15:41 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv 
 # -- Compiling module DecodeExecute_register
 # 
 # Top level modules:
 # 	DecodeExecute_register
-# End time: 21:16:48 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:41 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:48 on Sep 17,2024
+# Start time: 01:15:41 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv 
 # -- Compiling module controlUnit
 # 
 # Top level modules:
 # 	controlUnit
-# End time: 21:16:49 on Sep 17,2024, Elapsed time: 0:00:01
+# End time: 01:15:41 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:49 on Sep 17,2024
+# Start time: 01:15:41 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv 
 # -- Compiling module comparator_branch
 # 
 # Top level modules:
 # 	comparator_branch
-# End time: 21:16:49 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:42 on Sep 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:49 on Sep 17,2024
+# Start time: 01:15:42 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv 
 # -- Compiling module ALU
-# ** Warning: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(20): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	ALU
-# End time: 21:16:49 on Sep 17,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 01:15:42 on Sep 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:50 on Sep 17,2024
+# Start time: 01:15:42 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv 
 # -- Compiling module adder_16
 # 
 # Top level modules:
 # 	adder_16
-# End time: 21:16:50 on Sep 17,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:50 on Sep 17,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_8bits.sv 
-# -- Compiling module adder_8bits
-# 
-# Top level modules:
-# 	adder_8bits
-# End time: 21:16:50 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:42 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:50 on Sep 17,2024
+# Start time: 01:15:42 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv 
 # -- Compiling module mux_2inputs_16bits
 # ** Warning: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	mux_2inputs_16bits
-# End time: 21:16:51 on Sep 17,2024, Elapsed time: 0:00:01
+# End time: 01:15:43 on Sep 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:51 on Sep 17,2024
+# Start time: 01:15:43 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv 
 # -- Compiling module mux_2inputs_8bits
 # ** Warning: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	mux_2inputs_8bits
-# End time: 21:16:51 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:43 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:15:43 on Sep 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv 
+# -- Compiling module ALU_vectorial
+# 
+# Top level modules:
+# 	ALU_vectorial
+# End time: 01:15:43 on Sep 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:15:43 on Sep 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv 
+# -- Compiling module mux_2inputs_20bits
+# 
+# Top level modules:
+# 	mux_2inputs_20bits
+# End time: 01:15:44 on Sep 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:15:44 on Sep 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv 
+# -- Compiling module mux_2inputs_128bits
+# 
+# Top level modules:
+# 	mux_2inputs_128bits
+# End time: 01:15:44 on Sep 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:15:44 on Sep 20,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv 
+# -- Compiling module substractor_branch
+# 
+# Top level modules:
+# 	substractor_branch
+# End time: 01:15:44 on Sep 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:16:52 on Sep 17,2024
+# Start time: 01:15:44 on Sep 20,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv 
 # -- Compiling module cpu_top_tb
 # 
 # Top level modules:
 # 	cpu_top_tb
-# End time: 21:16:52 on Sep 17,2024, Elapsed time: 0:00:00
+# End time: 01:15:44 on Sep 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  cpu_top_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" cpu_top_tb 
-# Start time: 21:16:52 on Sep 17,2024
+# Start time: 01:15:45 on Sep 20,2024
 # Loading sv_std.std
 # Loading work.cpu_top_tb
 # Loading work.adder_16
@@ -259,41 +287,148 @@
 # Loading work.FetchDecode_register
 # Loading work.hazard_detection_unit
 # Loading work.controlUnit
+# Loading work.mux_2inputs_20bits
 # Loading work.zeroExtend
+# Loading work.substractor_branch
 # Loading work.Regfile_scalar
 # Loading work.Regfile_vector
-# Loading work.MemoryLoader
 # Loading work.comparator_branch
 # Loading work.DecodeExecute_register
 # Loading work.mux_3inputs
 # Loading work.ALU
-# Loading work.adder_8bits
+# Loading work.ALU_vectorial
+# Loading work.MemoryLoader
 # Loading work.forwarding_unit
 # Loading work.ExecuteMemory_register
 # Loading work.RAM
 # Loading work.MemoryWriteback_register
 # Loading work.mux_2inputs_8bits
+# Loading work.mux_2inputs_128bits
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'regfile_data_1'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv(5).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/u_hazard_detection File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 127
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/u_hazard_detection File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 128
 # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'regfile_data_2'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/u_hazard_detection File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 127
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'data1'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_A File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 244
-# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'data1'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_B File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 252
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA_execute'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv(13).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ExecuteMemory_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 393
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA_memory'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv(25).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ExecuteMemory_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 393
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'address_a'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/RAM_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 422
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/u_hazard_detection File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_A File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 227
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_B File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 235
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_escalar File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 243
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_escalar File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 243
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_escalar File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 243
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_1 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 32
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_1 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 32
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_1 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 32
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_2 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 39
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_2 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 39
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_2 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 39
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_3 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_3 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_3 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_4 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 53
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_4 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 53
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_4 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 53
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_5 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 60
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_5 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 60
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_5 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 60
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_6 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_6 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_6 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 67
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_7 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 74
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_7 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 74
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_7 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 74
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_8 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_8 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_8 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_9 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_9 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_9 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 87
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_10 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 94
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_10 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 94
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_10 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 94
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_11 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 101
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_11 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 101
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_11 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 101
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_12 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_12 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_12 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_13 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_13 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_13 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_14 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_14 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_14 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_15 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 129
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_15 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 129
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_15 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 129
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcA'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_16 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 136
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'srcB'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_16 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 136
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'result'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/ALU_vectorial_16 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 136
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'ALUresult_in'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ExecuteMemory_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 274
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (16) for port 'address_b'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v(42).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/RAM_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 309
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (16) for port 'data_a'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/RAM_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 309
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data_from_memory_in'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/MemoryWriteback_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 321
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data_from_memory_out'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/MemoryWriteback_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 321
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data0'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_2inputs_writeback File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 459
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data1'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_8bits.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_2inputs_writeback File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 459
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_2inputs_writeback File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 349
 # 
 # add wave *
 # view structure
@@ -308,10 +443,9 @@
 # ** Warning: (vsim-7) Failed to open readmem file "./memory/RAM.ver" in read mode.
 # No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/RAM_instance/altsyncram_component/m_default/altsyncram_inst
-# ** Note: $finish    : C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv(481)
+# ** Note: $finish    : C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv(378)
 #    Time: 100 ps  Iteration: 0  Instance: /cpu_top_tb
 # 1
-# Break in Module cpu_top_tb at C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv line 481
-# Can't move the Now cursor.
-# End time: 21:24:40 on Sep 17,2024, Elapsed time: 0:07:48
-# Errors: 0, Warnings: 11
+# Break in Module cpu_top_tb at C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv line 378
+# End time: 01:16:43 on Sep 20,2024, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 63

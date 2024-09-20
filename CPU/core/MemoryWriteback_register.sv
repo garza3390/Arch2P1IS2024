@@ -4,56 +4,84 @@ module MemoryWriteback_register (
 	input logic wre_memory,
 	input logic vector_wre_memory,
 	input logic [1:0] select_writeback_data_mux_memory,
+	input logic [1:0] select_writeback_vector_data_mux_memory,
+	input logic [15:0] data_from_memory_in,
+	input logic [127:0] vector_data_from_memory_in,
+	input logic [15:0] calc_data_in,
+	input logic [127:0] calc_vector_in,
 	input logic [4:0] rs1_memory,
 	input logic [4:0] rs2_memory,
-	input logic [4:0] rd_memory, 
-	input logic [7:0] data_from_memory_in,
-	input logic [127:0] vector_data_from_memory_in,
-	input logic [7:0] calc_data_in,
-	output logic [7:0] data_from_memory_out,
-	output logic [127:0] vector_data_from_memory_out,
-	output logic [7:0] calc_data_out,
-   output logic wre_writeback,
+	input logic [4:0] rd_memory,
+	
+	output logic wre_writeback,
 	output logic vector_wre_writeback,
 	output logic [1:0] select_writeback_data_mux_writeback,
+	output logic [1:0] select_writeback_vector_data_mux_writeback,
+	output logic [15:0] data_from_memory_out,
+	output logic [127:0] vector_data_from_memory_out,
+	output logic [15:0] calc_data_out,
+	output logic [15:0] calc_vector_out,
 	output logic [4:0] rs1_writeback,
 	output logic [4:0] rs2_writeback,
 	output logic [4:0] rd_writeback
+	
+	
+	
+	
 );
-   logic [7:0] data_calculated;
-   logic [7:0] data_memory;
-	logic [127:0] vector_data_memory;
+   logic wre;
+	logic vector_wre;
+	logic [1:0] select_writeback_data_mux;
+	logic [1:0] select_writeback_vector_data_mux;
+	logic [15:0] data_from_memory;
+	logic [127:0] vector_data_from_memory;
+	logic [15:0] calc_data;
+	logic [127:0] calc_vector;
 	logic [4:0] rs1;
 	logic [4:0] rs2;
+	logic [4:0] rd;
+	
    // Proceso de escritura en el registro
    always_ff @(posedge clk or posedge reset) begin
         if (reset) begin
-            data_calculated <= 8'b0; 
-            data_memory <= 8'b0;
-				vector_data_memory <= 128'b0;
-            wre_writeback <= 1'b0;
-            vector_wre_writeback <= 1'b0;
-            select_writeback_data_mux_writeback <= 1'b0;
-            rd_writeback <= 5'b0;
+            wre <= 1'b0;
+				vector_wre <= 1'b0;
+				select_writeback_data_mux <= 2'b0;
+				select_writeback_vector_data_mux <= 2'b0;
+				data_from_memory <= 16'b0;
+				vector_data_from_memory <= 128'b0;
+				calc_data <= 16'b0;
+				calc_vector <= 128'b0;
 				rs1 <= 5'b0;
 				rs2 <= 5'b0;
+				rd <= 5'b0;
+				
         end else begin
-            data_calculated <= calc_data_in;
-            data_memory <= data_from_memory_in;
-				vector_data_memory <= vector_data_from_memory_in;
-            wre_writeback <= wre_memory;
-            vector_wre_writeback <= vector_wre_memory;
-            select_writeback_data_mux_writeback <= select_writeback_data_mux_memory;
-            rd_writeback <= rd_memory;
+            wre <= wre_memory;
+				vector_wre <= vector_wre_memory;
+				select_writeback_data_mux <= select_writeback_data_mux_memory;
+				select_writeback_vector_data_mux <= select_writeback_vector_data_mux_memory;
+				data_from_memory <= data_from_memory_in;
+				vector_data_from_memory <= vector_data_from_memory_in;
+				calc_data <= calc_data_in;
+				calc_vector <= calc_vector_in;
 				rs1 <= rs1_memory;
 				rs2 <= rs2_memory;
+				rd <= rd_memory;
         end
    end
+	
     // Salidas del registro
-   assign calc_data_out = data_calculated;
-   assign data_from_memory_out = data_memory;
-	assign vector_data_from_memory_out = vector_data_memory;
-	assign rs1_writeback = rs1;
-	assign rs2_writeback = rs2;
+   assign wre_writeback = wre;
+	assign vector_wre_writeback = vector_wre;
+	assign [1:0] select_writeback_data_mux_writeback = select_writeback_data_mux;
+	assign [1:0] select_writeback_vector_data_mux_writeback = select_writeback_vector_data_mux;
+	assign [15:0] data_from_memory_out = data_from_memory;
+	assign [127:0] vector_data_from_memory_out = vector_data_from_memory;
+	assign [15:0] calc_data_out = calc_data;
+	assign [15:0] calc_vector_out = calc_vector;
+	assign [4:0] rs1_writeback = rs1;
+	assign [4:0] rs2_writeback = rs2;
+	assign [4:0] rd_writeback = rd;
     
 endmodule

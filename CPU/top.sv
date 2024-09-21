@@ -31,7 +31,7 @@ module top (
 	logic write_memory_enable_a_execute, write_memory_enable_b_execute;
 	logic write_memory_enable_a_memory, write_memory_enable_b_memory;
 	logic [1:0] select_writeback_data_mux_execute, select_writeback_vector_data_mux_execute;
-	logic [3:0] aluOp_execute;
+	logic [4:0] aluOp_execute;
 	logic [4:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
 	logic [4:0] rs2_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
 	logic [4:0] rd_execute; 
@@ -62,7 +62,7 @@ module top (
 	logic [7:0] data_from_memory;
 	// registro Memory-Writeback
 	logic [7:0] data_from_memory_writeback;
-	logic [15:0] alu_result_writeback;
+	logic [7:0] alu_result_writeback;
 	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
 	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
 	logic [4:0] rd_writeback;
@@ -78,7 +78,7 @@ module top (
 	logic [127:0] alu_vector_result_memory;
 	logic [127:0] alu_vector_result_writeback;
 	logic [127:0] writeback_vector;
-	logic [3:0] aluVectorOp_execute;
+	logic [4:0] aluVectorOp_execute;
 //////////////////////////////////////////////////////////////////////////////
 	assign pc_offset = 16'b0000000000000001;// Inicialización
 //////////////////////////////////////////////////////////////////////////////
@@ -223,7 +223,7 @@ module top (
 	);
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del MUX de forwarding A
-	mux_3inputs mux_alu_forward_A (
+	mux_3inputs_16bits mux_alu_forward_A (
 		.data0(srcA_execute),
       .data1(writeback_data),
       .data2(alu_result_memory),
@@ -231,7 +231,7 @@ module top (
       .out(alu_src_A)
 	);
 	// Instancia del MUX de forwarding B
-	mux_3inputs mux_alu_forward_B (
+	mux_3inputs_16bits mux_alu_forward_B (
 		.data0(srcB_execute),
       .data1(writeback_data),
       .data2(alu_result_memory),

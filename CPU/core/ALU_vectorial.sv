@@ -1,5 +1,5 @@
 module ALU_vectorial (
-    input logic [3:0] aluVectorOp, // Entrada de control para la operación ALU
+    input logic [4:0] aluVectorOp, // Entrada de control para la operación ALU
     input logic [127:0] srcA_vector, // Primer operando
     input logic [127:0] srcB_vector, // Segundo operando
     output logic [127:0] result_vector // Resultado de la operación
@@ -20,14 +20,27 @@ module ALU_vectorial (
 	logic [7:0] vector_alu_result_14;
 	logic [7:0] vector_alu_result_15;
 	logic [7:0] vector_alu_result_16;
-	
 	logic [127:0] vector_data;
-	
 	logic [11:0] memory_base;
 	logic [11:0] vector_address_out;
+	// Variables para almacenar los resultados de las operaciones
+	logic [127:0] addRoundKey_result, shiftRows_result, mixColumns_result, rotWord_result, rcon_result;
 	
-	// Instanciar los módulos de operaciones
+	AddRoundKey AddRoundKey_instance(
+		.state_matrix(srcA_vector),
+		.round_key(srcB_vector),
+		.result_matrix(addRoundKey_result)
+	);
+
+	shiftRows shiftRows_instance(
+		.matrix_in(srcA_vector), 
+		.matrix_out(shiftRows_result)
+	);	
 	
+	mixColumns mixColumns_instance(
+		.state_matrix_in(srcA_vector),
+		.state_matrix_out(mixColumns_result)
+	);
 	
 	ALU ALU_vectorial_1 (
 		.aluOp(aluVectorOp),       
@@ -167,14 +180,14 @@ module ALU_vectorial (
 		.data_vectorial_out(vector_data)
 	);
 	
-	
-	
-	
 	always_comb begin
 		case (aluVectorOp)
-			4'b0000: result_vector = 128'b0; // Si hay un nop/stall el resultado es cero
-			4'b0001: result_vector = vector_data; // provisional, falta definir los resultados
-			default: result_vector = 128'b0; // Manejo de caso inválido, resultado es cero
+			5'b10011: result_vector = addRoundKey_result; // Suma
+			5'b10100: result_vector = shiftRows_result; // Suma
+			5'b10101: result_vector = mixColumns_result; // Suma
+			5'b10110: result_vector = rotWord_result; // Suma
+			5'b10111: result_vector = rcon_result; // Suma
+			default: result_vector = 128'b0; // Manejo de caso inválido
       endcase
     end
 endmodule

@@ -7,7 +7,7 @@ module MemoryWriteback_register (
 	input logic [1:0] select_writeback_vector_data_mux_memory,
 	input logic [7:0] data_from_memory_in,
 	input logic [127:0] vector_data_from_memory_in,
-	input logic [7:0] calc_data_in,
+	input logic [15:0] calc_data_in,
 	input logic [127:0] calc_vector_in,
 	input logic [4:0] rs1_memory,
 	input logic [4:0] rs2_memory,
@@ -17,9 +17,9 @@ module MemoryWriteback_register (
 	output logic vector_wre_writeback,
 	output logic [1:0] select_writeback_data_mux_writeback,
 	output logic [1:0] select_writeback_vector_data_mux_writeback,
-	output logic [7:0] data_from_memory_out,
+	output logic [15:0] data_from_memory_out,
 	output logic [127:0] vector_data_from_memory_out,
-	output logic [7:0] calc_data_out,
+	output logic [15:0] calc_data_out,
 	output logic [127:0] calc_vector_out,
 	output logic [4:0] rs1_writeback,
 	output logic [4:0] rs2_writeback,
@@ -33,7 +33,7 @@ module MemoryWriteback_register (
 	logic vector_wre;
 	logic [1:0] select_writeback_data_mux;
 	logic [1:0] select_writeback_vector_data_mux;
-	logic [7:0] data_from_memory;
+	logic [15:0] data_from_memory;
 	logic [127:0] vector_data_from_memory;
 	logic [15:0] calc_data;
 	logic [127:0] calc_vector;
@@ -48,7 +48,7 @@ module MemoryWriteback_register (
 				vector_wre <= 1'b0;
 				select_writeback_data_mux <= 2'b0;
 				select_writeback_vector_data_mux <= 2'b0;
-				data_from_memory <= 8'b0;
+				data_from_memory <= 16'b0;
 				vector_data_from_memory <= 128'b0;
 				calc_data <= 16'b0;
 				calc_vector <= 128'b0;
@@ -61,7 +61,7 @@ module MemoryWriteback_register (
 				vector_wre <= vector_wre_memory;
 				select_writeback_data_mux <= select_writeback_data_mux_memory;
 				select_writeback_vector_data_mux <= select_writeback_vector_data_mux_memory;
-				data_from_memory <= data_from_memory_in;
+				data_from_memory <= {8'b0,data_from_memory_in};
 				vector_data_from_memory <= vector_data_from_memory_in;
 				calc_data <= calc_data_in;
 				calc_vector <= calc_vector_in;

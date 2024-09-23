@@ -29,8 +29,8 @@ module FetchDecode_register (
 					pc_decode_reg <= pc_decode; // No actualizar el valor del PC
 				end
         end 
-		  else begin
-            instruction_out_reg <= 20'b0; // Si flush es 1, la salida de la instrucción es 0
+		  else if (flush == 2'b01) begin
+            instruction_out_reg <= 20'b0; // Si flush es 01, la salida de la instrucción es 0
             pc_decode_reg <= pc; 
 				
         end

@@ -14,7 +14,7 @@ module PC_register (
         if (reset) begin
             out <= 16'b0; // Inicializar el registro en 0 cuando se active el reset
         end
-		  if (nop) begin
+		  if (nop == 2'b01) begin
             out <= address_out; // mantener el mismo valor si nop es 1 (no actualiza el pc)
         end 
 		  else begin

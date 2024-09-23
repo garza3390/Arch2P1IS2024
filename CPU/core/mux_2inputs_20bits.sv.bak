@@ -8,7 +8,7 @@ module mux_2inputs_20bits (
         case(select)
             2'b00: out = data0;
             2'b01: out = data1;
-            default: out = 20'b0;
+            default: out = 20'h0;
         endcase
     end
 

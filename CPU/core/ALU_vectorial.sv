@@ -26,6 +26,9 @@ module ALU_vectorial (
 	// Variables para almacenar los resultados de las operaciones
 	logic [127:0] addRoundKey_result, shiftRows_result, mixColumns_result, rotWord_result, rcon_result;
 	
+	assign rotWord_result = 128'b0; //solo se inicializa para quitar warnings
+	assign rcon_result = rotWord_result; //solo se inicializa para quitar warnings
+	
 	AddRoundKey AddRoundKey_instance(
 		.state_matrix(srcA_vector),
 		.round_key(srcB_vector),
@@ -182,12 +185,13 @@ module ALU_vectorial (
 	
 	always_comb begin
 		case (aluVectorOp)
-			5'b10011: result_vector = addRoundKey_result; // Suma
-			5'b10100: result_vector = shiftRows_result; // Suma
-			5'b10101: result_vector = mixColumns_result; // Suma
-			5'b10110: result_vector = rotWord_result; // Suma
-			5'b10111: result_vector = rcon_result; // Suma
-			default: result_vector = 128'b0; // Manejo de caso inválido
+			5'b00000: result_vector = 128'b0; // nop
+			5'b10011: result_vector = addRoundKey_result; 
+			5'b10100: result_vector = shiftRows_result;
+			5'b10101: result_vector = mixColumns_result;
+			5'b10110: result_vector = rotWord_result; 
+			5'b10111: result_vector = rcon_result; 
+			default: result_vector = 128'b0; // Para codigos que no existen
       endcase
     end
 endmodule

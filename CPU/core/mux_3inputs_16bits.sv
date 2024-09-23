@@ -3,7 +3,7 @@ module mux_3inputs_16bits (
     input logic [15:0] data1,  // Segunda entrada
     input logic [15:0] data2,  // Tercera entrada
     input logic [2:0] select,  // Señal de selección de 3 bits
-    output logic [7:0] out    // Salida de 16 bits
+    output logic [15:0] out    // Salida de 16 bits
 );
 
     always_comb begin

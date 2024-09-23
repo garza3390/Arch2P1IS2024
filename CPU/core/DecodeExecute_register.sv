@@ -17,8 +17,8 @@ module DecodeExecute_register (
 	output logic [1:0] select_writeback_data_mux_execute,
 	output logic [1:0] select_writeback_vector_data_mux_execute,
 	
-	output logic [3:0] aluOp_execute,
-	output logic [3:0] aluVectorOp_execute,
+	output logic [4:0] aluOp_execute,
+	output logic [4:0] aluVectorOp_execute,
    output logic [15:0] srcA_out,
    output logic [15:0] srcB_out,
 	output logic [127:0] srcA_vector_out,
@@ -38,14 +38,15 @@ module DecodeExecute_register (
 	logic [4:0] rd;
 	
 	logic load;
+	//logic load_vector;   //falta implentarla para los riesgos de load para vectores
 	logic wre;
 	logic vector_wre;
 	logic write_memory_enable_a;
 	logic write_memory_enable_b;
 	logic [1:0] select_writeback_data_mux;
 	logic [1:0] select_writeback_vector_data_mux;
-	logic [3:0] aluOp;
-	logic [3:0] aluVectorOp;
+	logic [4:0] aluOp;
+	logic [4:0] aluVectorOp;
 	
    always_ff @(posedge clk) begin
 		if (reset) begin
@@ -64,8 +65,8 @@ module DecodeExecute_register (
 			write_memory_enable_b <= 1'b0;
          select_writeback_data_mux <= 2'b00;
 			select_writeback_vector_data_mux <= 2'b00;
-         aluOp <= 4'b0;
-			aluVectorOp <= 4'b0;
+         aluOp <= 5'b0;
+			aluVectorOp <= 5'b0;
 			
       end else begin
 			srcA <= srcA_in;
@@ -76,17 +77,19 @@ module DecodeExecute_register (
 			rs2 <= rs2_decode;
 			rd <= rd_decode;
 			
-			load <= nop_mux_output_in[16];
-			wre <= nop_mux_output_in[15];
-			vector_wre <= nop_mux_output_in[14];
-			write_memory_enable_a <= nop_mux_output_in[13];
-			write_memory_enable_b <= nop_mux_output_in[12];
-         select_writeback_data_mux <= nop_mux_output_in[11:10];
-			select_writeback_vector_data_mux <= nop_mux_output_in[9:8];
-         aluOp <= nop_mux_output_in[7:4];
-			aluVectorOp <= nop_mux_output_in[3:0];    
+			load <= nop_mux_output_in[18];
+			wre <= nop_mux_output_in[17];
+			vector_wre <= nop_mux_output_in[16];
+			write_memory_enable_a <= nop_mux_output_in[15];
+			write_memory_enable_b <= nop_mux_output_in[14];
+         select_writeback_data_mux <= nop_mux_output_in[13:12];
+			select_writeback_vector_data_mux <= nop_mux_output_in[11:10];
+         aluOp <= nop_mux_output_in[9:5];
+			aluVectorOp <= nop_mux_output_in[4:0];    
       end
    end
+	
+	//assign load_vector = nop_mux_output_in[19];  // falta implementarla, se le asigna un valor para quitar warnings
 	
    assign srcA_out = srcA;
    assign srcB_out = srcB;

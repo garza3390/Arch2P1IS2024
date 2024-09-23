@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/simulation/modelsim
 vadder_16
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1727064678
+Z2 !s110 1727076544
 !i10b 1
 !s100 7D?YT?WoBiTT8N@aKlLJY0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1727064677.000000
+Z6 !s108 1727076544.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv|
 !i113 1
@@ -37,7 +37,7 @@ Z8 !s92 -sv -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vector
 Z9 tCvgOpt 0
 vAddRoundKey
 R1
-Z10 !s110 1727064683
+Z10 !s110 1727076546
 !i10b 1
 !s100 Ne5]@B`KBQ6K16FoZHN`S0
 R3
@@ -54,7 +54,7 @@ R5
 r1
 !s85 0
 31
-Z12 !s108 1727064683.000000
+Z12 !s108 1727076546.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/AddRoundKey.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/AddRoundKey.sv|
 !i113 1
@@ -64,7 +64,7 @@ R9
 n@add@round@key
 vALU
 R1
-!s110 1727064677
+R2
 !i10b 1
 !s100 8noF`fY81kEgYzEajQh?Y1
 R3
@@ -91,7 +91,7 @@ R9
 n@a@l@u
 vALU_vectorial
 R1
-!s110 1727064679
+Z13 !s110 1727076545
 !i10b 1
 !s100 NK_OJ04[4l_bb9i:hb3aJ1
 R3
@@ -108,7 +108,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064679.000000
+Z14 !s108 1727076545.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv|
 !i113 1
@@ -118,15 +118,15 @@ R9
 n@a@l@u_vectorial
 vcomparator_branch
 R1
-Z13 !s110 1727064676
+R2
 !i10b 1
-!s100 9_gbeLVL_PJY<RkALO4ho0
+!s100 i4X0H?0XhHlbCOGS2T7FO0
 R3
-I6CW:BJ;>kPh9nJCgm]NF]3
+I_19Dc^2ZOaoQS7e:]G]b]0
 R4
 S1
 R0
-w1727048342
+w1727076378
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv
 !i122 16
@@ -135,7 +135,7 @@ R5
 r1
 !s85 0
 31
-Z14 !s108 1727064676.000000
+R6
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv|
 !i113 1
@@ -144,7 +144,7 @@ R8
 R9
 vcontrolUnit
 R1
-R13
+Z15 !s110 1727076543
 !i10b 1
 !s100 _0l?CV0_afg_Thk7GYb>c0
 R3
@@ -161,7 +161,7 @@ R5
 r1
 !s85 0
 31
-R14
+Z16 !s108 1727076543.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv|
 !i113 1
@@ -171,7 +171,7 @@ R9
 ncontrol@unit
 vcpu_top_tb
 R1
-R10
+Z17 !s110 1727076547
 !i10b 1
 !s100 IJN]T3GWl9EhjgNBPN@Ze2
 R3
@@ -188,7 +188,7 @@ R5
 r1
 !s85 0
 31
-R12
+!s108 1727076547.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv|
 !i113 1
@@ -197,7 +197,7 @@ R7
 R9
 vDecodeExecute_register
 R1
-Z15 !s110 1727064675
+R15
 !i10b 1
 !s100 3EB]@Tgg2@mB`?j;CemdE2
 R3
@@ -214,7 +214,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064675.000000
+R16
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv|
 !i113 1
@@ -241,7 +241,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064674.000000
+R16
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv|
 !i113 1
@@ -251,7 +251,7 @@ R9
 n@execute@memory_register
 vFetchDecode_register
 R1
-!s110 1727064674
+R15
 !i10b 1
 !s100 7ghLeJ7FE@bl>?T<E3h[F1
 R3
@@ -268,7 +268,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064673.000000
+Z18 !s108 1727076542.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv|
 !i113 1
@@ -278,7 +278,7 @@ R9
 n@fetch@decode_register
 vforwarding_unit
 R1
-!s110 1727064673
+Z19 !s110 1727076542
 !i10b 1
 !s100 0U>_MQ8_?:IjiDgTNgWdg1
 R3
@@ -286,7 +286,7 @@ I538nZoVaE]OFO6BQ3GNG31
 R4
 S1
 R0
-Z16 w1726530057
+Z20 w1726530057
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv
 !i122 11
@@ -295,7 +295,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064672.000000
+R18
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv|
 !i113 1
@@ -304,15 +304,15 @@ R8
 R9
 vhazard_detection_unit
 R1
-!s110 1727064672
+R19
 !i10b 1
-!s100 HLZ2M=E5KT_N[IM:DoE[`1
+!s100 V6<HZiG=;HLW]nofL?9@c3
 R3
-Ib[EI]TofXBQAAH]RV8DEn2
+I;j8N<o7KK<iY_B2l8U5>J1
 R4
 S1
 R0
-w1727049663
+w1727076474
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv
 !i122 10
@@ -321,7 +321,7 @@ R5
 r1
 !s85 0
 31
-Z17 !s108 1727064671.000000
+R18
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv|
 !i113 1
@@ -330,7 +330,7 @@ R8
 R9
 vMemoryLoader
 R1
-!s110 1727064671
+R19
 !i10b 1
 !s100 [BYhchgRA8^n0>=;9mm>A3
 R3
@@ -347,7 +347,7 @@ R5
 r1
 !s85 0
 31
-R17
+R18
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryLoader.sv|
 !i113 1
@@ -357,7 +357,7 @@ R9
 n@memory@loader
 vMemoryWriteback_register
 R1
-Z18 !s110 1727064670
+R19
 !i10b 1
 !s100 ZQfbf:PFbY`f[aGnoG:<72
 R3
@@ -374,7 +374,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064670.000000
+Z21 !s108 1727076541.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv|
 !i113 1
@@ -384,7 +384,7 @@ R9
 n@memory@writeback_register
 vmixColumns
 R1
-R10
+R17
 !i10b 1
 !s100 CO;71FRXN7FZfQELjIfB30
 R3
@@ -411,7 +411,7 @@ R9
 nmix@columns
 vmux_2inputs_128bits
 R1
-!s110 1727064681
+R13
 !i10b 1
 !s100 W;WRCQBf:]S1nbGFlRL`l2
 R3
@@ -423,12 +423,12 @@ w1727032297
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv
 !i122 22
-Z19 L0 1 15
+Z22 L0 1 15
 R5
 r1
 !s85 0
 31
-!s108 1727064681.000000
+R14
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv|
 !i113 1
@@ -437,7 +437,7 @@ R8
 R9
 vmux_2inputs_16bits
 R1
-R2
+R13
 !i10b 1
 !s100 XG5:0nWX6mD19jDg4fZJ^2
 R3
@@ -449,12 +449,12 @@ w1726730597
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv
 !i122 19
-R19
+R22
 R5
 r1
 !s85 0
 31
-!s108 1727064678.000000
+R6
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv|
 !i113 1
@@ -463,7 +463,7 @@ R8
 R9
 vmux_2inputs_20bits
 R1
-!s110 1727064680
+R13
 !i10b 1
 !s100 G8_`0f2F_RIf2leT;<GU>1
 R3
@@ -475,12 +475,12 @@ w1727045982
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv
 !i122 21
-R19
+R22
 R5
 r1
 !s85 0
 31
-!s108 1727064680.000000
+R14
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv|
 !i113 1
@@ -489,7 +489,7 @@ R8
 R9
 vmux_3inputs_16bits
 R1
-Z20 !s110 1727064682
+R10
 !i10b 1
 !s100 8>eQd;AXja:6`7ZQdX6d=3
 R3
@@ -506,7 +506,7 @@ R5
 r1
 !s85 0
 31
-Z21 !s108 1727064682.000000
+R12
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_16bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_16bits.sv|
 !i113 1
@@ -515,7 +515,7 @@ R8
 R9
 vPC_register
 R1
-R18
+Z23 !s110 1727076541
 !i10b 1
 !s100 KZ:TbE@3FmjIKYfZVSgUX0
 R3
@@ -532,7 +532,7 @@ R5
 r1
 !s85 0
 31
-Z22 !s108 1727064669.000000
+R21
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv|
 !i113 1
@@ -541,7 +541,7 @@ R8
 R9
 n@p@c_register
 vRAM
-!s110 1727064665
+Z24 !s110 1727076540
 !i10b 1
 !s100 cWXF0HkGIYZ`10RWZh_mg0
 R3
@@ -557,17 +557,17 @@ R5
 r1
 !s85 0
 31
-!s108 1727064664.000000
+Z25 !s108 1727076539.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v|
 !i113 1
-Z23 o-vlog01compat -work work
-Z24 !s92 -vlog01compat -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory}
+Z26 o-vlog01compat -work work
+Z27 !s92 -vlog01compat -work work {+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory}
 R9
 n@r@a@m
 vRegfile_scalar
 R1
-!s110 1727064669
+R23
 !i10b 1
 !s100 6>J8[LG8ofK^b5<eKL^`f2
 R3
@@ -584,7 +584,7 @@ R5
 r1
 !s85 0
 31
-R22
+R21
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv|
 !i113 1
@@ -594,7 +594,7 @@ R9
 n@regfile_scalar
 vRegfile_vector
 R1
-Z25 !s110 1727064668
+R23
 !i10b 1
 !s100 f>D1zcE3n?S^0PmT`1_4J0
 R3
@@ -611,7 +611,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064668.000000
+R21
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv|
 !i113 1
@@ -620,7 +620,7 @@ R8
 R9
 n@regfile_vector
 vROM
-!s110 1727064664
+!s110 1727076539
 !i10b 1
 !s100 H@`2l@PiDZlD=dEe72RCi3
 R3
@@ -636,17 +636,17 @@ R5
 r1
 !s85 0
 31
-!s108 1727064663.000000
+R25
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v|
 !i113 1
-R23
-R24
+R26
+R27
 R9
 n@r@o@m
 vshiftRows
 R1
-!s110 1727064666
+R24
 !i10b 1
 !s100 Pc^_aVS9Z107LWMb0N]U11
 R3
@@ -654,7 +654,7 @@ IGEEBd16;[dVOQ:bZF_CJS1
 R4
 S1
 R0
-R16
+R20
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv
 !i122 2
@@ -663,7 +663,7 @@ R5
 r1
 !s85 0
 31
-Z26 !s108 1727064666.000000
+Z28 !s108 1727076540.000000
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv|
 !i113 1
@@ -673,7 +673,7 @@ R9
 nshift@rows
 vsubstractor_branch
 R1
-R20
+R10
 !i10b 1
 !s100 HU>iUc11>HZ4lAdDjHz_H0
 R3
@@ -690,7 +690,7 @@ R5
 r1
 !s85 0
 31
-R21
+R12
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv|
 !i113 1
@@ -699,7 +699,7 @@ R8
 R9
 vtop
 R1
-!s110 1727064667
+R24
 !i10b 1
 !s100 TmK@TRMKg]0Z]Wj7kF55Q0
 R3
@@ -716,7 +716,7 @@ R5
 r1
 !s85 0
 31
-R26
+R28
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv|
 !i113 1
@@ -725,7 +725,7 @@ R7
 R9
 vzeroExtend
 R1
-R25
+R23
 !i10b 1
 !s100 5aolV5;7S3:MiS@[DIJ^<1
 R3
@@ -733,7 +733,7 @@ Ik8VK87Jc35`XaFjKgjaAQ3
 R4
 S1
 R0
-R16
+R20
 8C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv
 FC:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv
 !i122 4
@@ -742,7 +742,7 @@ R5
 r1
 !s85 0
 31
-!s108 1727064667.000000
+R28
 !s107 C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core|C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv|
 !i113 1

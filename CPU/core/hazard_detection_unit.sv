@@ -23,7 +23,7 @@ always_comb begin
 		  flush = 2'b00; 
 		  nop = 2'b00;
     end
-	 if ((opcode == 5'b00011) & (regfile_data_1 != regfile_data_2)) begin  // bne: si toma el branch hace un flush
+	 if ((opcode == 5'b00011) & (regfile_data_1 > regfile_data_2)) begin  // bne: si toma el branch hace un flush
 		  flush = 2'b01;
 		  nop = 2'b00;
     end

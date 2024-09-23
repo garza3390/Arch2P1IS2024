@@ -370,9 +370,8 @@ module cpu_top_tb;
       //select_forward_mux_B = 0;
       //select_writeback_data_mux_writeback = 0;
       reset = 0;
-	// Finalizar la simulación
-	#200
-	$finish;
+		#500
+		$finish;
 	end
 endmodule
 

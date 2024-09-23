@@ -38,9 +38,9 @@ module cpu_top_tb;
 	logic [4:0] rd_execute; 
 	logic load_instruction;
 	// alu
-	logic [7:0] alu_src_A;
-	logic [7:0] alu_src_B;
-	logic [7:0] alu_result_execute;
+	logic [15:0] alu_src_A;
+	logic [15:0] alu_src_B;
+	logic [15:0] alu_result_execute;
 	
 	// mux's de la alu
 	logic [15:0] srcA_execute;
@@ -62,7 +62,7 @@ module cpu_top_tb;
 	// memoria de datos
 	logic [7:0] data_from_memory;
 	// registro Memory-Writeback
-	logic [7:0] data_from_memory_writeback;
+	logic [15:0] data_from_memory_writeback;
 	logic [15:0] alu_result_writeback;
 	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
 	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
@@ -74,7 +74,6 @@ module cpu_top_tb;
 	logic [4:0] vector_rd_writeback;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
 	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data, vector_data_from_memory;
-	logic [11:0] vector_address_execute, vector_address_memory;
 	logic [127:0] alu_vector_result_execute;
 	logic [127:0] alu_vector_result_memory;
 	logic [127:0] alu_vector_result_writeback;
@@ -227,7 +226,7 @@ module cpu_top_tb;
       .data1(writeback_data),
       .data2(alu_result_memory),
       .select(select_forward_mux_A),
-      .out()
+      .out(alu_src_A)
 	);
 	// Instancia del MUX de forwarding B
 	mux_3inputs_16bits mux_alu_forward_B (
@@ -240,8 +239,8 @@ module cpu_top_tb;
 	// Instancia de la ALU
 	ALU ALU_escalar(
 		.aluOp(aluOp_execute),       
-      .srcA(alu_src_A),
-      .srcB(alu_src_B),
+      .srcA(alu_src_A[7:0]),
+      .srcB(alu_src_B[7:0]),
       .result(alu_result_execute)
 	);
 	// Instancia de la ALU vectorial
@@ -286,7 +285,6 @@ module cpu_top_tb;
      	.srcB_execute(alu_src_B),
 		.rd_execute(rd_execute),
 		.vector_srcB_execute(vector_srcB_execute),
-	
      	.wre_memory(wre_memory),
 		.vector_wre_memory(vector_wre_memory),
 		.ALUresult_out(alu_result_memory),
@@ -306,15 +304,16 @@ module cpu_top_tb;
 	// Instancia de la RAM
 	RAM RAM_instance(
 		.address_a(srcA_memory), // la direccion de memoria es la misma pero el dato necesario se maneja con las señales de control
-		.address_b(srcA_memory), 
+		.address_b(srcA_memory[11:0]), 
       .clock(clk),
-      .data_a(srcB_memory),
+      .data_a(srcB_memory[7:0]),
 		.data_b(vector_srcB_memory),
       .wren_a(write_memory_enable_a_memory),
 		.wren_b(write_memory_enable_b_memory),
       .q_a(data_from_memory),
 		.q_b(vector_data_from_memory)
 	);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
@@ -329,8 +328,7 @@ module cpu_top_tb;
 		.calc_vector_in(alu_vector_result_memory),
 		.rs1_memory(rs1_memory),
       .rs2_memory(rs2_memory),
-      .rd_memory(rd_memory),
-		
+      .rd_memory(rd_memory),	
 		.wre_writeback(wre_writeback),
 		.vector_wre_writeback(vector_wre_writeback),
 		.select_writeback_data_mux_writeback(select_writeback_data_mux_writeback),
@@ -343,14 +341,15 @@ module cpu_top_tb;
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
-	// Instancia del MUX de writeback
-	mux_2inputs_8bits mux_2inputs_writeback (
+////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Instancia del MUX de writeback escalar
+	mux_2inputs_16bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
       .data1(alu_result_writeback),
       .select(select_writeback_data_mux_writeback),
       .out(writeback_data)
 	);
-	// Instancia del MUX de writeback
+	// Instancia del MUX de writeback vectorial
 	mux_2inputs_128bits mux_vector_2inputs_writeback (
 		.data0(vector_writeback_data),
       .data1(alu_vector_result_writeback),
@@ -365,14 +364,14 @@ module cpu_top_tb;
       reset = 1;
 		clk = 0;
       pc_offset = 16'h0001;
-      select_pc_mux = 0;
-      select_nop_mux = 0;
-      select_forward_mux_A = 0;
-      select_forward_mux_B = 0;
-      select_writeback_data_mux_writeback = 0;
+      //select_pc_mux = 0;
+      //select_nop_mux = 0;
+      //select_forward_mux_A = 0;
+      //select_forward_mux_B = 0;
+      //select_writeback_data_mux_writeback = 0;
       reset = 0;
 	// Finalizar la simulación
-	#100
+	#200
 	$finish;
 	end
 endmodule

@@ -73,7 +73,6 @@ module top (
 	logic [4:0] vector_rd_writeback;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
 	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data, vector_data_from_memory;
-	//logic [11:0] vector_address_execute, vector_address_memory;
 	logic [127:0] alu_vector_result_execute;
 	logic [127:0] alu_vector_result_memory;
 	logic [127:0] alu_vector_result_writeback;

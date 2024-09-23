@@ -5,18 +5,17 @@ module ALU (
     output logic [15:0] result // Resultado de la operación
 );
 	// Variables para almacenar los resultados de las operaciones
-	logic [7:0] add_result, sub_result;
-	// Instanciar los módulos adder y subtractor
-	adder_8bits u_adder (
-		.a(srcA),
-		.b(srcB),
-		.y(add_result)
-	);
+	logic [7:0] increment_result, test_result;
+	
+	assign increment_result = srcA+1'b1;
+	assign test_result = srcB;
+	
 	// Selección de la operación basada en ALUop
 	always_comb begin
 		case (aluOp)
 			5'b00000: result = 16'b0; // nop/stall
-			5'b00001: result = {8'b00000000, add_result}; // Suma
+			5'b00001: result = {8'b00000000, test_result}; //para evitar warnings
+			5'b00100: result = {8'b00000000, increment_result}; // Incrementa en 1 y hace el numero de 16 bits
 			default: result = 16'b0; // Manejo de caso inválido
       endcase
     end

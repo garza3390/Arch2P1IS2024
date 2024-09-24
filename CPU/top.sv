@@ -48,7 +48,7 @@ module top (
 	logic wre_memory, wre_execute;
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory, select_writeback_vector_data_mux_memory;
-	logic write_memory_enable_memory;
+	//logic write_memory_enable_memory;
 	logic [7:0] alu_result_memory;
 	logic [15:0] srcA_memory;
 	logic [15:0] srcB_memory;
@@ -70,9 +70,8 @@ module top (
 	// vectorial
 	logic vector_wre_writeback;
 	logic [127:0] vector_rd1, vector_rd2, vector_rd3;
-	logic [4:0] vector_rd_writeback;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
-	logic [127:0] vector_data_execute, vector_data_memory, vector_writeback_data, vector_data_from_memory;
+	logic [127:0] vector_writeback_data, vector_data_from_memory;
 	logic [127:0] alu_vector_result_execute;
 	logic [127:0] alu_vector_result_memory;
 	logic [127:0] alu_vector_result_writeback;
@@ -176,7 +175,7 @@ module top (
 		.wre(vector_wre_writeback),
 		.a1(instruction_decode[4:0]),
       .a2(instruction_decode[9:5]),
-      .a3(vector_rd_writeback),
+      .a3(rd_writeback),
 		.wd3(writeback_vector),
 		.rd1(vector_rd1),   // Read data 1
 		.rd2(vector_rd2),   // Read data 2

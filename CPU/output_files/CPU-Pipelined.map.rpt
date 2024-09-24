@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPU-Pipelined
-Tue Sep 24 00:11:59 2024
+Tue Sep 24 17:02:50 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Sep 24 00:11:59 2024       ;
+; Analysis & Elaboration Status ; Successful - Tue Sep 24 17:02:50 2024       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; CPU-Pipelined                               ;
 ; Top-level Entity Name         ; top                                         ;
@@ -487,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 24 00:11:23 2024
+    Info: Processing started: Tue Sep 24 17:02:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU-Pipelined -c CPU-Pipelined --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -562,10 +562,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file core/mi
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/mixcolumns_tb.sv
     Info (12023): Found entity 1: mixColumns_tb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/mixColumns_tb.sv Line: 3
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "adder_16" for hierarchy "adder_16:pc_add" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 89
-Info (12128): Elaborating entity "mux_2inputs_16bits" for hierarchy "mux_2inputs_16bits:mux_2inputs_PC" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 96
-Info (12128): Elaborating entity "PC_register" for hierarchy "PC_register:pc_reg" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 104
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:rom_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 110
+Info (12128): Elaborating entity "adder_16" for hierarchy "adder_16:pc_add" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 88
+Info (12128): Elaborating entity "mux_2inputs_16bits" for hierarchy "mux_2inputs_16bits:mux_2inputs_PC" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 95
+Info (12128): Elaborating entity "PC_register" for hierarchy "PC_register:pc_reg" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 103
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:rom_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 109
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:rom_memory|altsyncram:altsyncram_component" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v Line: 82
 Info (12130): Elaborated megafunction instantiation "ROM:rom_memory|altsyncram:altsyncram_component" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v Line: 82
 Info (12133): Instantiated megafunction "ROM:rom_memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v Line: 82
@@ -592,27 +592,27 @@ Info (12128): Elaborating entity "decode_61a" for hierarchy "ROM:rom_memory|alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7hb.tdf
     Info (12023): Found entity 1: mux_7hb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/mux_7hb.tdf Line: 23
 Info (12128): Elaborating entity "mux_7hb" for hierarchy "ROM:rom_memory|altsyncram:altsyncram_component|altsyncram_0ef1:auto_generated|mux_7hb:mux2" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/altsyncram_0ef1.tdf Line: 42
-Info (12128): Elaborating entity "FetchDecode_register" for hierarchy "FetchDecode_register:FetchDecode_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 122
-Info (12128): Elaborating entity "hazard_detection_unit" for hierarchy "hazard_detection_unit:u_hazard_detection" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 137
-Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:control_unit_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 142
-Info (12128): Elaborating entity "mux_2inputs_20bits" for hierarchy "mux_2inputs_20bits:mux_2inputs_nop" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 149
-Info (12128): Elaborating entity "zeroExtend" for hierarchy "zeroExtend:zero_extend_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 154
-Info (12128): Elaborating entity "substractor_branch" for hierarchy "substractor_branch:branch_label_pc" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 160
-Info (12128): Elaborating entity "Regfile_scalar" for hierarchy "Regfile_scalar:regfile_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 172
-Info (12128): Elaborating entity "Regfile_vector" for hierarchy "Regfile_vector:vector_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 184
-Info (12128): Elaborating entity "comparator_branch" for hierarchy "comparator_branch:comparator_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 191
-Info (12128): Elaborating entity "DecodeExecute_register" for hierarchy "DecodeExecute_register:DecodeExecute_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 221
-Info (12128): Elaborating entity "mux_3inputs_16bits" for hierarchy "mux_3inputs_16bits:mux_alu_forward_A" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 230
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_escalar" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 245
-Info (12128): Elaborating entity "ALU_vectorial" for hierarchy "ALU_vectorial:ALU_vectorial_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 252
+Info (12128): Elaborating entity "FetchDecode_register" for hierarchy "FetchDecode_register:FetchDecode_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 121
+Info (12128): Elaborating entity "hazard_detection_unit" for hierarchy "hazard_detection_unit:u_hazard_detection" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 136
+Info (12128): Elaborating entity "controlUnit" for hierarchy "controlUnit:control_unit_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 141
+Info (12128): Elaborating entity "mux_2inputs_20bits" for hierarchy "mux_2inputs_20bits:mux_2inputs_nop" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 148
+Info (12128): Elaborating entity "zeroExtend" for hierarchy "zeroExtend:zero_extend_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 153
+Info (12128): Elaborating entity "substractor_branch" for hierarchy "substractor_branch:branch_label_pc" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 159
+Info (12128): Elaborating entity "Regfile_scalar" for hierarchy "Regfile_scalar:regfile_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 171
+Info (12128): Elaborating entity "Regfile_vector" for hierarchy "Regfile_vector:vector_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 183
+Info (12128): Elaborating entity "comparator_branch" for hierarchy "comparator_branch:comparator_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 190
+Info (12128): Elaborating entity "DecodeExecute_register" for hierarchy "DecodeExecute_register:DecodeExecute_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 220
+Info (12128): Elaborating entity "mux_3inputs_16bits" for hierarchy "mux_3inputs_16bits:mux_alu_forward_A" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 229
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_escalar" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 244
+Info (12128): Elaborating entity "ALU_vectorial" for hierarchy "ALU_vectorial:ALU_vectorial_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 251
 Info (12128): Elaborating entity "AddRoundKey" for hierarchy "ALU_vectorial:ALU_vectorial_instance|AddRoundKey:AddRoundKey_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 36
 Info (12128): Elaborating entity "shiftRows" for hierarchy "ALU_vectorial:ALU_vectorial_instance|shiftRows:shiftRows_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 41
 Info (12128): Elaborating entity "mixColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 46
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "const_matrix" into its bus
 Info (12128): Elaborating entity "MemoryLoader" for hierarchy "ALU_vectorial:ALU_vectorial_instance|MemoryLoader:MemoryLoader_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 184
-Info (12128): Elaborating entity "forwarding_unit" for hierarchy "forwarding_unit:forwarding_unit_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 268
-Info (12128): Elaborating entity "ExecuteMemory_register" for hierarchy "ExecuteMemory_register:ExecuteMemory_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 302
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 315
+Info (12128): Elaborating entity "forwarding_unit" for hierarchy "forwarding_unit:forwarding_unit_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 267
+Info (12128): Elaborating entity "ExecuteMemory_register" for hierarchy "ExecuteMemory_register:ExecuteMemory_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 301
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 314
 Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:RAM_instance|altsyncram:altsyncram_component" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v Line: 98
 Info (12130): Elaborated megafunction instantiation "RAM:RAM_instance|altsyncram:altsyncram_component" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v Line: 98
 Info (12133): Instantiated megafunction "RAM:RAM_instance|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v Line: 98
@@ -656,13 +656,13 @@ Info (12128): Elaborating entity "mux_tfb" for hierarchy "RAM:RAM_instance|altsy
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_0jb.tdf
     Info (12023): Found entity 1: mux_0jb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/mux_0jb.tdf Line: 23
 Info (12128): Elaborating entity "mux_0jb" for hierarchy "RAM:RAM_instance|altsyncram:altsyncram_component|altsyncram_spq2:auto_generated|mux_0jb:mux5" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/altsyncram_spq2.tdf Line: 58
-Info (12128): Elaborating entity "MemoryWriteback_register" for hierarchy "MemoryWriteback_register:MemoryWriteback_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 343
-Info (12128): Elaborating entity "mux_2inputs_128bits" for hierarchy "mux_2inputs_128bits:mux_vector_2inputs_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 358
+Info (12128): Elaborating entity "MemoryWriteback_register" for hierarchy "MemoryWriteback_register:MemoryWriteback_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 342
+Info (12128): Elaborating entity "mux_2inputs_128bits" for hierarchy "mux_2inputs_128bits:mux_vector_2inputs_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 357
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Tue Sep 24 00:11:59 2024
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue Sep 24 17:02:50 2024
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:39
 
 

@@ -1,51 +1,56 @@
-`timescale 1ns / 1ps
+`timescale 1ns/1ps
 
-module mixColumns_tb();
+module mixColumns_tb;
 
-    // Parámetros
-    localparam N = 127; // Definimos el tamaño de la matriz de estado
+    // Declaración de señales para la entrada y salida del módulo
+    logic [1:0] row;        
+    logic [7:0] col_in0;    
+    logic [7:0] col_in1;    
+    logic [7:0] col_in2;    
+    logic [7:0] col_in3;    
+    logic [7:0] col_out;   
 
-    // Señales del DUT (Device Under Test)
-    logic [N:0] state_matrix_in;    // Entrada de la matriz de estado
-    logic [N:0] state_matrix_out;   // Salida de la matriz de estado
-
-    // Instancia del módulo `mixColumns`
-    mixColumns #(N) dut (
-        .state_matrix_in(state_matrix_in),
-        .state_matrix_out(state_matrix_out)
+    // Instanciación del módulo a probar
+    mixColumn uut (
+        .row(row),
+        .col_in0(col_in0),
+        .col_in1(col_in1),
+        .col_in2(col_in2),
+        .col_in3(col_in3),
+        .col_out(col_out)
     );
 
-    // Procedimiento inicial
+    // Bloque de estímulo para la prueba
     initial begin
-        // Mostrar el inicio de la simulación
-        $display("Iniciando simulación...");
+        // Valores de entrada para la columna (e0, b4, 52, ae)
+        col_in0 = 8'hd4; 
+        col_in1 = 8'hbf;
+        col_in2 = 8'h5d;
+        col_in3 = 8'h30;
+        
+        // Probando para cada fila de la matriz MixColumns
+        // Primera fila de la matriz MixColumns
+        row = 2'b00;
+        #10; // Esperar 10 unidades de tiempo
+        $display("Row: %0d | col_out: %h", row, col_out);
+        
+        // Segunda fila de la matriz MixColumns
+        row = 2'b01;
+        #10; // Esperar 10 unidades de tiempo
+        $display("Row: %0d | col_out: %h", row, col_out);
+        
+        // Tercera fila de la matriz MixColumns
+        row = 2'b10;
+        #10; // Esperar 10 unidades de tiempo
+        $display("Row: %0d | col_out: %h", row, col_out);
+        
+        // Cuarta fila de la matriz MixColumns
+        row = 2'b11;
+        #10; // Esperar 10 unidades de tiempo
+        $display("Row: %0d | col_out: %h", row, col_out);
 
-        // Matriz de estado de prueba (4x4 bytes = 128 bits)
-        // Cada byte corresponde a una fila de la matriz de estado
-        // Ejemplo de datos de entrada (puedes modificar según tus pruebas)
-        state_matrix_in = 128'hd4bf5d30e0b452aeb84111f1b8f27988;  // Valor conocido para verificar
-
-        // Mostramos el valor inicial de la matriz de estado
-        $display("Matriz de estado inicial: %h", state_matrix_in);
-
-        // Esperamos unos ciclos de simulación para observar los resultados
-        #10;
-
-        // Mostramos el valor de salida después de aplicar `mixColumns`
-        $display("Matriz de estado después de mixColumns: %h", state_matrix_out);
-
-        // Comparamos el valor de salida con el esperado (valor de referencia)
-        // Puedes calcular los valores de salida esperados para verificar
-        // aquí si el resultado es correcto según la transformación de AES.
-        // Ejemplo (el valor exacto dependerá del test y la implementación)
-        // Comparación (esto debe ser calculado previamente)
-        if (state_matrix_out == 128'h046681e5e0cb199a48f8d37a2806264c) begin
-            $display("Test PASSED.");
-        end else begin
-            $display("Test FAILED. Resultado esperado: 046681e5e0cb199a48f8d37a2806264c");
-        end
-
-        // Terminamos la simulación
+        // Finalizar la simulación
         $finish;
     end
+
 endmodule

@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:49:12  AUGUST 07, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -74,10 +74,34 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME cpu_top_tb -section_id cp
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE core/shiftRows.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME shiftRows_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftRows_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftRows_tb -section_id shiftRows_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Fetch_Stage_tb.sv -section_id Fetch_Stage_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/ROM_tb.sv -section_id ROM_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Add_tb.sv -section_id Add_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/cpu_top_tb.sv -section_id cpu_top_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/shiftRows_tb.sv -section_id shiftRows_tb
+set_global_assignment -name SYSTEMVERILOG_FILE core/subBytes.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/subBytes_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbenches/shiftRows_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/roundKey_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/ROM_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/mixColumns_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/Fetch_Stage_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE testbenches/cpu_top_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/AddRoundKey_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenches/Add_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/shiftRows.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/sbox_rom_comb_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/sbox_rom_comb.sv
+set_global_assignment -name VERILOG_FILE core/sbox_rom.v
+set_global_assignment -name SYSTEMVERILOG_FILE core/roundKey.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/rotWord.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/Rcon.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/mixColumns.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/AddRoundKey.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/zeroExtend.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/signExtend.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/Regfile_vector.sv
@@ -97,28 +121,16 @@ set_global_assignment -name QIP_FILE memory/ROM.qip
 set_global_assignment -name SOURCE_FILE memory/ROM.cmp
 set_global_assignment -name QIP_FILE memory/RAM.qip
 set_global_assignment -name SOURCE_FILE memory/RAM.cmp
-set_global_assignment -name EDA_TEST_BENCH_NAME shiftRows_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id shiftRows_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME shiftRows_tb -section_id shiftRows_tb
 set_global_assignment -name SYSTEMVERILOG_FILE "core/CPU-Pipelined.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE core/adder_16.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/adder_8bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs_16bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs_8bits.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Fetch_Stage_tb.sv -section_id Fetch_Stage_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/ROM_tb.sv -section_id ROM_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/Add_tb.sv -section_id Add_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/cpu_top_tb.sv -section_id cpu_top_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/shiftRows_tb.sv -section_id shiftRows_tb
 set_global_assignment -name SYSTEMVERILOG_FILE core/ALU_vectorial.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs_20bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_2inputs_128bits.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/substractor_branch.sv
 set_global_assignment -name SYSTEMVERILOG_FILE core/mux_3inputs_16bits.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/AddRoundKey.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/AddRoundKey_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE core/mixColumns.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenches/mixColumns_tb.sv
 set_global_assignment -name MIF_FILE memory/ROM.mif
 set_global_assignment -name MIF_FILE memory/RAM.mif
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

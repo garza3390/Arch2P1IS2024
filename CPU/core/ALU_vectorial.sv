@@ -1,4 +1,5 @@
 module ALU_vectorial (
+	input logic clk,
     input logic [4:0] aluVectorOp, // Entrada de control para la operación ALU
     input logic [127:0] srcA_vector, // Primer operando
     input logic [127:0] srcB_vector, // Segundo operando
@@ -24,26 +25,51 @@ module ALU_vectorial (
 	logic [11:0] memory_base;
 	logic [11:0] vector_address_out;
 	// Variables para almacenar los resultados de las operaciones
-	logic [127:0] addRoundKey_result, shiftRows_result, mixColumns_result, rotWord_result, rcon_result;
+	logic [127:0] subBytes_result, mixColumns_result, shiftRows_result, addRoundKey_result, rotWord_result, rcon_result, roundKey_result;
 	
-	assign rotWord_result = 128'b0; //solo se inicializa para quitar warnings
-	assign rcon_result = rotWord_result; //solo se inicializa para quitar warnings
 	
-	AddRoundKey AddRoundKey_instance(
-		.state_matrix(srcA_vector),
-		.round_key(srcB_vector),
-		.result_matrix(addRoundKey_result)
+	mixColumns mixColumns_instance (
+        .row(srcA_vector[1:0]),
+        .col_in0(srcA_vector[7:0]),
+        .col_in1(srcA_vector[7:0]),
+        .col_in2(srcA_vector[7:0]),
+        .col_in3(srcA_vector[7:0]),
+        .col_out(mixColumns_result)
 	);
-
+	
 	shiftRows shiftRows_instance(
 		.matrix_in(srcA_vector), 
 		.matrix_out(shiftRows_result)
 	);	
 	
-	mixColumns mixColumns_instance(
-		.state_matrix_in(srcA_vector),
-		.state_matrix_out(mixColumns_result)
+	
+	addRoundKey #(8) addRoundKey_inst (
+        .in1(srcA_vector[7:0]),
+        .in2(srcB_vector[7:0]),
+        .out(addRoundKey_result)
+   );
+	
+	subBytes subBytes_instance (
+        .clk(clk),
+        .byte_in(srcA_vector),
+        .byte_out(subBytes_result)
+    );
+	 
+	rotWord rotWord_instance (
+		.word_in(srcA_vector[31:0]),
+		.word_out(rotWord_result)
+		);
+
+	roundKey	roundKey_instance (
+		.key_in(srcA_vector),    
+		.round(srcB_vector[3:0]),      
+		.key_out(roundKey_result)    
+		);
+	Rcon Rcon_instance (
+		.index(srcB_vector[3:0]),
+		.rcon_val(rcon_result)
 	);
+
 	
 	ALU ALU_vectorial_1 (
 		.aluOp(aluVectorOp),       

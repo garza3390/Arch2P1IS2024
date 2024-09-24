@@ -3,7 +3,7 @@ module ExecuteMemory_register (
    input logic reset,
    input logic wre_execute,
 	input logic vector_wre_execute,
-   input logic [15:0] ALUresult_in,
+   input logic [7:0] ALUresult_in,
    input logic [127:0] ALUvectorResult_in,
    input logic [1:0] select_writeback_data_mux_execute,
 	input logic [1:0] select_writeback_vector_data_mux_execute,
@@ -53,7 +53,7 @@ module ExecuteMemory_register (
 		if (reset) begin
 			wre <= 1'b0;
 			vector_wre <= 1'b0;
-			ALUresult <= 8'b0;
+			ALUresult <= 16'b0;
 			ALUvectorResult <= 128'b0;
 			select_writeback_data_mux <= 2'b0;
 			select_writeback_vector_data_mux <= 2'b0;
@@ -69,7 +69,7 @@ module ExecuteMemory_register (
 		end else begin
 			wre <= wre_execute;
 			vector_wre <= vector_wre_execute;
-			ALUresult <= ALUresult_in;
+			ALUresult <= {8'b0,ALUresult_in};
 			ALUvectorResult <= ALUvectorResult_in;
 			select_writeback_data_mux <= select_writeback_data_mux_execute;
 			select_writeback_vector_data_mux <= select_writeback_vector_data_mux_execute;

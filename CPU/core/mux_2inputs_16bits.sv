@@ -1,5 +1,6 @@
 module mux_2inputs_16bits (
-    input logic [15:0] data0, data1,
+    input logic [15:0] data0,
+	 input logic [15:0] data1,
     input logic [1:0] select,
     output logic [15:0] out
 );

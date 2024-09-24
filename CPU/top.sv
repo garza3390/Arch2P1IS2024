@@ -1,7 +1,7 @@
 module top (
     input logic clk,
     input logic reset
-);
+);	
 	// registro PC
 	logic [15:0] pc_mux_output;
 	logic [15:0] pc_address;
@@ -39,7 +39,7 @@ module top (
 	// alu
 	logic [15:0] alu_src_A;
 	logic [15:0] alu_src_B;
-	logic [15:0] alu_result_execute;
+	logic [7:0] alu_result_execute;
 	
 	// mux's de la alu
 	logic [15:0] srcA_execute;
@@ -49,7 +49,7 @@ module top (
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory, select_writeback_vector_data_mux_memory;
 	logic write_memory_enable_memory;
-	logic [15:0] alu_result_memory;
+	logic [7:0] alu_result_memory;
 	logic [15:0] srcA_memory;
 	logic [15:0] srcB_memory;
 	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
@@ -62,7 +62,7 @@ module top (
 	logic [7:0] data_from_memory;
 	// registro Memory-Writeback
 	logic [15:0] data_from_memory_writeback;
-	logic [15:0] alu_result_writeback;
+	logic [7:0] alu_result_writeback;
 	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
 	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
 	logic [4:0] rd_writeback;
@@ -81,7 +81,6 @@ module top (
 //////////////////////////////////////////////////////////////////////////////
 	assign pc_offset = 16'b0000000000000001;// Inicialización
 //////////////////////////////////////////////////////////////////////////////
-
 	// Instancia del sumador del PC
 	adder_16 pc_add (
 		.a(pc_mux_output),
@@ -357,4 +356,5 @@ module top (
       .select(select_writeback_data_mux_writeback),
       .out(writeback_vector)
 	);
+	
 endmodule

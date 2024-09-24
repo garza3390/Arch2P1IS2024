@@ -40,7 +40,7 @@ module cpu_top_tb;
 	// alu
 	logic [15:0] alu_src_A;
 	logic [15:0] alu_src_B;
-	logic [15:0] alu_result_execute;
+	logic [7:0] alu_result_execute;
 	
 	// mux's de la alu
 	logic [15:0] srcA_execute;

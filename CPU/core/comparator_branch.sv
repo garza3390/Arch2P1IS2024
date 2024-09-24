@@ -10,7 +10,7 @@ module comparator_branch (
 		  
 				// be = Branch on Equal
             5'b00011: begin
-                if (rs1_value > rs2_value) begin
+                if (rs1_value != rs2_value) begin
                     select_pc_mux = 2'b01; // toma la direccion del branch
                 end else begin
                     select_pc_mux = 2'b00; // toma la direccion de PC+1

@@ -7,18 +7,16 @@ module subBytes_tb;
 
     // Instancia del módulo subBytes
     subBytes uut (
-        //.clk(clk),
+        .clk(clk),
         .byte_in(byte_in),
         .byte_out(byte_out)
     );
 
-	 /*
     // Generador de reloj
     always begin
         clk = 0; #5;  // 5 ns en bajo
         clk = 1; #5;  // 5 ns en alto
     end
-	 */
 
     initial begin
         // Probar diferentes valores

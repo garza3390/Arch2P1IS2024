@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, Text
 import subprocess
+import os
 
 def load_file_content(filepath):
     try:
@@ -51,7 +52,7 @@ for i, (title, value) in enumerate(variables.items()):
 top_text = Text(top_frame, wrap="none", state=tk.DISABLED)
 bottom_text = Text(bottom_frame, wrap="none", state=tk.DISABLED)
 #  Extracción de los datos almacenados en memoria para su verificación.
-top_file_content = load_file_content("algorithm.s")
+top_file_content = load_file_content("textoInicial.s")
 bottom_file_content = load_file_content("RAM_resultado.mif")
 top_text.configure(state=tk.NORMAL)
 top_text.insert(tk.END, top_file_content)
@@ -84,23 +85,50 @@ entry_text.pack(pady=5, padx=5, fill="x")
 # El valor de llave se almacena en memoria
 def save_key():
     key = entry_key.get()
-    with open("key.fff", "w") as key_file:
+    # Especificar la ruta para la llave
+    result_file_path = os.path.join("..", "CPU", "memory", "key.fff")
+    
+    # Verificar si el directorio existe, si no, crearlo
+    directory = os.path.dirname(result_file_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    # Guardar la llave
+    with open(result_file_path, "w") as key_file:
         key_file.write(key)
-    print("Llave guardada.")
-# Función para cifrar el texto makefile
+    print("Llave guardada en:", result_file_path)
 def encrypt_text():
-    subprocess.run(["make", "-f", "Makefile_encrypt"])
+    # Cargar el contenido de algorithm_cifrado.s
+    top_file_content = load_file_content("../CPU/memory/algorithm_cifrado.s")
+    top_text.configure(state=tk.NORMAL)
+    top_text.delete(1.0, tk.END)  # Limpiar el contenido anterior
+    top_text.insert(tk.END, top_file_content)
+    top_text.configure(state=tk.DISABLED)
     print("Texto cifrado.")
-# Función para descifrar el texto makefile
+
+# Función para descifrar el texto
 def decrypt_text():
-    subprocess.run(["make", "-f", "Makefile_decrypt"])
+    # Cargar el contenido de algorithm_descifrado.s
+    top_file_content = load_file_content("../CPU/memory/algorithm_descifrado.s")
+    top_text.configure(state=tk.NORMAL)
+    top_text.delete(1.0, tk.END)  # Limpiar el contenido anterior
+    top_text.insert(tk.END, top_file_content)
+    top_text.configure(state=tk.DISABLED)
     print("Texto descifrado.")
-# Los datos de entrada se almacenan en memoria
 def save_text():
     text = entry_text.get()
-    with open("salida.fff", "w") as text_file:
+    # Especificar la ruta para el texto
+    result_file_path = os.path.join("..", "CPU", "memory", "RAM_input.mif")
+    
+    # Verificar si el directorio existe, si no, crearlo
+    directory = os.path.dirname(result_file_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    # Guardar el texto
+    with open(result_file_path, "w") as text_file:
         text_file.write(text)
-    print("Texto a cifrar guardado.")
+    print("Texto a cifrar guardado en:", result_file_path)
 save_key_button = tk.Button(control_aes_frame, text="Guardar Llave", command=save_key)
 save_key_button.pack(pady=5)
 save_encrypt_text_button = tk.Button(control_aes_frame, text="Guardar Texto a Encriptar o Descifrar", command=save_text)

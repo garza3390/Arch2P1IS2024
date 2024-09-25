@@ -91,8 +91,7 @@ module controlUnit (
 			end
 			// vldr: load 128 bits vectorial
 			5'b10010: begin
-				//load_vector: considerar riesgos al hacer un load de un vector
-				load = 1'b0;
+				load = 1'b1;
 				wre = 1'b0;
 				vector_wre = 1'b1;
 				write_memory_enable_a = 1'b0;

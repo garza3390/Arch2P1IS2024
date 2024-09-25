@@ -41,6 +41,10 @@ module top (
 	logic [15:0] alu_src_B;
 	logic [7:0] alu_result_execute;
 	
+	// alu vectorial
+	logic [127:0] alu_src_vector_A;
+	logic [127:0] alu_src_vector_B;
+	
 	// mux's de la alu
 	logic [15:0] srcA_execute;
 	logic [15:0] srcB_execute;
@@ -242,12 +246,28 @@ module top (
       .srcB(alu_src_B[7:0]),
       .result(alu_result_execute)
 	);
+	// Instancia del MUX de forwarding A vectorial
+	mux_3inputs_128bits mux_alu_forward_A_vector (
+		.data0(vector_srcA_execute),
+      .data1(writeback_vector),
+      .data2(alu_vector_result_memory),
+      .select(select_forward_mux_A),
+      .out(alu_src_vector_A)
+	);
+	// Instancia del MUX de forwarding B vectorial
+	mux_3inputs_128bits mux_alu_forward_B_vector (
+		.data0(vector_srcB_execute),
+      .data1(writeback_vector),
+      .data2(alu_vector_result_memory),
+      .select(select_forward_mux_B),
+     	.out(alu_src_vector_B)
+	);
 	// Instancia de la ALU vectorial
 	ALU_vectorial ALU_vectorial_instance(
 		.clk(clk),
 		.aluVectorOp(aluVectorOp_execute),       
-      .srcA_vector(vector_srcA_execute),
-      .srcB_vector(vector_srcB_execute),
+      .srcA_vector(alu_src_vector_A),
+      .srcB_vector(alu_src_vector_B),
       .result_vector(alu_vector_result_execute)
 	);
 	// Instancia del módulo forwarding_unit

@@ -158,12 +158,19 @@ def compiler(expression):
     return final_result
 
 filename = "ROM.mif"
-result_file_path = os.path.join(os.getcwd(), filename)
+result_file_path = os.path.join("..", "CPU", "memory", filename)
 
+# Verificar si el directorio existe, si no, crearlo
+directory = os.path.dirname(result_file_path)
+if not os.path.exists(directory):
+    os.makedirs(directory)
+
+# Crear el archivo si no existe
 if not os.path.exists(result_file_path):
     with open(result_file_path, "w") as temp_file:
-        pass  
+        pass
 
+# Abrir el archivo en modo 'append'
 with open(result_file_path, "a") as result_file:
     current_directory = os.getcwd()
     asm_file_path = os.path.join(current_directory, "algorithm.s")

@@ -20,7 +20,7 @@ module forwarding_unit (
 
     always_comb begin
 		  // Lógica para seleccionar la señal de ambos operandos (rs1_execute y rs2_execute) para instrucciones que escriben en el regfile
-        if ((wre_memory && (rd_memory == rs1_execute) && (rd_memory == rs2_execute)) || (wre_vector_memory && (rd_memory == rs1_execute) && (rd_memory == rs2_execute))) begin
+        if (((rd_memory == rs1_execute) && (rd_memory == rs2_execute)) || (wre_vector_memory && wre_memory)) begin
             select_forward_mux_A = 3'b010;
 				select_forward_mux_B = 3'b010;
         end else if ((wre_writeback && (rd_writeback == rs1_execute)) || (wre_vector_writeback && (rd_writeback == rs1_execute))) begin

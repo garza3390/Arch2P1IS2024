@@ -51,8 +51,8 @@ for i, (title, value) in enumerate(variables.items()):
 top_text = Text(top_frame, wrap="none", state=tk.DISABLED)
 bottom_text = Text(bottom_frame, wrap="none", state=tk.DISABLED)
 #  Extracción de los datos almacenados en memoria para su verificación.
-top_file_content = load_file_content("programa_entrada.fff")
-bottom_file_content = load_file_content("resultado.fff")
+top_file_content = load_file_content("algorithm.s")
+bottom_file_content = load_file_content("RAM_resultado.mif")
 top_text.configure(state=tk.NORMAL)
 top_text.insert(tk.END, top_file_content)
 top_text.configure(state=tk.DISABLED)

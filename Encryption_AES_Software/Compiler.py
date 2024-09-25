@@ -157,21 +157,21 @@ def compiler(expression):
 
     return final_result
 
-filename = "compiled.txt"
-result_file_path = os.path.join(os.getcwd(), "Compiler", filename)
+filename = "ROM.mif"
+result_file_path = os.path.join(os.getcwd(), filename)
 
 if not os.path.exists(result_file_path):
-    with open(result_file_path, "a") as temp_file:
+    with open(result_file_path, "w") as temp_file:
         pass  
 
 with open(result_file_path, "a") as result_file:
     current_directory = os.getcwd()
-    asm_file_path = os.path.join(current_directory, "Compiler", "algorithm.s")
+    asm_file_path = os.path.join(current_directory, "algorithm.s")
 
-    with open(asm_file_path, "r") as asm_file:  # Open the asm file for reading
+    with open(asm_file_path, "r") as asm_file:
         compiled_instructions = []
         for line in asm_file:
-            if line[0] != "_" and line[0] != "#" and line.strip() != "":  # Ignore labels and empty lines
-                instruction = compiler(line.strip())
+            line = line.strip()
+            if line and not line.startswith(("_", "#")):
+                instruction = compiler(line)
                 result_file.write(instruction + "\n")
-                

@@ -1,0 +1,11 @@
+|jtag_test
+clk => ~NO_FANOUT~
+A[0] => Add0.IN2
+A[1] => Add0.IN1
+B[0] => Add0.IN4
+B[1] => Add0.IN3
+SUMA[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+SUMA[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+SUMA[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

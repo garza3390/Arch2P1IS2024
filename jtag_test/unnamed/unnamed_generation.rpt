@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\jpabl\OneDrive\Documentos\GitHub\CPU-Pipelined\jtag_test\unnamed.qsys --block-symbol-file --output-directory=C:\Users\jpabl\OneDrive\Documentos\GitHub\CPU-Pipelined\jtag_test\unnamed --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading jtag_test/unnamed.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\jpabl\OneDrive\Documentos\GitHub\CPU-Pipelined\jtag_test\unnamed.qsys --synthesis=VERILOG --output-directory=C:\Users\jpabl\OneDrive\Documentos\GitHub\CPU-Pipelined\jtag_test\unnamed\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading jtag_test/unnamed.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: virtual_jtag_0: "unnamed" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: unnamed: Done "unnamed" with 2 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, Text
 import subprocess
+from Compiler import compiler
 import os
 
 def load_file_content(filepath):
@@ -14,7 +15,7 @@ def load_file_content(filepath):
     
 root = tk.Tk()
 root.title("AES Encryption Debugger")
-root.geometry("80x60+100+100")  # Para garantizar que los tamaños se adapten
+root.geometry("80x60+100+100")
 root.update_idletasks()
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -51,15 +52,15 @@ for i, (title, value) in enumerate(variables.items()):
     tk.Label(var_grid, text=value).grid(row=row, column=col*2+1, padx=5, pady=5, sticky="w")
 top_text = Text(top_frame, wrap="none", state=tk.DISABLED)
 bottom_text = Text(bottom_frame, wrap="none", state=tk.DISABLED)
-#  Extracción de los datos almacenados en memoria para su verificación.
 top_file_content = load_file_content("textoInicial.s")
-bottom_file_content = load_file_content("RAM_resultado.mif")
+bottom_file_content = load_file_content("../CPU/memory/RAM_resultado.mif")
 top_text.configure(state=tk.NORMAL)
 top_text.insert(tk.END, top_file_content)
 top_text.configure(state=tk.DISABLED)
 bottom_text.configure(state=tk.NORMAL)
 bottom_text.insert(tk.END, bottom_file_content)
 bottom_text.configure(state=tk.DISABLED)
+
 # Función para agregar el indicador circular en una línea específica
 def add_circular_indicator(text_widget, line_number):
     canvas = tk.Canvas(top_frame, width=20, height=20, bg='white', highlightthickness=0)
@@ -69,10 +70,12 @@ def add_circular_indicator(text_widget, line_number):
     text_widget.mark_set("insert", index)
     text_widget.window_create(index, window=canvas)
     text_widget.configure(state=tk.DISABLED)
-# Agregar el indicador circular en la línea especificada (stepping) esto con el fin de verificar la ejecución del código.
+
+# Agregar el indicador circular en la línea especificada
 add_circular_indicator(top_text, indicator_line_number)
 top_text.pack(fill="both", expand=True)
 bottom_text.pack(fill="both", expand=True)
+
 # Crear los campos de entrada y botones en el frame "Control AES"
 label_key = tk.Label(control_aes_frame, text="Llave:")
 label_key.pack(pady=5, anchor="w")
@@ -82,53 +85,51 @@ label_text = tk.Label(control_aes_frame, text="Texto a cifrar/descifrar:")
 label_text.pack(pady=5, anchor="w")
 entry_text = tk.Entry(control_aes_frame, width=100)
 entry_text.pack(pady=5, padx=5, fill="x")
-# El valor de llave se almacena en memoria
+
 def save_key():
     key = entry_key.get()
-    # Especificar la ruta para la llave
     result_file_path = os.path.join("..", "CPU", "memory", "key.fff")
-    
-    # Verificar si el directorio existe, si no, crearlo
     directory = os.path.dirname(result_file_path)
     if not os.path.exists(directory):
         os.makedirs(directory)
-    
-    # Guardar la llave
     with open(result_file_path, "w") as key_file:
         key_file.write(key)
     print("Llave guardada en:", result_file_path)
+
+def clear_text_except_indicator():
+    top_text.configure(state=tk.NORMAL)
+    top_text.delete(1.0, tk.END)  # Limpiar el contenido anterior
+    add_circular_indicator(top_text, indicator_line_number)  # Volver a agregar el indicador
+    top_text.configure(state=tk.DISABLED)
+
 def encrypt_text():
-    # Cargar el contenido de algorithm_cifrado.s
+    clear_text_except_indicator()  # Limpiar y mantener el indicador
     top_file_content = load_file_content("../CPU/memory/algorithm_cifrado.s")
     top_text.configure(state=tk.NORMAL)
-    top_text.delete(1.0, tk.END)  # Limpiar el contenido anterior
     top_text.insert(tk.END, top_file_content)
     top_text.configure(state=tk.DISABLED)
+    compiler('../CPU/memory/algorithm_cifrado.s')
     print("Texto cifrado.")
 
-# Función para descifrar el texto
 def decrypt_text():
-    # Cargar el contenido de algorithm_descifrado.s
+    clear_text_except_indicator()  # Limpiar y mantener el indicador
     top_file_content = load_file_content("../CPU/memory/algorithm_descifrado.s")
     top_text.configure(state=tk.NORMAL)
-    top_text.delete(1.0, tk.END)  # Limpiar el contenido anterior
     top_text.insert(tk.END, top_file_content)
     top_text.configure(state=tk.DISABLED)
+    compiler('../CPU/memory/algorithm_descifrado.s')
     print("Texto descifrado.")
+
 def save_text():
     text = entry_text.get()
-    # Especificar la ruta para el texto
     result_file_path = os.path.join("..", "CPU", "memory", "RAM_input.mif")
-    
-    # Verificar si el directorio existe, si no, crearlo
     directory = os.path.dirname(result_file_path)
     if not os.path.exists(directory):
         os.makedirs(directory)
-    
-    # Guardar el texto
     with open(result_file_path, "w") as text_file:
         text_file.write(text)
     print("Texto a cifrar guardado en:", result_file_path)
+
 save_key_button = tk.Button(control_aes_frame, text="Guardar Llave", command=save_key)
 save_key_button.pack(pady=5)
 save_encrypt_text_button = tk.Button(control_aes_frame, text="Guardar Texto a Encriptar o Descifrar", command=save_text)
@@ -137,4 +138,5 @@ encrypt_button = tk.Button(control_aes_frame, text="Cifrar Texto", command=encry
 encrypt_button.pack(pady=5)
 decrypt_button = tk.Button(control_aes_frame, text="Descifrar Texto", command=decrypt_text)
 decrypt_button.pack(pady=5)
+
 root.mainloop()

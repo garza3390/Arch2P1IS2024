@@ -26,8 +26,35 @@ instructions =  { # Dictionary with the 15 instructions to use.
                 'get_8x8': '1011',
                 'end': '1100'
                 }
+fileTo_compile = ''
+def compiler(Filename):
+    fileTo_compile = Filename
+    filename = "ROM.mif"
+    result_file_path = os.path.join("..", "CPU", "memory", filename)
 
-def compiler(expression):
+    # Verificar si el directorio existe, si no, crearlo
+    directory = os.path.dirname(result_file_path)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    # Crear el archivo si no existe
+    if not os.path.exists(result_file_path):
+        with open(result_file_path, "w") as temp_file:
+            pass
+
+    # Abrir el archivo en modo 'append'
+    with open(result_file_path, "a") as result_file:
+        asm_file_path = fileTo_compile
+
+        with open(asm_file_path, "r") as asm_file:
+            compiled_instructions = []
+            for line in asm_file:
+                line = line.strip()
+                if line and not line.startswith(("_", "#")):
+                    instruction = compiler_init(line)
+                    result_file.write(instruction + "\n")
+
+def compiler_init(expression):
     opcode = ""
     condition = ""
     reg_vd = ""
@@ -157,28 +184,4 @@ def compiler(expression):
 
     return final_result
 
-filename = "ROM.mif"
-result_file_path = os.path.join("..", "CPU", "memory", filename)
 
-# Verificar si el directorio existe, si no, crearlo
-directory = os.path.dirname(result_file_path)
-if not os.path.exists(directory):
-    os.makedirs(directory)
-
-# Crear el archivo si no existe
-if not os.path.exists(result_file_path):
-    with open(result_file_path, "w") as temp_file:
-        pass
-
-# Abrir el archivo en modo 'append'
-with open(result_file_path, "a") as result_file:
-    current_directory = os.getcwd()
-    asm_file_path = os.path.join(current_directory, "algorithm.s")
-
-    with open(asm_file_path, "r") as asm_file:
-        compiled_instructions = []
-        for line in asm_file:
-            line = line.strip()
-            if line and not line.startswith(("_", "#")):
-                instruction = compiler(line)
-                result_file.write(instruction + "\n")

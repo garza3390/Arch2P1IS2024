@@ -212,8 +212,8 @@ module ALU_vectorial (
 	always_comb begin
 		case (aluVectorOp)
 			5'b00000: result_vector = 128'b0; // nop
-			5'b10011: result_vector = addRoundKey_result; 
-			5'b10100: result_vector = shiftRows_result;
+			5'b10011: result_vector = addRoundKey_result; // 128'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;  
+			5'b10100: result_vector = shiftRows_result; // 128'b01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101;
 			5'b10101: result_vector = mixColumns_result;
 			5'b10110: result_vector = rotWord_result; 
 			5'b10111: result_vector = rcon_result; 

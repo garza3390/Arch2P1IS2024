@@ -280,9 +280,12 @@ module top (
       .rs2_writeback(rs2_writeback),
       .rd_memory(rd_memory),
       .rd_writeback(rd_writeback),
-      .write_memory_enable_execute(write_memory_enable_a_execute),
+      .write_memory_enable_a_execute(write_memory_enable_a_execute),
+		.write_memory_enable_b_execute(write_memory_enable_b_execute),
       .wre_memory(wre_memory),
       .wre_writeback(wre_writeback),
+		.wre_vector_memory(vector_wre_memory),
+      .wre_vector_writeback(vector_wre_writeback),
       .select_forward_mux_A(select_forward_mux_A),
       .select_forward_mux_B(select_forward_mux_B)
     );
@@ -373,7 +376,7 @@ module top (
 	mux_2inputs_128bits mux_vector_2inputs_writeback (
 		.data0(vector_writeback_data),
       .data1(alu_vector_result_writeback),
-      .select(select_writeback_data_mux_writeback),
+      .select(select_writeback_vector_data_mux_writeback),
       .out(writeback_vector)
 	);
 	

@@ -1,6 +1,7 @@
 |top
 clk => clk.IN10
 reset => reset.IN5
+encrypt_decrypt => ~NO_FANOUT~
 PC[0] << pc_mux_output[0].DB_MAX_OUTPUT_PORT_TYPE
 PC[1] << pc_mux_output[1].DB_MAX_OUTPUT_PORT_TYPE
 PC[2] << pc_mux_output[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -4518,27 +4519,21 @@ flush[1] <= <GND>
 
 |top|controlUnit:control_unit_instance
 opCode[0] => Decoder0.IN4
-opCode[0] => Decoder3.IN2
 opCode[1] => Decoder0.IN3
-opCode[1] => Decoder2.IN2
 opCode[2] => Decoder0.IN2
 opCode[2] => Decoder1.IN2
 opCode[3] => Decoder0.IN1
 opCode[3] => Decoder1.IN1
-opCode[3] => Decoder2.IN1
-opCode[3] => Decoder3.IN1
 opCode[4] => Decoder0.IN0
 opCode[4] => Decoder1.IN0
-opCode[4] => Decoder2.IN0
-opCode[4] => Decoder3.IN0
-control_signals[0] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
-control_signals[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
 control_signals[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
-control_signals[3] <= <GND>
-control_signals[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-control_signals[5] <= Decoder3.DB_MAX_OUTPUT_PORT_TYPE
-control_signals[6] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
-control_signals[7] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[3] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[6] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+control_signals[7] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 control_signals[8] <= <GND>
 control_signals[9] <= <GND>
 control_signals[10] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE

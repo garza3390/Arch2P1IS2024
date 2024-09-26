@@ -110,7 +110,7 @@ module controlUnit (
 				write_memory_enable_b = 1'b0;
 				select_writeback_data_mux = 2'b00;
 				select_writeback_vector_data_mux = 2'b00;
-				aluOp = 5'b00011;
+				aluOp = 5'b00000;
 				aluVectorOp = 5'b00000;
 			end
 			// vstr: store 128 bits vectorial
@@ -196,6 +196,42 @@ module controlUnit (
 				select_writeback_vector_data_mux = 2'b01;
 				aluOp = 5'b00000;
 				aluVectorOp = 5'b10111;
+			end
+			// subBytes
+			5'b11000: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11000;
+			end
+			// roundKey
+			5'b11001: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11001;
+			end
+			// xorColumns
+			5'b11010: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11010;
 			end
 			default: begin
 				load = 1'b0;

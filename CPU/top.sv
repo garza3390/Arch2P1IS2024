@@ -1,7 +1,7 @@
 module top (
     input logic clk,
     input logic reset,
-	 
+	 input logic encrypt_decrypt,
 	 //////////////////////////// FETCH
 	 output logic [15:0] PC,
 	 output logic [19:0] instr_fetch,

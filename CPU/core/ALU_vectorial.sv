@@ -7,7 +7,7 @@ module ALU_vectorial (
 );
 
 	// Variables para almacenar los resultados de las operaciones
-	logic [127:0] subBytes_result, mixColumns_result, shiftRows_result, addRoundKey_result, new_key;
+	logic [127:0] subBytes_result, mixColumns_result, shiftRows_result, addRoundKey_result, new_key; // , rotWord_result, rcon_result
 	logic [31:0] rotWord_column_result, subBytes_key_result, new_key_aux_0, new_key_aux_1, new_key_aux_2, new_key_aux_3;
 	
     // Señales para las filas de entrada (32 bits cada una)
@@ -501,8 +501,11 @@ module ALU_vectorial (
 			5'b10011: result_vector = addRoundKey_result;
 			5'b10100: result_vector = shiftRows_result; 
 			5'b10101: result_vector = mixColumns_result;
-			5'b10110: result_vector = 128'b0; //provisional
-			5'b10111: result_vector = 128'b0; //provisional
+			//5'b10110: result_vector = rotWord_result;
+			//5'b10111: result_vector = rcon_result;
+			5'b11000: result_vector = subBytes_result;
+			5'b11001: result_vector = new_key;
+			5'b11010: result_vector = {new_key_aux_3, new_key_aux_2, new_key_aux_1, new_key_aux_0}; //xor columns of the round key
 			default: result_vector = 128'b0; // Para codigos que no existen
       endcase
     end

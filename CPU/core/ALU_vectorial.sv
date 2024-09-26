@@ -5,27 +5,10 @@ module ALU_vectorial (
     input logic [127:0] srcB_vector, // Segundo operando
     output logic [127:0] result_vector // Resultado de la operación
 );
-	logic [7:0] vector_alu_result_1;
-	logic [7:0] vector_alu_result_2;
-	logic [7:0] vector_alu_result_3;
-	logic [7:0] vector_alu_result_4;
-	logic [7:0] vector_alu_result_5;
-	logic [7:0] vector_alu_result_6;
-	logic [7:0] vector_alu_result_7;
-	logic [7:0] vector_alu_result_8;
-	logic [7:0] vector_alu_result_9;
-	logic [7:0] vector_alu_result_10;
-	logic [7:0] vector_alu_result_11;
-	logic [7:0] vector_alu_result_12;
-	logic [7:0] vector_alu_result_13;
-	logic [7:0] vector_alu_result_14;
-	logic [7:0] vector_alu_result_15;
-	logic [7:0] vector_alu_result_16;
-	logic [127:0] vector_data;
-	
+
 	// Variables para almacenar los resultados de las operaciones
 	logic [127:0] subBytes_result, mixColumns_result, shiftRows_result, addRoundKey_result, new_key;
-	logic [31:0] rotWord_column_result, subBytes_key_result, new_key_aux_1, new_key_aux_2, new_key_aux_3;
+	logic [31:0] rotWord_column_result, subBytes_key_result, new_key_aux_0, new_key_aux_1, new_key_aux_2, new_key_aux_3;
 	
     // Señales para las filas de entrada (32 bits cada una)
 	logic [31:0] row_in_a_0, row_in_a_1, row_in_a_2, row_in_a_3;  // Filas de srcA
@@ -439,16 +422,16 @@ module ALU_vectorial (
 		 .col_in1_2(subBytes_key_result[15:8]),    // Segunda celda de la última columna
 		 .col_in2_2(subBytes_key_result[23:16]),    // Tercera celda de la última columna
 		 .col_in3_2(subBytes_key_result[31:24]),   // Cuarta celda de la última columna
-		 .col_out0(new_key[7:0]),   // Primera celda de la columna de salida
-		 .col_out1(new_key[15:8]),  // Segunda celda de la columna de salida
-		 .col_out2(new_key[23:16]), // Tercera celda de la columna de salida
-		 .col_out3(new_key[31:24])  // Cuarta celda de la columna de salida
+		 .col_out0(new_key_aux_0[7:0]),   // Primera celda de la columna de salida
+		 .col_out1(new_key_aux_0[15:8]),  // Segunda celda de la columna de salida
+		 .col_out2(new_key_aux_0[23:16]), // Tercera celda de la columna de salida
+		 .col_out3(new_key_aux_0[31:24])  // Cuarta celda de la columna de salida
 	);
 	
-	assign new_key_aux_1[7:0] = new_key[7:0];
-	assign new_key_aux_1[15:8] = new_key[15:8];
-	assign new_key_aux_1[23:16] = new_key[23:16];
-	assign new_key_aux_1[31:24] = new_key[31:24];
+	assign new_key[7:0] = new_key_aux_0[7:0];
+	assign new_key[39:32] = new_key_aux_0[15:8];
+	assign new_key[71:64] = new_key_aux_0[23:16];
+	assign new_key[103:96] = new_key_aux_0[31:24];
 	
 ////////////////////////////////////////////////////////////////////////////////////// 
 	xorColumns xor_instance_1 (
@@ -456,62 +439,67 @@ module ALU_vectorial (
 		 .col_in1(col_1_in_a_1),     // Segunda celda de la columna 1
 		 .col_in2(col_1_in_a_2),    // Tercera celda de la columna 1
 		 .col_in3(col_1_in_a_3),    // Cuarta celda de la columna 1
-		 .col_in0_2(new_key_aux_1[7:0]),    // Primera celda de la columna 2
-		 .col_in1_2(new_key_aux_1[15:8]),   // Segunda celda de la columna 2
-		 .col_in2_2(new_key_aux_1[23:16]),  // Tercera celda de la columna 2
-		 .col_in3_2(new_key_aux_1[31:24]),  // Cuarta celda de la columna 2
-		 .col_out0(new_key[15:8]),      // Primera celda de la salida
-		 .col_out1(new_key[47:40]),     // Segunda celda de la salida
-		 .col_out2(new_key[79:72]),    // Tercera celda de la salida
-		 .col_out3(new_key[111:104])     // Cuarta celda de la salida
+		 .col_in0_2(new_key[7:0]),    // Primera celda de la columna 2
+		 .col_in1_2(new_key[15:8]),   // Segunda celda de la columna 2
+		 .col_in2_2(new_key[23:16]),  // Tercera celda de la columna 2
+		 .col_in3_2(new_key[31:24]),  // Cuarta celda de la columna 2
+		 .col_out0(new_key_aux_1[7:0]),      // Primera celda de la salida
+		 .col_out1(new_key_aux_1[15:8]),     // Segunda celda de la salida
+		 .col_out2(new_key_aux_1[23:16]),    // Tercera celda de la salida
+		 .col_out3(new_key_aux_1[31:24])     // Cuarta celda de la salida
 	);
 	
-	assign new_key_aux_2[7:0] = new_key[15:8];
-	assign new_key_aux_2[15:8] = new_key[47:40];
-	assign new_key_aux_2[23:16] = new_key[79:72];
-	assign new_key_aux_2[31:24] = new_key[111:104];
+	assign new_key[15:8] = new_key_aux_1[7:0];
+	assign new_key[47:40] = new_key_aux_1[15:8];
+	assign new_key[79:72] = new_key_aux_1[23:16];
+	assign new_key[111:104] = new_key_aux_1[31:24];
 	
 	xorColumns xor_instance_2 (
 		 .col_in0(col_2_in_a_0),      // Primera celda de la columna 1
 		 .col_in1(col_2_in_a_1),     // Segunda celda de la columna 1
 		 .col_in2(col_2_in_a_2),    // Tercera celda de la columna 1
 		 .col_in3(col_2_in_a_3),    // Cuarta celda de la columna 1
-		 .col_in0_2(new_key_aux_2[7:0]),    // Primera celda de la columna 2
-		 .col_in1_2(new_key_aux_2[15:8]),   // Segunda celda de la columna 2
-		 .col_in2_2(new_key_aux_2[23:16]),  // Tercera celda de la columna 2
-		 .col_in3_2(new_key_aux_2[31:24]),  // Cuarta celda de la columna 2
-		 .col_out0(new_key[23:16]),      // Primera celda de la salida
-		 .col_out1(new_key[55:48]),     // Segunda celda de la salida
-		 .col_out2(new_key[87:80]),    // Tercera celda de la salida
-		 .col_out3(new_key[119:112])     // Cuarta celda de la salida
+		 .col_in0_2(new_key[15:8]),    // Primera celda de la columna 2
+		 .col_in1_2(new_key[47:40]),   // Segunda celda de la columna 2
+		 .col_in2_2(new_key[79:72]),  // Tercera celda de la columna 2
+		 .col_in3_2(new_key[111:104]),  // Cuarta celda de la columna 2
+		 .col_out0(new_key_aux_2[7:0]),      // Primera celda de la salida
+		 .col_out1(new_key_aux_2[15:8]),     // Segunda celda de la salida
+		 .col_out2(new_key_aux_2[23:16]),    // Tercera celda de la salida
+		 .col_out3(new_key_aux_2[31:24])     // Cuarta celda de la salida
 	);
 	
-	assign new_key_aux_3[7:0] = new_key[23:16];
-	assign new_key_aux_3[15:8] = new_key[55:48];
-	assign new_key_aux_3[23:16] = new_key[87:80];
-	assign new_key_aux_3[31:24] = new_key[119:112];
+	assign new_key[23:16] = new_key_aux_2[7:0];
+	assign new_key[55:48] = new_key_aux_2[15:8];
+	assign new_key[87:80] = new_key_aux_2[23:16];
+	assign new_key[119:112] = new_key_aux_2[31:24];
 
 	xorColumns xor_instance_3 (
 		 .col_in0(col_3_in_a_0),      // Primera celda de la columna 1
 		 .col_in1(col_3_in_a_1),     // Segunda celda de la columna 1
 		 .col_in2(col_3_in_a_2),    // Tercera celda de la columna 1
 		 .col_in3(col_3_in_a_3),    // Cuarta celda de la columna 1
-		 .col_in0_2(new_key_aux_3[7:0]),    // Primera celda de la columna 2
-		 .col_in1_2(new_key_aux_3[15:8]),   // Segunda celda de la columna 2
-		 .col_in2_2(new_key_aux_3[23:16]),  // Tercera celda de la columna 2
-		 .col_in3_2(new_key_aux_3[31:24]),  // Cuarta celda de la columna 2	 
-		 .col_out0(new_key[31:24]),      // Primera celda de la salida
-		 .col_out1(new_key[63:56]),     // Segunda celda de la salida
-		 .col_out2(new_key[95:88]),    // Tercera celda de la salida
-		 .col_out3(new_key[127:120])     // Cuarta celda de la salida
+		 .col_in0_2(new_key[23:16]),    // Primera celda de la columna 2
+		 .col_in1_2(new_key[55:48]),   // Segunda celda de la columna 2
+		 .col_in2_2(new_key[87:80]),  // Tercera celda de la columna 2
+		 .col_in3_2(new_key[119:112]),  // Cuarta celda de la columna 2	 
+		 .col_out0(new_key_aux_3[7:0]),      // Primera celda de la salida
+		 .col_out1(new_key_aux_3[15:8]),     // Segunda celda de la salida
+		 .col_out2(new_key_aux_3[23:16]),    // Tercera celda de la salida
+		 .col_out3(new_key_aux_3[31:24])     // Cuarta celda de la salida
 	);
 
+	assign new_key[31:24] = new_key_aux_3[7:0];
+	assign new_key[63:56] = new_key_aux_3[15:8];
+	assign new_key[95:88] = new_key_aux_3[23:16];
+	assign new_key[127:120] = new_key_aux_3[31:24];
+	
 	
 	always_comb begin
 		case (aluVectorOp)
 			5'b00000: result_vector = 128'b0; // nop
-			5'b10011: result_vector = addRoundKey_result; //128'b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;  
-			5'b10100: result_vector = shiftRows_result; // 128'b01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101;
+			5'b10011: result_vector = addRoundKey_result;
+			5'b10100: result_vector = shiftRows_result; 
 			5'b10101: result_vector = mixColumns_result;
 			5'b10110: result_vector = 128'b0; //provisional
 			5'b10111: result_vector = 128'b0; //provisional

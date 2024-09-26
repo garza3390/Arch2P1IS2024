@@ -12,330 +12,330 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/memory {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:38 on Sep 25,2024
+# Start time: 23:57:34 on Sep 25,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/ROM.v 
 # -- Compiling module ROM
 # 
 # Top level modules:
 # 	ROM
-# End time: 23:03:39 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:35 on Sep 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/memory {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:39 on Sep 25,2024
+# Start time: 23:57:35 on Sep 25,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/memory/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 23:03:39 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:35 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:39 on Sep 25,2024
+# Start time: 23:57:35 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv 
 # -- Compiling module subBytes
 # 
 # Top level modules:
 # 	subBytes
-# End time: 23:03:39 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:35 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:39 on Sep 25,2024
+# Start time: 23:57:35 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/shiftRows.sv 
 # -- Compiling module shiftRows
 # 
 # Top level modules:
 # 	shiftRows
-# End time: 23:03:39 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:35 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/rotWord.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:39 on Sep 25,2024
+# Start time: 23:57:36 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/rotWord.sv 
 # -- Compiling module rotWord
 # 
 # Top level modules:
 # 	rotWord
-# End time: 23:03:40 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:36 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Rcon.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:40 on Sep 25,2024
+# Start time: 23:57:36 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Rcon.sv 
 # -- Compiling module Rcon
 # 
 # Top level modules:
 # 	Rcon
-# End time: 23:03:40 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:36 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mixColumns.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:40 on Sep 25,2024
+# Start time: 23:57:36 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mixColumns.sv 
 # -- Compiling module mixColumns
 # 
 # Top level modules:
 # 	mixColumns
-# End time: 23:03:40 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:36 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/AddRoundKey.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:40 on Sep 25,2024
+# Start time: 23:57:36 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/AddRoundKey.sv 
 # -- Compiling module addRoundKey
 # 
 # Top level modules:
 # 	addRoundKey
-# End time: 23:03:40 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:37 on Sep 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:40 on Sep 25,2024
+# Start time: 23:57:37 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 23:03:41 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:37 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:41 on Sep 25,2024
+# Start time: 23:57:37 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/zeroExtend.sv 
 # -- Compiling module zeroExtend
 # 
 # Top level modules:
 # 	zeroExtend
-# End time: 23:03:41 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:37 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:41 on Sep 25,2024
+# Start time: 23:57:37 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_vector.sv 
 # -- Compiling module Regfile_vector
 # 
 # Top level modules:
 # 	Regfile_vector
-# End time: 23:03:41 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:37 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:41 on Sep 25,2024
+# Start time: 23:57:37 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/Regfile_scalar.sv 
 # -- Compiling module Regfile_scalar
 # 
 # Top level modules:
 # 	Regfile_scalar
-# End time: 23:03:41 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:38 on Sep 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:42 on Sep 25,2024
+# Start time: 23:57:38 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/PC_register.sv 
 # -- Compiling module PC_register
 # 
 # Top level modules:
 # 	PC_register
-# End time: 23:03:42 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:38 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:42 on Sep 25,2024
+# Start time: 23:57:38 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv 
 # -- Compiling module MemoryWriteback_register
 # 
 # Top level modules:
 # 	MemoryWriteback_register
-# End time: 23:03:42 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:38 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:42 on Sep 25,2024
+# Start time: 23:57:38 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/hazard_detection_unit.sv 
 # -- Compiling module hazard_detection_unit
 # 
 # Top level modules:
 # 	hazard_detection_unit
-# End time: 23:03:42 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:38 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:42 on Sep 25,2024
+# Start time: 23:57:39 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/forwarding_unit.sv 
 # -- Compiling module forwarding_unit
 # 
 # Top level modules:
 # 	forwarding_unit
-# End time: 23:03:43 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:39 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:43 on Sep 25,2024
+# Start time: 23:57:39 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/FetchDecode_register.sv 
 # -- Compiling module FetchDecode_register
 # 
 # Top level modules:
 # 	FetchDecode_register
-# End time: 23:03:43 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:39 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:43 on Sep 25,2024
+# Start time: 23:57:39 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv 
 # -- Compiling module ExecuteMemory_register
 # 
 # Top level modules:
 # 	ExecuteMemory_register
-# End time: 23:03:43 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:39 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:43 on Sep 25,2024
+# Start time: 23:57:40 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/DecodeExecute_register.sv 
 # -- Compiling module DecodeExecute_register
 # 
 # Top level modules:
 # 	DecodeExecute_register
-# End time: 23:03:43 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:40 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:44 on Sep 25,2024
+# Start time: 23:57:40 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/controlUnit.sv 
 # -- Compiling module controlUnit
 # 
 # Top level modules:
 # 	controlUnit
-# End time: 23:03:44 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:40 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:44 on Sep 25,2024
+# Start time: 23:57:40 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/comparator_branch.sv 
 # -- Compiling module comparator_branch
 # 
 # Top level modules:
 # 	comparator_branch
-# End time: 23:03:44 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:41 on Sep 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:44 on Sep 25,2024
+# Start time: 23:57:41 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU.sv 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 23:03:44 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:41 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:44 on Sep 25,2024
+# Start time: 23:57:41 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/adder_16.sv 
 # -- Compiling module adder_16
 # 
 # Top level modules:
 # 	adder_16
-# End time: 23:03:45 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:41 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:45 on Sep 25,2024
+# Start time: 23:57:41 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv 
 # -- Compiling module mux_2inputs_16bits
 # ** Warning: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv(12): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	mux_2inputs_16bits
-# End time: 23:03:45 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:41 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:45 on Sep 25,2024
+# Start time: 23:57:42 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv 
 # -- Compiling module ALU_vectorial
 # 
 # Top level modules:
 # 	ALU_vectorial
-# End time: 23:03:45 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:42 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:45 on Sep 25,2024
+# Start time: 23:57:42 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_20bits.sv 
 # -- Compiling module mux_2inputs_20bits
 # 
 # Top level modules:
 # 	mux_2inputs_20bits
-# End time: 23:03:46 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:42 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:46 on Sep 25,2024
+# Start time: 23:57:42 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_128bits.sv 
 # -- Compiling module mux_2inputs_128bits
 # 
 # Top level modules:
 # 	mux_2inputs_128bits
-# End time: 23:03:46 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:42 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:46 on Sep 25,2024
+# Start time: 23:57:43 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/substractor_branch.sv 
 # -- Compiling module substractor_branch
 # 
 # Top level modules:
 # 	substractor_branch
-# End time: 23:03:46 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:43 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_16bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:46 on Sep 25,2024
+# Start time: 23:57:43 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_16bits.sv 
 # -- Compiling module mux_3inputs_16bits
 # 
 # Top level modules:
 # 	mux_3inputs_16bits
-# End time: 23:03:47 on Sep 25,2024, Elapsed time: 0:00:01
+# End time: 23:57:43 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_128bits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:47 on Sep 25,2024
+# Start time: 23:57:43 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_128bits.sv 
 # -- Compiling module mux_3inputs_128bits
 # 
 # Top level modules:
 # 	mux_3inputs_128bits
-# End time: 23:03:47 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:43 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/core {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/xorColumns.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:47 on Sep 25,2024
+# Start time: 23:57:43 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/xorColumns.sv 
 # -- Compiling module xorColumns
 # 
 # Top level modules:
 # 	xorColumns
-# End time: 23:03:47 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:44 on Sep 25,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Manuel/Documents/TEC/Arqui\ 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches {C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:03:47 on Sep 25,2024
+# Start time: 23:57:44 on Sep 25,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches" C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv 
 # -- Compiling module cpu_top_tb
 # 
 # Top level modules:
 # 	cpu_top_tb
-# End time: 23:03:47 on Sep 25,2024, Elapsed time: 0:00:00
+# End time: 23:57:44 on Sep 25,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  cpu_top_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" cpu_top_tb 
-# Start time: 23:03:48 on Sep 25,2024
+# Start time: 23:57:44 on Sep 25,2024
 # Loading sv_std.std
 # Loading work.cpu_top_tb
 # Loading work.adder_16
@@ -376,12 +376,6 @@
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_A File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 228
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data2'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_16bits.sv(4).
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_alu_forward_B File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 236
-# ** Error (suppressible): (vsim-3839) Variable '/cpu_top_tb/ALU_vectorial_instance/new_key[15:8]', driven via a port connection, is multiply driven. See C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv(432).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/xor_instance_1 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 454
-# ** Error (suppressible): (vsim-3839) Variable '/cpu_top_tb/ALU_vectorial_instance/new_key[23:16]', driven via a port connection, is multiply driven. See C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv(432).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/xor_instance_2 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 474
-# ** Error (suppressible): (vsim-3839) Variable '/cpu_top_tb/ALU_vectorial_instance/new_key[31:24]', driven via a port connection, is multiply driven. See C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv(432).
-#    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ALU_vectorial_instance/xor_instance_3 File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 494
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'ALUresult_out'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ExecuteMemory_register.sv(21).
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/ExecuteMemory_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 295
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'calc_data_in'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/MemoryWriteback_register.sv(10).
@@ -390,9 +384,16 @@
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/MemoryWriteback_register_instance File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 342
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (8) for port 'data1'. The port definition is at: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_2inputs_16bits.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /cpu_top_tb/mux_2inputs_writeback File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv Line: 370
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./CPU-Pipelined_run_msim_rtl_verilog.do PAUSED at line 42
-# End time: 23:08:11 on Sep 25,2024, Elapsed time: 0:04:23
-# Errors: 3, Warnings: 6
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv(393)
+#    Time: 10 ns  Iteration: 0  Instance: /cpu_top_tb
+# 1
+# Break in Module cpu_top_tb at C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/cpu_top_tb.sv line 393
+# End time: 00:01:04 on Sep 26,2024, Elapsed time: 0:03:20
+# Errors: 0, Warnings: 6

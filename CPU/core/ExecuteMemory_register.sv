@@ -69,7 +69,7 @@ module ExecuteMemory_register (
 		end else begin
 			wre <= wre_execute;
 			vector_wre <= vector_wre_execute;
-			ALUresult <= {8'b0,ALUresult_in};
+			ALUresult <= ALUresult_in;
 			ALUvectorResult <= ALUvectorResult_in;
 			select_writeback_data_mux <= select_writeback_data_mux_execute;
 			select_writeback_vector_data_mux <= select_writeback_vector_data_mux_execute;

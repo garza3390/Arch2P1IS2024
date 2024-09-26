@@ -30,7 +30,6 @@ module Writeback_Stage_tb;
 		.rd2(rd2_vectorial),   
 		.rd3(rd3_vectorial)
 	);
-
 	always #10 clk = ~clk;
    initial begin
 		clk =0;

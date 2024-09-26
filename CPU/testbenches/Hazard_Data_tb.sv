@@ -2,76 +2,50 @@
 module Hazard_Data_tb;
 	logic clk;
 	logic reset;
-// registro PC
 	logic [15:0] pc_mux_output;
-	logic [15:0] pc_address;
-	// sumador del PC
-	logic [15:0] pc_offset;
-	logic [15:0] pc_incremented;
-	// mux del PC
-	logic [1:0] select_pc_mux;   // esta señal de control viene del comparador entre rs1 y rs2
-	logic [15:0] branch_address;
-	// registro Fetch-Decode
 	logic [19:0] instruction_fetch, instruction_decode;
 	logic [1:0] flush;
-	// unidad de control
 	logic [19:0] control_signals;
-	// mux de la unidad de control
 	logic [19:0] nop_mux_output;
 	logic [1:0] select_nop_mux;
-	// banco de registros
 	logic [15:0] writeback_data;
 	logic wre_writeback;
 	logic [15:0] rd1,rd2,rd3;
-	// extensor de signo
 	logic [15:0] extended_label;
-	// sumador branch
 	logic [15:0] pc_decode;
-	// registro Decode-Execute
 	logic write_memory_enable_a_execute, write_memory_enable_b_execute;
 	logic write_memory_enable_a_memory, write_memory_enable_b_memory;
 	logic [1:0] select_writeback_data_mux_execute, select_writeback_vector_data_mux_execute;
 	logic [4:0] aluOp_execute;
-	logic [4:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
-	logic [4:0] rs2_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
+	logic [4:0] rs1_execute;
+	logic [4:0] rs2_execute;
 	logic [4:0] rd_execute; 
 	logic load_instruction;
-	// alu
 	logic [15:0] alu_src_A;
 	logic [15:0] alu_src_B;
 	logic [7:0] alu_result_execute;
-	
-	// alu vectorial
 	logic [127:0] alu_src_vector_A;
 	logic [127:0] alu_src_vector_B;
-	
-	// mux's de la alu
 	logic [15:0] srcA_execute;
 	logic [15:0] srcB_execute;
-	// registro Execute-Memory
 	logic wre_memory, wre_execute;
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory, select_writeback_vector_data_mux_memory;
-	//logic write_memory_enable_memory;
 	logic [7:0] alu_result_memory;
 	logic [15:0] srcA_memory;
 	logic [15:0] srcB_memory;
-	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
-	logic [4:0] rs2_memory; // entrada a la unidad de adelantamiento
+	logic [4:0] rs1_memory;
+	logic [4:0] rs2_memory;
 	logic [4:0] rd_memory;
-	// unidad de adelantamiento
 	logic [2:0] select_forward_mux_A;
 	logic [2:0] select_forward_mux_B;
-	// memoria de datos
 	logic [7:0] data_from_memory;
-	// registro Memory-Writeback
 	logic [15:0] data_from_memory_writeback;
 	logic [7:0] alu_result_writeback;
-	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
-	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
+	logic [4:0] rs1_writeback;
+	logic [4:0] rs2_writeback;
 	logic [4:0] rd_writeback;
 	logic [1:0] select_writeback_data_mux_writeback, select_writeback_vector_data_mux_writeback;
-	// vectorial
 	logic vector_wre_writeback;
 	logic [127:0] vector_rd1, vector_rd2, vector_rd3;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
@@ -81,75 +55,6 @@ module Hazard_Data_tb;
 	logic [127:0] alu_vector_result_writeback;
 	logic [127:0] writeback_vector;
 	logic [4:0] aluVectorOp_execute;
-	
-	
-//////////////////////////////////////////////////////////////////////////////
-	assign pc_offset = 16'b0000000000000001;// suma 1 al PC
-	
-	//////////////////////////// FETCH
-	assign PC = pc_mux_output;
-	assign instr_fetch = instruction_fetch;
-	//////////////////////////// DECODE
-	assign instr_decode = instruction_decode;
-	assign opCode = instruction_decode[19:15];
-	assign register_source_1 = instruction_decode[4:0];
-	assign register_source_2 = instruction_decode[9:5];
-	assign read_data_1 = rd1;
-	assign read_data_2 = rd2;
-	assign read_vector_1 = vector_rd1;
-	assign read_vector_2 = vector_rd2;
-	//////////////////////////// EXECUTE
-	assign alu_scalar_srcA = alu_src_A[7:0];
-	assign alu_scalar_srcB = alu_src_B[7:0];
-	assign alu_vector_srcA = alu_src_vector_A;
-	assign alu_vector_srcB = alu_src_vector_B;
-	assign alu_scalar_result = alu_result_execute;
-	assign alu_vector_result = alu_vector_result_execute;
-	//////////////////////////// MEMORY
-	assign memory_address = srcA_memory;
-	assign memory_scalar_data = data_from_memory;
-	assign memory_vector_data = vector_data_from_memory;
-	assign write_memory_scalar_data = srcB_memory[7:0];
-	assign write_memory_vector_data = vector_srcB_memory;
-	assign write_memory_scalar_enable = write_memory_enable_a_memory;
-	assign write_memory_vector_enable = write_memory_enable_b_memory;
-	//////////////////////////// WRITEBACK
-	assign register_scalar_enable = wre_writeback;
-	assign register_vector_enable = vector_wre_writeback;
-	assign register_destination = rd_writeback;
-	assign writeback_data_w = writeback_data;
-	assign writeback_vector_w = writeback_vector;
-	 
-//////////////////////////////////////////////////////////////////////////////
-	// Instancia del sumador del PC
-	adder_16 pc_add (
-		.a(pc_mux_output),
-		.b(pc_offset),
-		.y(pc_incremented)
-	);
-	// Instancia del MUX del PC
-	mux_2inputs_16bits mux_2inputs_PC (
-		.data0(pc_address),
-		.data1(branch_address),
-		.select(select_pc_mux),
-		.out(pc_mux_output)
-	);
-	// Instancia del registro del PC
-	PC_register pc_reg (
-		.clk(clk),
-      .reset(reset),
-      .nop(select_nop_mux),
-      .address_in(pc_incremented),
-      .address_out(pc_address)
-	);
-	// Instancia de la memoria ROM
-	ROM rom_memory (
-		.address(pc_mux_output),
-      .clock(clk),
-      .q(instruction_fetch)
-	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro FetchDecode
 	FetchDecode_register FetchDecode_register_instance (
 		.clk(clk),
       .reset(reset),
@@ -160,8 +65,6 @@ module Hazard_Data_tb;
       .pc_decode(pc_decode),
       .instruction_out(instruction_decode)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia de la unidad de detección de riesgos
 	hazard_detection_unit u_hazard_detection (
 		.opcode(instruction_decode[19:15]),
 		.rd_load_execute(rd_execute),
@@ -175,30 +78,25 @@ module Hazard_Data_tb;
       .nop(select_nop_mux),
 		.flush(flush)
 	); 
-	// Instancia de la unidad de control
 	controlUnit control_unit_instance (
 		.opCode(instruction_decode[19:15]),
       .control_signals(control_signals)
 	);
-	// Instancia del MUX de NOP
 	mux_2inputs_20bits mux_2inputs_nop (
 		.data0(control_signals),
       .data1(20'b0),
       .select(select_nop_mux),
       .out(nop_mux_output)
 	);
-	// Instancia del extensor de ceros
 	zeroExtend zero_extend_instance (
 		.label(instruction_decode[14:10]),
 		.ZeroExtLabel(extended_label) 
 	); 
-	// Instancia del restador de etiquetas de branch (para nuestro caso es restador pues para los loops debe devolverse a una posicion anterior)
 	substractor_branch branch_label_pc (
 		.a(pc_decode),
       .b(extended_label),
       .y(branch_address)
 	);
-	// Instancia del banco de registros
 	Regfile_scalar regfile_instance (
 		.clk(clk),
 		.wre(wre_writeback),
@@ -210,7 +108,6 @@ module Hazard_Data_tb;
       .rd2(rd2),
       .rd3(rd3)
 	);
-	// Instancia del banco de registros vectorial
 	Regfile_vector vector_instance (
 		.clk(clk),
 		.wre(vector_wre_writeback),
@@ -218,19 +115,16 @@ module Hazard_Data_tb;
       .a2(instruction_decode[9:5]),
       .a3(rd_writeback),
 		.wd3(writeback_vector),
-		.rd1(vector_rd1),   // Read data 1
-		.rd2(vector_rd2),   // Read data 2
-		.rd3(vector_rd3)   // Read data 3
+		.rd1(vector_rd1), 
+		.rd2(vector_rd2),  
+		.rd3(vector_rd3)   
 	);
-	// Instancia del comparador de branch
 	comparator_branch comparator_instance (
 		.opCode(instruction_decode[19:15]),
       .rs1_value(rd1),
       .rs2_value(rd2),
       .select_pc_mux(select_pc_mux)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro DecodeExecute
 	DecodeExecute_register DecodeExecute_register_instance (
 		.clk(clk),
       .reset(reset),
@@ -254,13 +148,11 @@ module Hazard_Data_tb;
       .srcB_out(srcB_execute),
 		.srcA_vector_out(vector_srcA_execute),
       .srcB_vector_out(vector_srcB_execute),
-      .rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
-      .rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
+      .rs1_execute(rs1_execute),
+      .rs2_execute(rs2_execute),
       .rd_execute(rd_execute),
 		.load_instruction(load_instruction)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del MUX de forwarding A
 	mux_3inputs_16bits mux_alu_forward_A (
 		.data0(srcA_execute),
       .data1(writeback_data),
@@ -268,7 +160,6 @@ module Hazard_Data_tb;
       .select(select_forward_mux_A),
       .out(alu_src_A)
 	);
-	// Instancia del MUX de forwarding B
 	mux_3inputs_16bits mux_alu_forward_B (
 		.data0(srcB_execute),
       .data1(writeback_data),
@@ -276,14 +167,12 @@ module Hazard_Data_tb;
       .select(select_forward_mux_B),
      	.out(alu_src_B)
 	);
-	// Instancia de la ALU
 	ALU ALU_escalar(
 		.aluOp(aluOp_execute),       
       .srcA(alu_src_A[7:0]),
       .srcB(alu_src_B[7:0]),
       .result(alu_result_execute)
 	);
-	// Instancia del MUX de forwarding A vectorial
 	mux_3inputs_128bits mux_alu_forward_A_vector (
 		.data0(vector_srcA_execute),
       .data1(writeback_vector),
@@ -291,7 +180,6 @@ module Hazard_Data_tb;
       .select(select_forward_mux_A),
       .out(alu_src_vector_A)
 	);
-	// Instancia del MUX de forwarding B vectorial
 	mux_3inputs_128bits mux_alu_forward_B_vector (
 		.data0(vector_srcB_execute),
       .data1(writeback_vector),
@@ -299,7 +187,6 @@ module Hazard_Data_tb;
       .select(select_forward_mux_B),
      	.out(alu_src_vector_B)
 	);
-	// Instancia de la ALU vectorial
 	ALU_vectorial ALU_vectorial_instance(
 		.clk(clk),
 		.aluVectorOp(aluVectorOp_execute),       
@@ -307,7 +194,6 @@ module Hazard_Data_tb;
       .srcB_vector(alu_src_vector_B),
       .result_vector(alu_vector_result_execute)
 	);
-	// Instancia del módulo forwarding_unit
    forwarding_unit forwarding_unit_instance (
       .rs1_execute(rs1_execute),
       .rs2_execute(rs2_execute),
@@ -326,8 +212,6 @@ module Hazard_Data_tb;
       .select_forward_mux_A(select_forward_mux_A),
       .select_forward_mux_B(select_forward_mux_B)
     );
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
      	.reset(reset),
@@ -360,10 +244,8 @@ module Hazard_Data_tb;
      	.rd_memory(rd_memory),
 		.vector_srcB_memory(vector_srcB_memory)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia de la RAM
 	RAM RAM_instance(
-		.address_a(srcA_memory), // la direccion de memoria es la misma pero el dato necesario se maneja con las señales de control
+		.address_a(srcA_memory),
 		.address_b(srcA_memory[11:0]), 
       .clock(clk),
       .data_a(srcB_memory[7:0]),
@@ -373,8 +255,6 @@ module Hazard_Data_tb;
       .q_a(data_from_memory),
 		.q_b(vector_data_from_memory)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
       .reset(reset),
@@ -401,15 +281,12 @@ module Hazard_Data_tb;
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del MUX de writeback escalar
 	mux_2inputs_16bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
       .data1(alu_result_writeback),
       .select(select_writeback_data_mux_writeback),
       .out(writeback_data)
 	);
-	// Instancia del MUX de writeback vectorial
 	mux_2inputs_128bits mux_vector_2inputs_writeback (
 		.data0(vector_writeback_data),
       .data1(alu_vector_result_writeback),
@@ -424,14 +301,13 @@ module Hazard_Data_tb;
 		select_nop_mux = 2'b0;
 		flush = 2'b0;
 		pc_mux_output = 16'b0;
-		instruction_fetch = 20'b0;
-		#10
+		instruction_fetch = 20'b00100000010000000000;
+		#40
 		select_nop_mux = 2'b0;
 		flush = 2'b0;
 		pc_mux_output = 16'b0;
-		instruction_fetch = 20'b0;
-      #100;
+		instruction_fetch = 20'b00100000100000000001;
+      #200;
       $finish;
    end
-	
 endmodule

@@ -2,39 +2,25 @@
 module Memory_Stage_tb ;
    logic clk;
    logic reset;
-	logic [15:0] alu_src_A;
-	logic [15:0] alu_src_B;
 	logic [7:0] alu_result_execute;
-	// alu vectorial
-	logic [127:0] alu_src_vector_A;
-	logic [127:0] alu_src_vector_B;
-	// mux's de la alu
-	logic [15:0] srcA_execute;
-	logic [15:0] srcB_execute;
-	// registro Execute-Memory
 	logic wre_memory, wre_execute;
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory, select_writeback_vector_data_mux_memory;
-	//logic write_memory_enable_memory;
 	logic [7:0] alu_result_memory;
 	logic [15:0] srcA_memory;
 	logic [15:0] srcB_memory;
-	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
-	logic [4:0] rs2_memory; // entrada a la unidad de adelantamiento
+	logic [4:0] rs1_memory; 
+	logic [4:0] rs2_memory;
 	logic [4:0] rd_memory;
-	// unidad de adelantamiento
 	logic [2:0] select_forward_mux_A;
 	logic [2:0] select_forward_mux_B;
-	// memoria de datos
 	logic [7:0] data_from_memory;
-	// registro Memory-Writeback
 	logic [15:0] data_from_memory_writeback;
 	logic [7:0] alu_result_writeback;
-	logic [4:0] rs1_writeback; // entrada a la unidad de adelantamiento
-	logic [4:0] rs2_writeback; // entrada a la unidad de adelantamiento
+	logic [4:0] rs1_writeback;
+	logic [4:0] rs2_writeback;
 	logic [4:0] rd_writeback;
 	logic [1:0] select_writeback_data_mux_writeback, select_writeback_vector_data_mux_writeback;
-	// vectorial
 	logic vector_wre_writeback;
 	logic [127:0] vector_rd1, vector_rd2, vector_rd3;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute, vector_srcB_memory;
@@ -54,10 +40,6 @@ module Memory_Stage_tb ;
    logic [4:0] rs2_execute;
    logic [4:0] rd_execute;
 	logic [4:0] rd_decode;
-	
-	
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
      	.reset(reset),
@@ -90,10 +72,8 @@ module Memory_Stage_tb ;
      	.rd_memory(rd_memory),
 		.vector_srcB_memory(vector_srcB_memory)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia de la RAM
 	RAM RAM_instance(
-		.address_a(srcA_memory), // la direccion de memoria es la misma pero el dato necesario se maneja con las señales de control
+		.address_a(srcA_memory),
 		.address_b(srcA_memory[11:0]), 
       .clock(clk),
       .data_a(srcB_memory[7:0]),
@@ -103,8 +83,6 @@ module Memory_Stage_tb ;
       .q_a(data_from_memory),
 		.q_b(vector_data_from_memory)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro MemoryWriteback
 	MemoryWriteback_register MemoryWriteback_register_instance (
 		.clk(clk),
       .reset(reset),
@@ -131,24 +109,21 @@ module Memory_Stage_tb ;
      	.rs2_writeback(rs2_writeback),
       .rd_writeback(rd_writeback)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del MUX de writeback escalar
 	mux_2inputs_16bits mux_2inputs_writeback (
 		.data0(data_from_memory_writeback),
       .data1(alu_result_writeback),
       .select(select_writeback_data_mux_writeback),
       .out(writeback_data)
 	);
-	// Instancia del MUX de writeback vectorial
 	mux_2inputs_128bits mux_vector_2inputs_writeback (
 		.data0(vector_writeback_data),
       .data1(alu_vector_result_writeback),
       .select(select_writeback_vector_data_mux_writeback),
       .out(writeback_vector)
 	);
-
    always #10 clk = ~clk;
    initial begin
+		clk = 0;
       reset = 1;
 		#20
 		reset =  0;
@@ -158,18 +133,18 @@ module Memory_Stage_tb ;
 		select_writeback_data_mux_execute = 8'b00000010;
 		select_writeback_vector_data_mux_execute = 128'b01;
 		write_memory_enable_a_execute = 2'b01;
-		write_memory_enable_b_execute = 2'b01;
+		write_memory_enable_b_execute = 2'b00;
 		rs1_execute = 4'b0001;
 		rs2_execute = 4'b0010;
 		rd_decode = 4'b0011;
 		rd_execute = 4'b0011;
       #20
-		vector_wre_execute = 1;
+		vector_wre_execute = 0;
 		alu_result_execute = 8'b00000001;
 		alu_vector_result_execute = 128'b1;
 		select_writeback_data_mux_execute = 8'b00000010;
 		select_writeback_vector_data_mux_execute = 128'b01;
-		write_memory_enable_a_execute = 2'b01;
+		write_memory_enable_a_execute = 2'b00;
 		write_memory_enable_b_execute = 2'b01;
 		rs1_execute = 4'b0001;
 		rs2_execute = 4'b0010;
@@ -178,5 +153,4 @@ module Memory_Stage_tb ;
       #100;
       $finish;
    end
-	
 endmodule

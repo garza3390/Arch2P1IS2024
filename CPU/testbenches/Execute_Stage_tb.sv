@@ -1,5 +1,4 @@
 `timescale 1ps/1ps
-
 module Execute_Stage_tb;
    logic clk;
    logic reset;
@@ -12,51 +11,42 @@ module Execute_Stage_tb;
 	logic [4:0] rs2_decode;
 	logic [4:0] rd_decode;
 	logic [15:0] pc_decode;
-	// registro Decode-Execute
 	logic write_memory_enable_a_execute, write_memory_enable_b_execute;
 	logic write_memory_enable_a_memory, write_memory_enable_b_memory;
 	logic [1:0] select_writeback_data_mux_execute, select_writeback_vector_data_mux_execute;
 	logic [4:0] aluOp_execute;
-	logic [4:0] rs1_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
-	logic [4:0] rs2_execute; // entrada a la unidad de adelantamiento y de deteccion de riesgos
+	logic [4:0] rs1_execute;
+	logic [4:0] rs2_execute;
 	logic [4:0] rd_execute; 
 	logic load_instruction;
-	// alu
 	logic [15:0] alu_src_A;
 	logic [15:0] alu_src_B;
 	logic [7:0] alu_result_execute;
-
-	// mux's de la alu
 	logic [15:0] srcA_execute;
 	logic [15:0] srcB_execute;
-	// registro Execute-Memory
 	logic wre_memory, wre_execute;
 	logic vector_wre_memory, vector_wre_execute;
 	logic [1:0] select_writeback_data_mux_memory, select_writeback_vector_data_mux_memory;
-	//logic write_memory_enable_memory;
 	logic [7:0] alu_result_memory;
 	logic [15:0] srcA_memory;
 	logic [15:0] srcB_memory;
-	logic [4:0] rs1_memory; // entrada a la unidad de adelantamiento
-	logic [4:0] rs2_memory; // entrada a la unidad de adelantamiento
+	logic [4:0] rs1_memory;
+	logic [4:0] rs2_memory;
 	logic [4:0] rd_memory;
-	// unidad de adelantamiento
 	logic [2:0] select_forward_mux_A;
 	logic [2:0] select_forward_mux_B;
 	logic [127:0] vector_srcA_execute, vector_srcB_execute;
 	logic [127:0] vector_writeback_data;
 	logic [4:0] aluVectorOp_execute;
 	logic [127:0] alu_vector_result_memory;
-
-
 	DecodeExecute_register DecodeExecute_register_instance (
 		.clk(clk),
       .reset(reset),
       .nop_mux_output_in(nop_mux_output_in),
       .srcA_in(srcA_in),
       .srcB_in(srcB_in),
-	.srcA_vector_in(srcA_vector_in),
-	.srcB_vector_in(srcB_vector_in),
+		.srcA_vector_in(srcA_vector_in),
+		.srcB_vector_in(srcB_vector_in),
       .rs1_decode(rs1_decode),
       .rs2_decode(rs2_decode),
       .rd_decode(rd_decode),
@@ -72,13 +62,11 @@ module Execute_Stage_tb;
       .srcB_out(srcB_execute),
 		.srcA_vector_out(vector_srcA_execute),
       .srcB_vector_out(vector_srcB_execute),
-      .rs1_execute(rs1_execute),  // entrada a la unidad de adelantamiento
-      .rs2_execute(rs2_execute), // entrada a la unidad de adelantamiento
+      .rs1_execute(rs1_execute),
+      .rs2_execute(rs2_execute),
       .rd_execute(rd_execute),
 		.load_instruction(load_instruction)
 	);
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del MUX de forwarding A
 	mux_3inputs_16bits mux_alu_forward_A (
 		.data0(srcA_execute),
       .data1(writeback_data),
@@ -86,7 +74,6 @@ module Execute_Stage_tb;
       .select(select_forward_mux_A),
       .out(alu_src_A)
 	);
-	// Instancia del MUX de forwarding B
 	mux_3inputs_16bits mux_alu_forward_B (
 		.data0(srcB_execute),
       .data1(writeback_data),
@@ -94,14 +81,12 @@ module Execute_Stage_tb;
       .select(select_forward_mux_B),
      	.out(alu_src_B)
 	);
-	// Instancia de la ALU
 	ALU ALU_escalar(
 		.aluOp(aluOp_execute),       
       .srcA(alu_src_A[7:0]),
       .srcB(alu_src_B[7:0]),
       .result(alu_result_execute)
 	);
-	// Instancia del MUX de forwarding A vectorial
 	mux_3inputs_128bits mux_alu_forward_A_vector (
 		.data0(vector_srcA_execute),
       .data1(writeback_vector),
@@ -109,7 +94,6 @@ module Execute_Stage_tb;
       .select(select_forward_mux_A),
       .out(alu_src_vector_A)
 	);
-	// Instancia del MUX de forwarding B vectorial
 	mux_3inputs_128bits mux_alu_forward_B_vector (
 		.data0(vector_srcB_execute),
       .data1(writeback_vector),
@@ -117,7 +101,6 @@ module Execute_Stage_tb;
       .select(select_forward_mux_B),
      	.out(alu_src_vector_B)
 	);
-	// Instancia de la ALU vectorial
 	ALU_vectorial ALU_vectorial_instance(
 		.clk(clk),
 		.aluVectorOp(aluVectorOp_execute),       
@@ -125,7 +108,6 @@ module Execute_Stage_tb;
       .srcB_vector(alu_src_vector_B),
       .result_vector(alu_vector_result_execute)
 	);
-	// Instancia del módulo forwarding_unit
    forwarding_unit forwarding_unit_instance (
       .rs1_execute(rs1_execute),
       .rs2_execute(rs2_execute),
@@ -144,8 +126,6 @@ module Execute_Stage_tb;
       .select_forward_mux_A(select_forward_mux_A),
       .select_forward_mux_B(select_forward_mux_B)
     );
-////////////////////////////////////////////////////////////////////////////////////////////////////
-	// Instancia del registro ExecuteMemory
 	ExecuteMemory_register ExecuteMemory_register_instance (
 		.clk(clk),
      	.reset(reset),
@@ -181,8 +161,9 @@ module Execute_Stage_tb;
    always #10 clk = ~clk;
    initial begin
       reset = 1;
+		clk = 0;
 		#20 reset =  0;
-		nop_mux_output_in = 20'b0;
+		nop_mux_output_in = 20'b00000000000010100000;
 		srcA_vector_in = 128'b1;
 		srcB_vector_in = 128'b01;
 		srcA_in = 16'b00000001;

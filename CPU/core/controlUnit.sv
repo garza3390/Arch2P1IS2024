@@ -65,6 +65,42 @@ module controlUnit (
 				aluOp = 5'b00100;
 				aluVectorOp = 5'b00000;
 			end
+			// add: suma de dos registros
+			5'b00101: begin
+				load = 1'b0;
+				wre = 1'b1;
+				vector_wre = 1'b0;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b01;
+				select_writeback_vector_data_mux = 2'b00;
+				aluOp = 5'b00101;
+				aluVectorOp = 5'b00000;
+			end
+			// xor
+			5'b00110: begin
+				load = 1'b0;
+				wre = 1'b1;
+				vector_wre = 1'b0;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b01;
+				select_writeback_vector_data_mux = 2'b00;
+				aluOp = 5'b00110;
+				aluVectorOp = 5'b00000;
+			end
+			// mul
+			5'b00111: begin
+				load = 1'b0;
+				wre = 1'b1;
+				vector_wre = 1'b0;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b01;
+				select_writeback_vector_data_mux = 2'b00;
+				aluOp = 5'b00111;
+				aluVectorOp = 5'b00000;
+			end
 			// bne: salta si los valores que compara son diferentes
 			5'b00011: begin
 				load = 1'b0;

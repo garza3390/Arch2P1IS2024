@@ -1,4 +1,4 @@
-module AddRoundKeyWithRcon(
+module Rcon(
     input  logic [3:0] round,    // Número de ronda (4 bits)
     input  logic [7:0] col_in0,  // Primera celda de la columna de entrada
     input  logic [7:0] col_in1,  // Segunda celda de la columna de entrada
@@ -19,7 +19,7 @@ module AddRoundKeyWithRcon(
 
     // Inicializamos la tabla de Rcon
     initial begin
-        Rcon[0]  = 32'h00000000; // No se usa en AES
+        Rcon[0]  = 32'h00000000;
         Rcon[1]  = 32'h01000000;
         Rcon[2]  = 32'h02000000;
         Rcon[3]  = 32'h04000000;

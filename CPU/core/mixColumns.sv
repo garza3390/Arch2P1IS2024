@@ -48,8 +48,8 @@ module mixColumns(
         case (col_idx)
             2'b00: result = galois_mult(MixMatrix[row_idx][0], col_in0);
             2'b01: result = galois_mult(MixMatrix[row_idx][1], col_in1);
-            2'b02: result = galois_mult(MixMatrix[row_idx][2], col_in2);
-            2'b03: result = galois_mult(MixMatrix[row_idx][3], col_in3);
+            2'b10: result = galois_mult(MixMatrix[row_idx][2], col_in2);
+            2'b11: result = galois_mult(MixMatrix[row_idx][3], col_in3);
             default: result = 8'h00;
         endcase
     end

@@ -60,7 +60,7 @@ module subBytes (
     // Lógica de búsqueda en la S-Box
     always @(*) begin
         // Fila: 4 bits más significativos (MSB), Columna: 4 bits menos significativos (LSB)
-        out_byte = SBox[in_byte[7:4]][in_byte[3:0]];
+        byte_out = SBox[byte_in[7:4]][byte_in[3:0]];
     end
 
 endmodule

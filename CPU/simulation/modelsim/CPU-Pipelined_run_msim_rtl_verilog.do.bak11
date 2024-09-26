@@ -37,9 +37,9 @@ vlog -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS
 vlog -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core {C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/mux_3inputs_128bits.sv}
 vlog -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core {C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/core/xorColumns.sv}
 
-vlog -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches {C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv}
+vlog -sv -work work +incdir+C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches {C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Memory_Stage_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Hazard_Data_tb
 
 add wave *
 view structure

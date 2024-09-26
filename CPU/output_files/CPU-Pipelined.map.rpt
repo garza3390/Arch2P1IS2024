@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU-Pipelined
-Thu Sep 26 01:29:11 2024
+Thu Sep 26 12:56:57 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 26 01:29:11 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 26 12:56:57 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; CPU-Pipelined                               ;
 ; Top-level Entity Name           ; top                                         ;
@@ -231,9 +231,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 7-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -1970,7 +1968,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1980,7 +1978,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 26 01:29:00 2024
+    Info: Processing started: Thu Sep 26 12:56:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU-Pipelined -c CPU-Pipelined
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -2076,6 +2074,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: Execute_Stage_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/memory_stage_tb.sv
     Info (12023): Found entity 1: Memory_Stage_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/writeback_stage_tb.sv
+    Info (12023): Found entity 1: Writeback_Stage_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Writeback_Stage_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/instruccion_r_tb.sv
+    Info (12023): Found entity 1: Instruccion_R_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/instruccion_i_tb.sv
+    Info (12023): Found entity 1: Instruccion_I_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/instruccion_j_tb.sv
+    Info (12023): Found entity 1: Instruccion_J_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_J_tb.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file testbenches/hazard_data_tb.sv
+    Info (12023): Found entity 1: Hazard_Data_tb File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 2
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(129): created implicit net for "wre_execute" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 129
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(130): created implicit net for "vector_wre_execute" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 130
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(139): created implicit net for "vector_srcA_execute" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 139
@@ -2095,6 +2103,40 @@ Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(84): cre
 Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(85): created implicit net for "write_memory_enable_b_memory" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 85
 Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(122): created implicit net for "wre_writeback" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 122
 Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(140): created implicit net for "writeback_data" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_J_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_J_tb.sv Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_J_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Instruccion_J_tb.sv Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(90): created implicit net for "PC" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(91): created implicit net for "instr_fetch" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 91
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(93): created implicit net for "instr_decode" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(94): created implicit net for "opCode" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 94
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(95): created implicit net for "register_source_1" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 95
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(96): created implicit net for "register_source_2" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(97): created implicit net for "read_data_1" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(98): created implicit net for "read_data_2" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(99): created implicit net for "read_vector_1" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 99
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(100): created implicit net for "read_vector_2" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(102): created implicit net for "alu_scalar_srcA" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 102
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(103): created implicit net for "alu_scalar_srcB" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(104): created implicit net for "alu_vector_srcA" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 104
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(105): created implicit net for "alu_vector_srcB" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 105
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(106): created implicit net for "alu_scalar_result" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 106
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(107): created implicit net for "alu_vector_result" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 107
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(109): created implicit net for "memory_address" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 109
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(110): created implicit net for "memory_scalar_data" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(111): created implicit net for "memory_vector_data" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(112): created implicit net for "write_memory_scalar_data" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(113): created implicit net for "write_memory_vector_data" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 113
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(114): created implicit net for "write_memory_scalar_enable" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 114
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(115): created implicit net for "write_memory_vector_enable" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 115
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(117): created implicit net for "register_scalar_enable" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(118): created implicit net for "register_vector_enable" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(119): created implicit net for "register_destination" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(120): created implicit net for "writeback_data_w" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(121): created implicit net for "writeback_vector_w" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 121
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "adder_16" for hierarchy "adder_16:pc_add" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv Line: 165
 Info (12128): Elaborating entity "mux_2inputs_16bits" for hierarchy "mux_2inputs_16bits:mux_2inputs_PC" File: C:/Users/Joseph/Documents/ProyectosQuartus/Arch2P1IS2024/CPU/top.sv Line: 172
@@ -2402,10 +2444,10 @@ Info (21057): Implemented 3427 device resources after synthesis - the final reso
     Info (21061): Implemented 1776 logic cells
     Info (21064): Implemented 440 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
-    Info: Peak virtual memory: 4958 megabytes
-    Info: Processing ended: Thu Sep 26 01:29:11 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 153 warnings
+    Info: Peak virtual memory: 4959 megabytes
+    Info: Processing ended: Thu Sep 26 12:56:57 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:19
 
 

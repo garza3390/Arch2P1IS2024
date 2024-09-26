@@ -47,14 +47,14 @@ module Fetch_Stage_tb;
    );
    always #10 clk = ~clk;
    initial begin
-		clk =0;
       reset = 1;
-      #20 reset = 0;
+      clk = 0;
       pc_offset = 16'h0001;
       select_pc_mux = 2'b00;
       select_nop_mux = 2'b00;
       branch_address = 16'h0000;
       flush = 2'b00;
+      #20 reset = 0;
       #100;
       $finish;
    end

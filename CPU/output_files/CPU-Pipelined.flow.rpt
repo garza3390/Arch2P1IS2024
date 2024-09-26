@@ -1,5 +1,5 @@
 Flow report for CPU-Pipelined
-Thu Sep 26 01:29:11 2024
+Thu Sep 26 12:56:57 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Sep 26 01:29:11 2024       ;
+; Flow Status                     ; Successful - Thu Sep 26 12:56:57 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; CPU-Pipelined                               ;
 ; Top-level Entity Name           ; top                                         ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/26/2024 01:29:00 ;
+; Start date & time ; 09/26/2024 12:56:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU-Pipelined       ;
 +-------------------+---------------------+
@@ -79,40 +79,55 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 200715048319395.172733574019836        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 200715048319395.172737700117216        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ROM_tb                            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Writeback_Stage_tb                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Hazard_Data_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Execute_Stage_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Fetch_Stage_tb                    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shiftRows_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Instruccion_I_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; cpu_top_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Decode_Stage_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Instruccion_R_tb                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Add_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Memory_Stage_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Instruccion_J_tb                  ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Memory_Stage_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Hazard_Data_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_RUN_TOOL_AUTOMATICALLY           ; Off                                    ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/ROM_tb.sv                  ; --            ; --          ; ROM_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/Writeback_Stage_tb.sv      ; --            ; --          ; Writeback_Stage_tb                ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/Hazard_Data_tb.sv          ; --            ; --          ; Hazard_Data_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/Execute_Stage_tb.sv        ; --            ; --          ; Execute_Stage_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/Fetch_Stage_tb.sv          ; --            ; --          ; Fetch_Stage_tb                    ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/shiftRows_tb.sv            ; --            ; --          ; shiftRows_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/Instruccion_I_tb.sv        ; --            ; --          ; Instruccion_I_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/cpu_top_tb.sv              ; --            ; --          ; cpu_top_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/Decode_Stage_tb.sv         ; --            ; --          ; Decode_Stage_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/Instruccion_R_tb.sv        ; --            ; --          ; Instruccion_R_tb                  ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/Add_tb.sv                  ; --            ; --          ; Add_tb                            ;
 ; EDA_TEST_BENCH_FILE                  ; testbenches/Memory_Stage_tb.sv         ; --            ; --          ; Memory_Stage_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; testbenches/Instruccion_J_tb.sv        ; --            ; --          ; Instruccion_J_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ROM_tb                                 ; --            ; --          ; ROM_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Writeback_Stage_tb                     ; --            ; --          ; Writeback_Stage_tb                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Hazard_Data_tb                         ; --            ; --          ; Hazard_Data_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Execute_Stage_tb                       ; --            ; --          ; Execute_Stage_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Fetch_Stage_tb                         ; --            ; --          ; Fetch_Stage_tb                    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shiftRows_tb                           ; --            ; --          ; shiftRows_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Instruccion_I_tb                       ; --            ; --          ; Instruccion_I_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; cpu_top_tb                             ; --            ; --          ; cpu_top_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Decode_Stage_tb                        ; --            ; --          ; Decode_Stage_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Instruccion_R_tb                       ; --            ; --          ; Instruccion_R_tb                  ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Add_tb                                 ; --            ; --          ; Add_tb                            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Memory_Stage_tb                        ; --            ; --          ; Memory_Stage_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Instruccion_J_tb                       ; --            ; --          ; Instruccion_J_tb                  ;
 ; EDA_TEST_BENCH_NAME                  ; Fetch_Stage_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; ROM_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Add_tb                                 ; --            ; --          ; eda_simulation                    ;
@@ -121,6 +136,11 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; Decode_Stage_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Execute_Stage_tb                       ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; Memory_Stage_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Writeback_Stage_tb                     ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Instruccion_I_tb                       ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Instruccion_J_tb                       ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Instruccion_R_tb                       ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Hazard_Data_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -149,8 +169,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4958 MB             ; 00:00:12                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:12                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 4959 MB             ; 00:00:18                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

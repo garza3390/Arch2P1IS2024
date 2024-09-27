@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU-Pipelined
-Thu Sep 26 20:28:38 2024
+Thu Sep 26 23:54:06 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,32 +37,48 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  29. Port Connectivity Checks: "mux_2inputs_16bits:mux_2inputs_writeback"
  30. Port Connectivity Checks: "MemoryWriteback_register:MemoryWriteback_register_instance"
  31. Port Connectivity Checks: "ExecuteMemory_register:ExecuteMemory_register_instance"
- 32. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|Rcon:rcon_instance"
- 33. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_15"
- 34. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_14"
- 35. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_13"
- 36. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_12"
- 37. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_11"
- 38. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_10"
- 39. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_9"
- 40. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_8"
- 41. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_7"
- 42. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_6"
- 43. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_5"
- 44. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_4"
- 45. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_3"
- 46. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_2"
- 47. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_1"
- 48. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_0"
- 49. Port Connectivity Checks: "mux_3inputs_16bits:mux_alu_forward_B"
- 50. Port Connectivity Checks: "mux_3inputs_16bits:mux_alu_forward_A"
- 51. Port Connectivity Checks: "Regfile_vector:vector_instance"
- 52. Port Connectivity Checks: "Regfile_scalar:regfile_instance"
- 53. Port Connectivity Checks: "mux_2inputs_20bits:mux_2inputs_nop"
- 54. Port Connectivity Checks: "adder_16:pc_add"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 32. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_15"
+ 33. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_14"
+ 34. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_13"
+ 35. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_12"
+ 36. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_11"
+ 37. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_10"
+ 38. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_9"
+ 39. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_8"
+ 40. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_7"
+ 41. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_6"
+ 42. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_5"
+ 43. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_4"
+ 44. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_3"
+ 45. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_2"
+ 46. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_1"
+ 47. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_0"
+ 48. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|Rcon:rcon_instance"
+ 49. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_15"
+ 50. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_14"
+ 51. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_13"
+ 52. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_12"
+ 53. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_11"
+ 54. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_10"
+ 55. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_9"
+ 56. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_8"
+ 57. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_7"
+ 58. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_6"
+ 59. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_5"
+ 60. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_4"
+ 61. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_3"
+ 62. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_2"
+ 63. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_1"
+ 64. Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_0"
+ 65. Port Connectivity Checks: "mux_3inputs_16bits:mux_alu_forward_B"
+ 66. Port Connectivity Checks: "mux_3inputs_16bits:mux_alu_forward_A"
+ 67. Port Connectivity Checks: "Regfile_vector:vector_instance"
+ 68. Port Connectivity Checks: "Regfile_scalar:regfile_instance"
+ 69. Port Connectivity Checks: "mux_2inputs_20bits:mux_2inputs_nop"
+ 70. Port Connectivity Checks: "adder_16:pc_add"
+ 71. Post-Synthesis Netlist Statistics for Top Partition
+ 72. Elapsed Time Per Partition
+ 73. Analysis & Synthesis Messages
 
 
 
@@ -89,7 +105,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 26 20:28:38 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 26 23:54:05 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; CPU-Pipelined                               ;
 ; Top-level Entity Name           ; top                                         ;
@@ -209,7 +225,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -250,6 +266,11 @@ https://fpgasoftware.intel.com/eula.
 ; core/mux_3inputs_128bits.sv      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/mux_3inputs_128bits.sv      ;         ;
 ; core/xorColumns.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/xorColumns.sv               ;         ;
 ; core/cycle_counter.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/cycle_counter.sv            ;         ;
+; core/encrypt.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv                  ;         ;
+; core/decrypt.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv                  ;         ;
+; core/inverseShiftRows.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseShiftRows.sv         ;         ;
+; core/inverseMixColumns.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseMixColumns.sv        ;         ;
+; core/inverseSubBytes.sv          ; yes             ; User SystemVerilog HDL File  ; C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv          ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                  ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                           ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                     ;         ;
@@ -276,14 +297,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1450      ;
+; Estimate of Logic utilization (ALMs needed) ; 2247      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1785      ;
-;     -- 7 input functions                    ; 7         ;
-;     -- 6 input functions                    ; 1026      ;
-;     -- 5 input functions                    ; 421       ;
-;     -- 4 input functions                    ; 86        ;
-;     -- <=3 input functions                  ; 245       ;
+; Combinational ALUT usage for logic          ; 2634      ;
+;     -- 7 input functions                    ; 56        ;
+;     -- 6 input functions                    ; 1723      ;
+;     -- 5 input functions                    ; 412       ;
+;     -- 4 input functions                    ; 151       ;
+;     -- <=3 input functions                  ; 292       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 963       ;
 ;                                             ;           ;
@@ -295,8 +316,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1403      ;
-; Total fan-out                               ; 18889     ;
-; Average fan-out                             ; 5.17      ;
+; Total fan-out                               ; 23746     ;
+; Average fan-out                             ; 5.28      ;
 +---------------------------------------------+-----------+
 
 
@@ -305,32 +326,64 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name              ; Library Name ;
 +-----------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |top                                                            ; 1785 (1)            ; 963 (0)                   ; 1352192           ; 1          ; 231  ; 0            ; |top                                                                                                      ; top                      ; work         ;
+; |top                                                            ; 2634 (1)            ; 963 (0)                   ; 1352192           ; 1          ; 231  ; 0            ; |top                                                                                                      ; top                      ; work         ;
 ;    |ALU:ALU_escalar|                                            ; 9 (9)               ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |top|ALU:ALU_escalar                                                                                      ; ALU                      ; work         ;
-;    |ALU_vectorial:ALU_vectorial_instance|                       ; 1143 (440)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance                                                                 ; ALU_vectorial            ; work         ;
-;       |mixColumns:mixColumns_inst_0|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_0                                    ; mixColumns               ; work         ;
-;       |mixColumns:mixColumns_inst_14|                           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_14                                   ; mixColumns               ; work         ;
-;       |mixColumns:mixColumns_inst_4|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_4                                    ; mixColumns               ; work         ;
-;       |mixColumns:mixColumns_inst_9|                            ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_9                                    ; mixColumns               ; work         ;
-;       |subBytes:subBytes_instance_0|                            ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_0                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_10|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_10                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_12|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_12                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_13|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_13                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_14|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_14                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_16|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_16                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_17|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_17                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_18|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_18                                   ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_1|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_1                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_2|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_2                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_3|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_3                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_4|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_4                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_5|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_5                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_6|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_6                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_8|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_8                                    ; subBytes                 ; work         ;
-;       |subBytes:subBytes_instance_9|                            ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_9                                    ; subBytes                 ; work         ;
-;       |xorColumns:xor_instance_1|                               ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|xorColumns:xor_instance_1                                       ; xorColumns               ; work         ;
-;       |xorColumns:xor_instance_2|                               ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|xorColumns:xor_instance_2                                       ; xorColumns               ; work         ;
-;       |xorColumns:xor_instance_3|                               ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|xorColumns:xor_instance_3                                       ; xorColumns               ; work         ;
+;    |ALU_vectorial:ALU_vectorial_instance|                       ; 2019 (648)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance                                                                 ; ALU_vectorial            ; work         ;
+;       |decrypt:decrypt_inst|                                    ; 679 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst                                            ; decrypt                  ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_0    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_10|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_10   ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_11|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_11   ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_12|             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_12   ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_13|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_13   ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_1|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_1    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_2|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_2    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_4|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_4    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_5|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_5    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_6|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_6    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_7|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_7    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_8|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_8    ; inverseMixColumns        ; work         ;
+;          |inverseMixColumns:inv_mixColumns_inst_9|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_9    ; inverseMixColumns        ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_0|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_0    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_10|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_10   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_11|             ; 39 (39)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_11   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_12|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_12   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_13|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_13   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_14|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_14   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_15|             ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_15   ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_1|              ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_1    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_2|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_2    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_3|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_3    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_4|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_4    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_5|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_5    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_6|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_6    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_7|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_7    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_8|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_8    ; inverseSubBytes          ; work         ;
+;          |inverseSubBytes:inv_subBytes_instance_9|              ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_9    ; inverseSubBytes          ; work         ;
+;       |encrypt:encrypt_inst|                                    ; 692 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst                                            ; encrypt                  ; work         ;
+;          |addRoundKey:add_round_key_inst_0|                     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|addRoundKey:add_round_key_inst_0           ; addRoundKey              ; work         ;
+;          |addRoundKey:add_round_key_inst_3|                     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|addRoundKey:add_round_key_inst_3           ; addRoundKey              ; work         ;
+;          |mixColumns:mixColumns_inst_3|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_3               ; mixColumns               ; work         ;
+;          |mixColumns:mixColumns_inst_4|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_4               ; mixColumns               ; work         ;
+;          |mixColumns:mixColumns_inst_9|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_9               ; mixColumns               ; work         ;
+;          |subBytes:subBytes_instance_0|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_0               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_10|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_10              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_12|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_12              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_13|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_13              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_14|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_14              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_16|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_16              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_17|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_17              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_18|                        ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_18              ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_1|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_1               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_2|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_2               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_3|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_3               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_4|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_4               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_5|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_5               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_6|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_6               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_8|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_8               ; subBytes                 ; work         ;
+;          |subBytes:subBytes_instance_9|                         ; 40 (40)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_9               ; subBytes                 ; work         ;
+;          |xorColumns:xor_instance_1|                            ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|xorColumns:xor_instance_1                  ; xorColumns               ; work         ;
+;          |xorColumns:xor_instance_2|                            ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|xorColumns:xor_instance_2                  ; xorColumns               ; work         ;
+;          |xorColumns:xor_instance_3|                            ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|xorColumns:xor_instance_3                  ; xorColumns               ; work         ;
 ;    |DecodeExecute_register:DecodeExecute_register_instance|     ; 0 (0)               ; 301 (301)                 ; 0                 ; 0          ; 0    ; 0            ; |top|DecodeExecute_register:DecodeExecute_register_instance                                               ; DecodeExecute_register   ; work         ;
 ;    |ExecuteMemory_register:ExecuteMemory_register_instance|     ; 9 (9)               ; 291 (291)                 ; 0                 ; 0          ; 0    ; 0            ; |top|ExecuteMemory_register:ExecuteMemory_register_instance                                               ; ExecuteMemory_register   ; work         ;
 ;    |FetchDecode_register:FetchDecode_register_instance|         ; 10 (10)             ; 36 (36)                   ; 0                 ; 0          ; 0    ; 0            ; |top|FetchDecode_register:FetchDecode_register_instance                                                   ; FetchDecode_register     ; work         ;
@@ -356,7 +409,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram_g9j1:auto_generated|                       ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |top|Regfile_vector:vector_instance|altsyncram:rf_rtl_1|altsyncram_g9j1:auto_generated                    ; altsyncram_g9j1          ; work         ;
 ;    |adder_16:pc_add|                                            ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|adder_16:pc_add                                                                                      ; adder_16                 ; work         ;
 ;    |comparator_branch:comparator_instance|                      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|comparator_branch:comparator_instance                                                                ; comparator_branch        ; work         ;
-;    |controlUnit:control_unit_instance|                          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|controlUnit:control_unit_instance                                                                    ; controlUnit              ; work         ;
+;    |controlUnit:control_unit_instance|                          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|controlUnit:control_unit_instance                                                                    ; controlUnit              ; work         ;
 ;    |cycle_counter:my_counter|                                   ; 32 (32)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|cycle_counter:my_counter                                                                             ; cycle_counter            ; work         ;
 ;    |forwarding_unit:forwarding_unit_instance|                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|forwarding_unit:forwarding_unit_instance                                                             ; forwarding_unit          ; work         ;
 ;    |hazard_detection_unit:u_hazard_detection|                   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|hazard_detection_unit:u_hazard_detection                                                             ; hazard_detection_unit    ; work         ;
@@ -364,8 +417,8 @@ https://fpgasoftware.intel.com/eula.
 ;    |mux_2inputs_16bits:mux_2inputs_PC|                          ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2inputs_16bits:mux_2inputs_PC                                                                    ; mux_2inputs_16bits       ; work         ;
 ;    |mux_2inputs_16bits:mux_2inputs_writeback|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2inputs_16bits:mux_2inputs_writeback                                                             ; mux_2inputs_16bits       ; work         ;
 ;    |mux_2inputs_20bits:mux_2inputs_nop|                         ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_2inputs_20bits:mux_2inputs_nop                                                                   ; mux_2inputs_20bits       ; work         ;
-;    |mux_3inputs_128bits:mux_alu_forward_A_vector|               ; 136 (136)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_128bits:mux_alu_forward_A_vector                                                         ; mux_3inputs_128bits      ; work         ;
-;    |mux_3inputs_128bits:mux_alu_forward_B_vector|               ; 129 (129)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_128bits:mux_alu_forward_B_vector                                                         ; mux_3inputs_128bits      ; work         ;
+;    |mux_3inputs_128bits:mux_alu_forward_A_vector|               ; 133 (133)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_128bits:mux_alu_forward_A_vector                                                         ; mux_3inputs_128bits      ; work         ;
+;    |mux_3inputs_128bits:mux_alu_forward_B_vector|               ; 106 (106)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_128bits:mux_alu_forward_B_vector                                                         ; mux_3inputs_128bits      ; work         ;
 ;    |mux_3inputs_16bits:mux_alu_forward_A|                       ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_16bits:mux_alu_forward_A                                                                 ; mux_3inputs_16bits       ; work         ;
 ;    |mux_3inputs_16bits:mux_alu_forward_B|                       ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|mux_3inputs_16bits:mux_alu_forward_B                                                                 ; mux_3inputs_16bits       ; work         ;
 ;    |substractor_branch:branch_label_pc|                         ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|substractor_branch:branch_label_pc                                                                   ; substractor_branch       ; work         ;
@@ -980,25 +1033,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+------------------------------------------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top|FetchDecode_register:FetchDecode_register_instance|instruction_out_reg[14]                                       ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|FetchDecode_register:FetchDecode_register_instance|pc_decode_reg[3]                                              ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |top|ExecuteMemory_register:ExecuteMemory_register_instance|ALUresult[7]                                              ;
-; 4:1                ; 136 bits  ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |top|mux_3inputs_128bits:mux_alu_forward_B_vector|Mux8                                                                ;
-; 4:1                ; 136 bits  ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |top|mux_3inputs_128bits:mux_alu_forward_A_vector|Mux70                                                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|FetchDecode_register:FetchDecode_register_instance|instruction_out_reg                                           ;
-; 8:1                ; 20 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |top|ROM:rom_memory|altsyncram:altsyncram_component|altsyncram_0ef1:auto_generated|mux_7hb:mux2|l3_w16_n0_mux_dataout ;
-; 33:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector83                                                                  ;
-; 33:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector3                                                                   ;
-; 33:1               ; 2 bits    ; 44 LEs        ; 20 LEs               ; 24 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector44                                                                  ;
-; 20:1               ; 24 bits   ; 312 LEs       ; 192 LEs              ; 120 LEs                ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector85                                                                  ;
-; 20:1               ; 68 bits   ; 884 LEs       ; 612 LEs              ; 272 LEs                ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector66                                                                  ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 18 LEs               ; 10 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Selector123                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |top|FetchDecode_register:FetchDecode_register_instance|instruction_out_reg[18]                                      ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|FetchDecode_register:FetchDecode_register_instance|pc_decode_reg[3]                                             ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |top|ExecuteMemory_register:ExecuteMemory_register_instance|ALUresult[3]                                             ;
+; 4:1                ; 136 bits  ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |top|mux_3inputs_128bits:mux_alu_forward_B_vector|Mux101                                                             ;
+; 4:1                ; 136 bits  ; 272 LEs       ; 272 LEs              ; 0 LEs                  ; No         ; |top|mux_3inputs_128bits:mux_alu_forward_A_vector|Mux73                                                              ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|FetchDecode_register:FetchDecode_register_instance|instruction_out_reg                                          ;
+; 8:1                ; 20 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |top|ROM:rom_memory|altsyncram:altsyncram_component|altsyncram_0ef1:auto_generated|mux_7hb:mux2|l3_w4_n0_mux_dataout ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 40 LEs               ; 16 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux103                                                                     ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 44 LEs               ; 12 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux95                                                                      ;
+; 22:1               ; 3 bits    ; 42 LEs        ; 33 LEs               ; 9 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux62                                                                      ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux88                                                                      ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 44 LEs               ; 12 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux120                                                                     ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 22 LEs               ; 6 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux48                                                                      ;
+; 22:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux16                                                                      ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux85                                                                      ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 44 LEs               ; 12 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux40                                                                      ;
+; 22:1               ; 3 bits    ; 42 LEs        ; 33 LEs               ; 9 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux110                                                                     ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux8                                                                       ;
+; 22:1               ; 4 bits    ; 56 LEs        ; 48 LEs               ; 8 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux0                                                                       ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 22 LEs               ; 6 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux39                                                                      ;
+; 22:1               ; 3 bits    ; 42 LEs        ; 36 LEs               ; 6 LEs                  ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux64                                                                      ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 22 LEs               ; 10 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux93                                                                      ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 22 LEs               ; 10 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux13                                                                      ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux25                                                                      ;
+; 28:1               ; 2 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |top|ALU_vectorial:ALU_vectorial_instance|Mux10                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -1525,189 +1590,365 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|Rcon:rcon_instance" ;
-+-------+-------+----------+----------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                  ;
-+-------+-------+----------+----------------------------------------------------------+
-; round ; Input ; Info     ; Stuck at GND                                             ;
-+-------+-------+----------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_15" ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at VCC                                                                                      ;
+; col_idx ; Input ; Info     ; Stuck at VCC                                                                                      ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_15" ;
-+---------+-------+----------+-------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                           ;
-+---------+-------+----------+-------------------------------------------------------------------+
-; row_idx ; Input ; Info     ; Stuck at VCC                                                      ;
-; col_idx ; Input ; Info     ; Stuck at VCC                                                      ;
-+---------+-------+----------+-------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_14" ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                        ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                                   ;
+; col_idx    ; Input ; Info     ; Stuck at VCC                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_14" ;
-+------------+-------+----------+----------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                        ;
-+------------+-------+----------+----------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                   ;
-; row_idx[0] ; Input ; Info     ; Stuck at GND                                                   ;
-; col_idx    ; Input ; Info     ; Stuck at VCC                                                   ;
-+------------+-------+----------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_13" ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                        ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                                   ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; col_idx    ; Input ; Info     ; Stuck at VCC                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_13" ;
-+------------+-------+----------+----------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                        ;
-+------------+-------+----------+----------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at GND                                                   ;
-; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                   ;
-; col_idx    ; Input ; Info     ; Stuck at VCC                                                   ;
-+------------+-------+----------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_12" ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at GND                                                                                      ;
+; col_idx ; Input ; Info     ; Stuck at VCC                                                                                      ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_12" ;
-+---------+-------+----------+-------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                           ;
-+---------+-------+----------+-------------------------------------------------------------------+
-; row_idx ; Input ; Info     ; Stuck at GND                                                      ;
-; col_idx ; Input ; Info     ; Stuck at VCC                                                      ;
-+---------+-------+----------+-------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_11" ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                        ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_11" ;
-+------------+-------+----------+----------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                        ;
-+------------+-------+----------+----------------------------------------------------------------+
-; row_idx    ; Input ; Info     ; Stuck at VCC                                                   ;
-; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                   ;
-; col_idx[0] ; Input ; Info     ; Stuck at GND                                                   ;
-+------------+-------+----------+----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_10" ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                        ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                                   ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                   ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                                   ;
++------------+-------+----------+------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_10" ;
-+------------+-------+----------+----------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                        ;
-+------------+-------+----------+----------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                   ;
-; row_idx[0] ; Input ; Info     ; Stuck at GND                                                   ;
-; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                   ;
-; col_idx[0] ; Input ; Info     ; Stuck at GND                                                   ;
-+------------+-------+----------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_9" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_9" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at GND                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_8" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_8" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx    ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at GND                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_7" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_7" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx    ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_6" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_6" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                  ;
-; row_idx[0] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_5" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_5" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_4" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_4" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx    ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_3" ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                          ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at VCC                                                                                     ;
+; col_idx ; Input ; Info     ; Stuck at GND                                                                                     ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_3" ;
-+---------+-------+----------+------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                          ;
-+---------+-------+----------+------------------------------------------------------------------+
-; row_idx ; Input ; Info     ; Stuck at VCC                                                     ;
-; col_idx ; Input ; Info     ; Stuck at GND                                                     ;
-+---------+-------+----------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_2" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; col_idx    ; Input ; Info     ; Stuck at GND                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_2" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                  ;
-; row_idx[0] ; Input ; Info     ; Stuck at GND                                                  ;
-; col_idx    ; Input ; Info     ; Stuck at GND                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_1" ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                       ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                                  ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                                  ;
+; col_idx    ; Input ; Info     ; Stuck at GND                                                                                  ;
++------------+-------+----------+-----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_1" ;
-+------------+-------+----------+---------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                       ;
-+------------+-------+----------+---------------------------------------------------------------+
-; row_idx[1] ; Input ; Info     ; Stuck at GND                                                  ;
-; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                  ;
-; col_idx    ; Input ; Info     ; Stuck at GND                                                  ;
-+------------+-------+----------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_0" ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                          ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at GND                                                                                     ;
+; col_idx ; Input ; Info     ; Stuck at GND                                                                                     ;
++---------+-------+----------+--------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_0" ;
-+---------+-------+----------+------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                          ;
-+---------+-------+----------+------------------------------------------------------------------+
-; row_idx ; Input ; Info     ; Stuck at GND                                                     ;
-; col_idx ; Input ; Info     ; Stuck at GND                                                     ;
-+---------+-------+----------+------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|Rcon:rcon_instance" ;
++-------+-------+----------+-------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                       ;
++-------+-------+----------+-------------------------------------------------------------------------------+
+; round ; Input ; Info     ; Stuck at GND                                                                  ;
++-------+-------+----------+-------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_15" ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at VCC                                                                           ;
+; col_idx ; Input ; Info     ; Stuck at VCC                                                                           ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_14" ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                        ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                        ;
+; col_idx    ; Input ; Info     ; Stuck at VCC                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_13" ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                        ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                        ;
+; col_idx    ; Input ; Info     ; Stuck at VCC                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_12" ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at GND                                                                           ;
+; col_idx ; Input ; Info     ; Stuck at VCC                                                                           ;
++---------+-------+----------+----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_11" ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at VCC                                                                        ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                        ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_10" ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                             ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                        ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                        ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                        ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                        ;
++------------+-------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_9" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_8" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at GND                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_7" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_6" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_5" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_4" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx    ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_3" ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                               ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at VCC                                                                          ;
+; col_idx ; Input ; Info     ; Stuck at GND                                                                          ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_2" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; row_idx[0] ; Input ; Info     ; Stuck at GND                                                                       ;
+; col_idx    ; Input ; Info     ; Stuck at GND                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_1" ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+; row_idx[1] ; Input ; Info     ; Stuck at GND                                                                       ;
+; row_idx[0] ; Input ; Info     ; Stuck at VCC                                                                       ;
+; col_idx    ; Input ; Info     ; Stuck at GND                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_0" ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                               ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
+; row_idx ; Input ; Info     ; Stuck at GND                                                                          ;
+; col_idx ; Input ; Info     ; Stuck at GND                                                                          ;
++---------+-------+----------+---------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1778,22 +2019,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 592                         ;
 ;     plain             ; 16                          ;
-; arriav_lcell_comb     ; 1785                        ;
+; arriav_lcell_comb     ; 2634                        ;
 ;     arith             ; 54                          ;
 ;         1 data inputs ; 30                          ;
 ;         2 data inputs ; 1                           ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 9                           ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 1708                        ;
+;     extend            ; 56                          ;
+;         7 data inputs ; 56                          ;
+;     normal            ; 2508                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 175                         ;
-;         4 data inputs ; 72                          ;
-;         5 data inputs ; 412                         ;
-;         6 data inputs ; 1026                        ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 198                         ;
+;         4 data inputs ; 137                         ;
+;         5 data inputs ; 403                         ;
+;         6 data inputs ; 1723                        ;
 ;     shared            ; 16                          ;
 ;         1 data inputs ; 11                          ;
 ;         2 data inputs ; 5                           ;
@@ -1802,7 +2043,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 440                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.62                        ;
+; Average LUT depth     ; 5.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1811,7 +2052,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:18     ;
+; Top            ; 00:00:25     ;
 +----------------+--------------+
 
 
@@ -1821,7 +2062,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 26 20:27:53 2024
+    Info: Processing started: Thu Sep 26 23:53:11 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU-Pipelined -c CPU-Pipelined
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1914,7 +2155,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file core/xo
 Info (12021): Found 1 design units, including 1 entities, in source file core/addroundkey_gar.sv
     Info (12023): Found entity 1: addRoundKey_gar File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/addRoundKey_gar.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/execute_stage_tb.sv
-    Info (12023): Found entity 1: Execute_Stage_tb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 3
+    Info (12023): Found entity 1: Execute_Stage_tb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/memory_stage_tb.sv
     Info (12023): Found entity 1: Memory_Stage_tb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file testbenches/writeback_stage_tb.sv
@@ -1929,59 +2170,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file testben
     Info (12023): Found entity 1: Hazard_Data_tb File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file core/cycle_counter.sv
     Info (12023): Found entity 1: cycle_counter File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/cycle_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/encrypt.sv
+    Info (12023): Found entity 1: encrypt File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/decrypt.sv
+    Info (12023): Found entity 1: decrypt File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/inverseshiftrows.sv
+    Info (12023): Found entity 1: inverseShiftRows File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseShiftRows.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/inversemixcolumns.sv
+    Info (12023): Found entity 1: inverseMixColumns File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseMixColumns.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/inversesubbytes.sv
+    Info (12023): Found entity 1: inverseSubBytes File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(129): created implicit net for "wre_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 129
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(130): created implicit net for "vector_wre_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 130
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(139): created implicit net for "vector_srcA_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 139
 Warning (10236): Verilog HDL Implicit Net warning at Decode_Stage_tb.sv(140): created implicit net for "vector_srcB_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Decode_Stage_tb.sv Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(84): created implicit net for "writeback_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 84
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(107): created implicit net for "writeback_vector" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 107
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(110): created implicit net for "alu_src_vector_A" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 110
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(118): created implicit net for "alu_src_vector_B" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(126): created implicit net for "alu_vector_result_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 126
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(134): created implicit net for "rs1_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 134
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(135): created implicit net for "rs2_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 135
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(137): created implicit net for "rd_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 137
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(141): created implicit net for "wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 141
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(143): created implicit net for "vector_wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 143
-Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(179): created implicit net for "vector_srcB_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 179
-Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(84): created implicit net for "write_memory_enable_a_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 84
-Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(85): created implicit net for "write_memory_enable_b_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 85
-Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(122): created implicit net for "wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 122
-Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(140): created implicit net for "writeback_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 126
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 157
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 126
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 157
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_J_tb.sv(126): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_J_tb.sv Line: 126
-Warning (10236): Verilog HDL Implicit Net warning at Instruccion_J_tb.sv(157): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_J_tb.sv Line: 157
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(90): created implicit net for "PC" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 90
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(91): created implicit net for "instr_fetch" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 91
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(93): created implicit net for "instr_decode" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 93
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(94): created implicit net for "opCode" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 94
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(95): created implicit net for "register_source_1" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 95
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(96): created implicit net for "register_source_2" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 96
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(97): created implicit net for "read_data_1" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 97
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(98): created implicit net for "read_data_2" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 98
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(99): created implicit net for "read_vector_1" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 99
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(100): created implicit net for "read_vector_2" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 100
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(102): created implicit net for "alu_scalar_srcA" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 102
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(103): created implicit net for "alu_scalar_srcB" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 103
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(104): created implicit net for "alu_vector_srcA" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 104
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(105): created implicit net for "alu_vector_srcB" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 105
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(106): created implicit net for "alu_scalar_result" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 106
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(107): created implicit net for "alu_vector_result" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 107
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(109): created implicit net for "memory_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 109
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(110): created implicit net for "memory_scalar_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 110
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(111): created implicit net for "memory_vector_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 111
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(112): created implicit net for "write_memory_scalar_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 112
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(113): created implicit net for "write_memory_vector_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 113
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(114): created implicit net for "write_memory_scalar_enable" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 114
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(115): created implicit net for "write_memory_vector_enable" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 115
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(117): created implicit net for "register_scalar_enable" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 117
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(118): created implicit net for "register_vector_enable" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 118
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(119): created implicit net for "register_destination" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 119
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(120): created implicit net for "writeback_data_w" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 120
-Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(121): created implicit net for "writeback_vector_w" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(72): created implicit net for "writeback_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 72
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(92): created implicit net for "writeback_vector" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 92
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(95): created implicit net for "alu_src_vector_A" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 95
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(102): created implicit net for "alu_src_vector_B" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 102
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(109): created implicit net for "alu_vector_result_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 109
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(116): created implicit net for "rs1_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 116
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(117): created implicit net for "rs2_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(119): created implicit net for "rd_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(123): created implicit net for "wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 123
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(125): created implicit net for "vector_wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 125
+Warning (10236): Verilog HDL Implicit Net warning at Execute_Stage_tb.sv(159): created implicit net for "vector_srcB_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Execute_Stage_tb.sv Line: 159
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(56): created implicit net for "srcA_execute" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(57): created implicit net for "alu_src_B" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 57
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(66): created implicit net for "write_memory_enable_a_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 66
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(67): created implicit net for "write_memory_enable_b_memory" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 67
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(100): created implicit net for "wre_writeback" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at Memory_Stage_tb.sv(116): created implicit net for "writeback_data" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Memory_Stage_tb.sv Line: 116
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(98): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_R_tb.sv(126): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_R_tb.sv Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(98): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at Instruccion_I_tb.sv(126): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Instruccion_I_tb.sv Line: 126
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(98): created implicit net for "branch_address" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at Hazard_Data_tb.sv(126): created implicit net for "select_pc_mux" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/testbenches/Hazard_Data_tb.sv Line: 126
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "cycle_counter" for hierarchy "cycle_counter:my_counter" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 129
 Info (12128): Elaborating entity "adder_16" for hierarchy "adder_16:pc_add" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 136
@@ -2028,17 +2253,42 @@ Info (12128): Elaborating entity "mux_3inputs_16bits" for hierarchy "mux_3inputs
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_escalar" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 292
 Info (12128): Elaborating entity "mux_3inputs_128bits" for hierarchy "mux_3inputs_128bits:mux_alu_forward_A_vector" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 300
 Info (12128): Elaborating entity "ALU_vectorial" for hierarchy "ALU_vectorial:ALU_vectorial_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 316
-Info (12128): Elaborating entity "addRoundKey" for hierarchy "ALU_vectorial:ALU_vectorial_instance|addRoundKey:add_round_key_inst_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 97
-Info (12128): Elaborating entity "mixColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|mixColumns:mixColumns_inst_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 152
+Info (12128): Elaborating entity "encrypt" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 21
+Info (12128): Elaborating entity "addRoundKey" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|addRoundKey:add_round_key_inst_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 100
+Info (12128): Elaborating entity "mixColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|mixColumns:mixColumns_inst_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 155
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "MixMatrix" into its bus
-Info (12128): Elaborating entity "shiftRows" for hierarchy "ALU_vectorial:ALU_vectorial_instance|shiftRows:shiftRows_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 298
-Info (12128): Elaborating entity "subBytes" for hierarchy "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 303
+Info (12128): Elaborating entity "shiftRows" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|shiftRows:shiftRows_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 301
+Info (12128): Elaborating entity "subBytes" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 306
 Warning (10030): Net "SBox.data_a" at subBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
 Warning (10030): Net "SBox.waddr_a" at subBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
 Warning (10030): Net "SBox.we_a" at subBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-Info (12128): Elaborating entity "rotWord" for hierarchy "ALU_vectorial:ALU_vectorial_instance|rotWord:rot_word_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 391
-Info (12128): Elaborating entity "Rcon" for hierarchy "ALU_vectorial:ALU_vectorial_instance|Rcon:rcon_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 429
-Info (12128): Elaborating entity "xorColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|xorColumns:xor_instance_1" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 450
+Info (12128): Elaborating entity "rotWord" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|rotWord:rot_word_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 394
+Info (12128): Elaborating entity "Rcon" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|Rcon:rcon_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 432
+Info (12128): Elaborating entity "xorColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|xorColumns:xor_instance_1" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/encrypt.sv Line: 453
+Info (12128): Elaborating entity "decrypt" for hierarchy "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/ALU_vectorial.sv Line: 30
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(21): object "col_0_in_b_0" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(21): object "col_0_in_b_1" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(21): object "col_0_in_b_2" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(21): object "col_0_in_b_3" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 21
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(22): object "col_1_in_b_0" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(22): object "col_1_in_b_1" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(22): object "col_1_in_b_2" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(22): object "col_1_in_b_3" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(23): object "col_2_in_b_0" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(23): object "col_2_in_b_1" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(23): object "col_2_in_b_2" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(23): object "col_2_in_b_3" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 23
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(24): object "col_3_in_b_0" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(24): object "col_3_in_b_1" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(24): object "col_3_in_b_2" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 24
+Warning (10036): Verilog HDL or VHDL warning at decrypt.sv(24): object "col_3_in_b_3" assigned a value but never read File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 24
+Info (12128): Elaborating entity "inverseMixColumns" for hierarchy "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseMixColumns:inv_mixColumns_inst_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 91
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "InvMixMatrix" into its bus
+Info (12128): Elaborating entity "inverseShiftRows" for hierarchy "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseShiftRows:inverseShiftRows_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 237
+Info (12128): Elaborating entity "inverseSubBytes" for hierarchy "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_0" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/decrypt.sv Line: 243
+Warning (10030): Net "invSBox.data_a" at inverseSubBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+Warning (10030): Net "invSBox.waddr_a" at inverseSubBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+Warning (10030): Net "invSBox.we_a" at inverseSubBytes.sv(7) has no driver or initial value, using a default initial value '0' File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
 Info (12128): Elaborating entity "forwarding_unit" for hierarchy "forwarding_unit:forwarding_unit_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 335
 Info (12128): Elaborating entity "ExecuteMemory_register" for hierarchy "ExecuteMemory_register:ExecuteMemory_register_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 369
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_instance" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 382
@@ -2149,27 +2399,43 @@ Warning (276027): Inferred dual-clock RAM node "Regfile_vector:vector_instance|r
 Warning (276027): Inferred dual-clock RAM node "Regfile_vector:vector_instance|rf_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "Regfile_scalar:regfile_instance|rf_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "Regfile_scalar:regfile_instance|rf_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
-Info (276014): Found 20 instances of uninferred RAM logic
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_19|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_18|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_17|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_16|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_15|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_14|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_13|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_12|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_11|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_10|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_9|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_8|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_7|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_6|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_5|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_4|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_3|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_2|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_1|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
-    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|subBytes:subBytes_instance_0|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+Info (276014): Found 36 instances of uninferred RAM logic
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_15|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_14|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_13|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_12|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_11|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_10|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_9|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_8|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_7|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_6|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_5|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_4|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_3|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_2|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_1|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|decrypt:decrypt_inst|inverseSubBytes:inv_subBytes_instance_0|invSBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/inverseSubBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_19|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_18|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_17|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_16|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_15|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_14|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_13|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_12|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_11|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_10|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_9|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_8|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_7|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_6|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_5|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_4|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_3|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_2|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_1|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
+    Info (276007): RAM logic "ALU_vectorial:ALU_vectorial_instance|encrypt:encrypt_inst|subBytes:subBytes_instance_0|SBox" is uninferred due to asynchronous read logic File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/core/subBytes.sv Line: 7
 Info (19000): Inferred 4 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Regfile_vector:vector_instance|rf_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -2278,21 +2544,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "memory_address[14]" is stuck at GND File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 17
     Warning (13410): Pin "memory_address[15]" is stuck at GND File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 17
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "RAM:RAM_instance|altsyncram:altsyncram_component|altsyncram_spq2:auto_generated|ALTSYNCRAM" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/altsyncram_spq2.tdf Line: 59
+Info (17036): Removed 1 MSB VCC or GND address nodes from RAM block "RAM:RAM_instance|altsyncram:altsyncram_component|altsyncram_spq2:auto_generated|ALTSYNCRAM" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/db/altsyncram_spq2.tdf Line: 353
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "encrypt_decrypt" File: C:/Users/Manuel/Documents/TEC/Arqui 2/CPU_vectorial/Arch2P1IS2024/CPU/top.sv Line: 4
-Info (21057): Implemented 3350 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4199 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 227 output pins
-    Info (21061): Implemented 2678 logic cells
+    Info (21061): Implemented 3527 logic cells
     Info (21064): Implemented 440 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
-    Info: Peak virtual memory: 4872 megabytes
-    Info: Processing ended: Thu Sep 26 20:28:38 2024
-    Info: Elapsed time: 00:00:45
-    Info: Total CPU time (on all processors): 00:00:57
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 124 warnings
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Thu Sep 26 23:54:06 2024
+    Info: Elapsed time: 00:00:55
+    Info: Total CPU time (on all processors): 00:01:04
 
 

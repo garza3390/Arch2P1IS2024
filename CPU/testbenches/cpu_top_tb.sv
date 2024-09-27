@@ -3,6 +3,9 @@ module cpu_top_tb;
 	logic clk;
 	logic reset;
 	
+	logic enable_counter;
+	logic [31:0] clk_counter;
+	
 	// registro PC
 	logic [15:0] pc_mux_output;
 	logic [15:0] pc_address;
@@ -85,6 +88,14 @@ module cpu_top_tb;
 	
 	
 	//////////////////////////////////////////////////////////////////////////////
+	//contador de ciclos de reloj
+	cycle_counter my_counter (
+        .clk(clk),
+        .rst(reset),
+        .enable(enable_counter),
+        .count(clk_counter)
+    );
+	
 	// Instancia del sumador del PC
 	adder_16 pc_add (
 		.a(pc_mux_output),
@@ -385,10 +396,16 @@ module cpu_top_tb;
 	// Proceso de prueba
 	always #10 clk = ~clk;
 	initial begin
-		reset = 1;
-		clk = 0;
-      pc_offset = 16'h0001;
+		pc_offset = 16'h0001;
+      reset = 0;		
+		clk = 0;               
+      reset = 1;            
+      enable_counter = 0;
+		
+		#10
+		
       reset = 0;
+      enable_counter = 1;
 		#10000
 		$finish;
 	end

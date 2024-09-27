@@ -233,6 +233,42 @@ module controlUnit (
 				aluOp = 5'b00000;
 				aluVectorOp = 5'b11010;
 			end
+			// InverseShiftRows 
+			5'b11101: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11101;
+			end
+			// InverseMixColumns 
+			5'b11100: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11100;
+			end
+			// InverseSubBytes 
+			5'b11110: begin
+				load = 1'b0;
+				wre = 1'b0;
+				vector_wre = 1'b1;
+				write_memory_enable_a = 1'b0;
+				write_memory_enable_b = 1'b0;
+				select_writeback_data_mux = 2'b00;
+				select_writeback_vector_data_mux = 2'b01;
+				aluOp = 5'b00000;
+				aluVectorOp = 5'b11110;
+			end
 			default: begin
 				load = 1'b0;
 				wre = 1'b0;

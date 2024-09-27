@@ -43,11 +43,11 @@ var_grid.pack(fill="both", expand=True)
 pc_from_jtag = 1
 stepping = []
 variables = {
-    "Metrica 1 1": "Valor 1",
-    "Metrica 2": "Valor 2",
-    "Metrica 3": "Valor 3",
-    "Metrica 4": "Valor 4",
-    "Metrica 5": "Valor 5",
+    "CPI": "343",
+    "Accesos a memoria": "224",
+    "Frecuencia de reloj": "125KHz",
+    "Cache Miss Rate": "57",
+    "Estado Registro": "1",
     "Ciclos por instruccion: ": "Valor 6"
 }
 for i, (title, value) in enumerate(variables.items()):

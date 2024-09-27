@@ -2,39 +2,22 @@ module top (
     input logic clk,
     input logic reset,
 	 input logic encrypt_decrypt,
+	 input logic enable_counter,
+	 
+	 output logic [31:0] clk_counter,
 	 //////////////////////////// FETCH
 	 output logic [15:0] PC,
 	 output logic [19:0] instr_fetch,
 	 //////////////////////////// DECODE
-	 output logic [19:0] instr_decode,
-	 output logic [4:0] opCode,
-	 output logic [4:0] register_source_1,
-	 output logic [4:0] register_source_2,
-	 output logic [15:0] read_data_1,
-	 output logic [15:0] read_data_2,
-	 output logic [127:0] read_vector_1,
-	 output logic [127:0] read_vector_2,
+	 output logic [4:0] reg_address_1,
+	 output logic [4:0] reg_address_2,
 	 //////////////////////////// EXECUTE
-	 output logic [7:0] alu_scalar_srcA,
-	 output logic [7:0] alu_scalar_srcB,
-	 output logic [127:0] alu_vector_srcA,
-	 output logic [127:0] alu_vector_srcB,
-	 output logic [7:0] alu_scalar_result,
 	 output logic [127:0] alu_vector_result,
 	 //////////////////////////// MEMORY
 	 output logic [15:0] memory_address,
-	 output logic [7:0] memory_scalar_data,
-	 output logic [127:0] memory_vector_data,
-	 output logic [7:0] write_memory_scalar_data,
-	 output logic [127:0] write_memory_vector_data,
-	 output logic write_memory_scalar_enable,
-	 output logic write_memory_vector_enable,
 	 //////////////////////////// WRITEBACK
-	 output logic register_scalar_enable,
-	 output logic register_vector_enable,
-	 output logic [4:0] register_destination,
-	 output logic [15:0] writeback_data_w,
-	 output logic [127:0] writeback_vector_w
+	 output logic [4:0] register_destination
+	 
 );	
 
 
@@ -126,37 +109,25 @@ module top (
 	assign PC = pc_mux_output;
 	assign instr_fetch = instruction_fetch;
 	//////////////////////////// DECODE
-	assign instr_decode = instruction_decode;
-	assign opCode = instruction_decode[19:15];
-	assign register_source_1 = instruction_decode[4:0];
-	assign register_source_2 = instruction_decode[9:5];
-	assign read_data_1 = rd1;
-	assign read_data_2 = rd2;
-	assign read_vector_1 = vector_rd1;
-	assign read_vector_2 = vector_rd2;
+	assign reg_address_1 = instruction_decode[4:0];
+	assign reg_address_2 = instruction_decode[9:5];
 	//////////////////////////// EXECUTE
-	assign alu_scalar_srcA = alu_src_A[7:0];
-	assign alu_scalar_srcB = alu_src_B[7:0];
-	assign alu_vector_srcA = alu_src_vector_A;
-	assign alu_vector_srcB = alu_src_vector_B;
-	assign alu_scalar_result = alu_result_execute;
 	assign alu_vector_result = alu_vector_result_execute;
 	//////////////////////////// MEMORY
 	assign memory_address = srcA_memory;
-	assign memory_scalar_data = data_from_memory;
-	assign memory_vector_data = vector_data_from_memory;
-	assign write_memory_scalar_data = srcB_memory[7:0];
-	assign write_memory_vector_data = vector_srcB_memory;
-	assign write_memory_scalar_enable = write_memory_enable_a_memory;
-	assign write_memory_vector_enable = write_memory_enable_b_memory;
 	//////////////////////////// WRITEBACK
-	assign register_scalar_enable = wre_writeback;
-	assign register_vector_enable = vector_wre_writeback;
 	assign register_destination = rd_writeback;
-	assign writeback_data_w = writeback_data;
-	assign writeback_vector_w = writeback_vector;
-	 
+	
+	
 //////////////////////////////////////////////////////////////////////////////
+	//contador de ciclos de reloj
+	cycle_counter my_counter (
+        .clk(clk),
+        .rst(reset),
+        .enable(enable_counter),
+        .count(clk_counter)
+    );
+	
 	// Instancia del sumador del PC
 	adder_16 pc_add (
 		.a(pc_mux_output),

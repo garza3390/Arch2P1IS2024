@@ -1,187 +1,75 @@
 import os
+registers = {
+    'r1':  '00001', 'r2':  '00010', 'r3':  '00011', 'r4':  '00100', 'r5':  '00101', 'r6':  '00110',
+    'r7':  '00111', 'r8':  '01000', 'r9':  '01001', 'r10': '01010', 'r11': '01011', 'r12': '01100',
+    'r13': '01101', 'r14': '01110', 'r15': '01111', 'r16': '10000', 'r17': '10001', 'r18': '10010',
+    'r19': '10011', 'r20': '10100', 'r21': '10101', 'r22': '10110', 'r23': '10111', 'r24': '11000',
+    'r25': '11001', 'r26': '11010', 'r27': '11011', 'r28': '11100', 'r29': '11101', 'r30': '11110',
+    'r31': '11111', 'r32': '100000',
+    'vr1':  '00001', 'vr2':  '00010', 'vr3':  '00011', 'vr4':  '00100', 'vr5':  '00101', 'vr6':  '00110',
+    'vr7':  '00111', 'vr8':  '01000', 'vr9':  '01001', 'vr10': '01010', 'vr11': '01011', 'vr12': '01100',
+    'vr13': '01101', 'vr14': '01110', 'vr15': '01111', 'vr16': '10000', 'vr17': '10001', 'vr18': '10010',
+    'vr19': '10011', 'vr20': '10100', 'vr21': '10101', 'vr22': '10110', 'vr23': '10111', 'vr24': '11000',
+    'vr25': '11001', 'vr26': '11010', 'vr27': '11011', 'vr28': '11100', 'vr29': '11101', 'vr30': '11110',
+    'vr31': '11111', 'vr32': '100000'
+}
 
-registers = {   # Dictionary with the 8 scalar registers to use.
-                'Rn1':   '000',
-                'Rn2':   '001',
-                'Rn3':   '010',
-                'Rn4':   '011',
-                'Rn5':   '100',
-                'Rn6':   '101',
-                'Rn7':   '110',
-                'Rn8':   '111'
-            }
+instructions = {
+    'str': '00001', 'ldr': '00010', 'Add_1': '00100', 'add': '00101', 'xor': '00110', 'mul': '00111',
+    'bne': '00011',
+    'vstr': '10001', 'vldr': '10010', 'AddRoundKey': '10011', 'ShiftRows': '10100', 'MixColumns': '10101',
+    'RotWord': '10110', 'Rcon': '10111', 'SubBytes': '11000', 'RoundKey': '11001', 'XorColumns': '11010',
+    'InverseMixColumns': '11100', 'InverseShiftRows': '11101', 'InverseSubBytes': '11110', 'nop': '0'*20
+}
 
-instructions =  { # Dictionary with the 15 instructions to use.
-                'mov': '0000',
-                'inc': '0001',
-                'add': '0010',
-                'cmp': '0011',
-                'b': '0100',
-                'bnq': '0101',
-                'load_8x8': '0110',
-                'store_8x8': '0111',
-                'mods_8x8': '1000',
-                'inc_4x16': '1001',
-                'norm': '1010',
-                'get_8x8': '1011',
-                'end': '1100'
-                }
-fileTo_compile = ''
-def compiler(Filename):
-    fileTo_compile = Filename
-    filename = "ROM.mif"
-    result_file_path = os.path.join("..", "CPU", "memory", filename)
 
-    # Verificar si el directorio existe, si no, crearlo
-    directory = os.path.dirname(result_file_path)
-    if not os.path.exists(directory):
-        os.makedirs(directory)
+def eliminar_comentarios(archivo_entrada, archivo_salida):
+    try:
+        with open(os.path.join(os.getcwd(),"CPU","memory",archivo_entrada), 'r') as entrada, open(os.path.join(os.getcwd(),"CPU","memory",archivo_salida), 'w') as salida:
+            for linea in entrada:
+                linea_sin_comentario = linea.split('//')[0]
+                if linea_sin_comentario.strip():
+                    salida.write(linea_sin_comentario)
+            entrada.close()
+            salida.close()
+        print(f"Archivo procesado exitosamente. Resultado guardado en: {archivo_salida}")
+    except FileNotFoundError:
+        print(f"El archivo {archivo_entrada} no se encontró.")
+    except Exception as e:
+        print(f"Error: {e}")
 
-    # Crear el archivo si no existe
-    if not os.path.exists(result_file_path):
-        with open(result_file_path, "w") as temp_file:
-            pass
+def compiler(file_name,outfile):
+    if os.path.exists(os.path.join(os.getcwd(),"CPU","memory",outfile)):
+        nf = open(os.path.join(os.getcwd(),"CPU","memory",outfile),"w")
+        nf.close()
+        pass
+    with open(os.path.join(os.getcwd(),"CPU","memory",file_name),"r") as f, open(os.path.join(os.getcwd(),"CPU","memory",outfile),"w") as of:
+        for line in f:
+            
+            parts = line.strip().split(" ")
+            
+            print(parts)
+            command = parts[0]
+            if ":" not in command:
+                if command == "nop":
+                    of.write(instructions[command]+"\n")
+                elif command in ["str","vstr"]:
+                    of.write(instructions[command]+"0"*5+ registers[parts[1]] + registers[parts[2]]+"\n")
+                elif command in ["ldr","Add_1","vldr","ShiftRows","MixColumns","RotWord","SubBytes","RoundKey","XorColumns","InverseMixColumns","InverseShiftRows","InverseSubBytes"]:
+                    of.write(instructions[command]+registers[parts[1]] + "0"*5 + registers[parts[2].replace("\n","")]+"\n")
+                elif command in ["add","xor","mul","AddRoundKey","Rcon"]:
+                    of.write(instructions[command]+registers[parts[1]] + registers[parts[2]] + registers[parts[3]]+"\n")
+                elif command in ["bne"]:
+                    of.write(instructions[command]+ str(format(int(parts[1]),"05b")) + registers[parts[2]]+registers[parts[3]]+"\n")
+        of.close()
+        f.close()
+                
 
-    # Abrir el archivo en modo 'append'
-    with open(result_file_path, "a") as result_file:
-        asm_file_path = fileTo_compile
+infile = "Encriptacion_AES_SIMD.s"
+tempfile = "Encriptacion_AES_SIMDwc.s"
+outfile = "instructions.mif"
 
-        with open(asm_file_path, "r") as asm_file:
-            compiled_instructions = []
-            for line in asm_file:
-                line = line.strip()
-                if line and not line.startswith(("_", "#")):
-                    instruction = compiler_init(line)
-                    result_file.write(instruction + "\n")
-
-def compiler_init(expression):
-    opcode = ""
-    condition = ""
-    reg_vd = ""
-    reg_vs = ""
-    reg_dest = ""
-    reg_source_a = ""
-    reg_source_b = ""
-    immediate = ""
-    
-    if expression == "end":
-        command = expression
-        opcode = "1110"
-        condition = "0"
-        reg_vd = reg_vs = "0"
-        reg_dest = reg_source_a = reg_source_b = "000"
-        immediate = 16 * "0"
-        final_result = opcode + condition + reg_vd + reg_vs + reg_dest + reg_source_a + reg_source_b + immediate
-    else:
-        i = 0
-        while expression[i] != " ":
-            i += 1
-        command = expression[:i]
-        opcode = instructions[command]  # Getting the operation code
-
-        condition = "1" if command == "bnq" else "0"  # Only "branch not equal" has a condition.
-        
-        expression = expression.replace(" ", "")
-
-        if command == "mov":  # movRnx,YY
-            reg_vd = reg_vs = "0"
-            reg_dest = registers[expression[i:i+3]]
-            reg_source_a = reg_source_b = "000"
-            j = 7
-            while expression[j] != "/":
-                j += 1
-            immediate = bin(int(expression[7:j]))[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "inc":
-            reg_vd = reg_vs = "0"
-            reg_dest = registers[expression[i:i+3]]
-            reg_source_a = reg_source_b = "000"
-            immediate = 16 * "0"
-        elif command == "add":  # addRnx,Rny,ZZ
-            reg_vd = reg_vs = "0"
-            reg_dest = registers[expression[i:i+3]]
-            reg_source_a = registers[expression[i+4:i+7]]
-            reg_source_b = "000"
-            j = 11
-            while expression[j] != "/":
-                j += 1
-            immediate = bin(int(expression[11:j]))[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "cmp":  # cmpRnx,Rny
-            reg_vd = reg_vs = "0"
-            reg_dest = "000"
-            reg_source_a = registers[expression[i:i+3]]
-            reg_source_b = registers[expression[i+4:i+7]]
-            immediate = 16 * "0"
-        elif command == "b":  # b_BuildHistogram or bnq_BuildHistogram
-            reg_vd = reg_vs = "0"
-            reg_dest = reg_source_a = reg_source_b = "000"
-            if expression[2] == "E":
-                immediate = bin(41)[2:]
-            else:
-                if expression[7] == "H":  # b_BuildHistogram
-                    immediate = bin(14)[2:]
-                elif expression[7] == "l":  # b_Normalize
-                    immediate = bin(28)[2:]
-                else:  # b_BuildImg
-                    immediate = bin(33)[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "bnq":  # bnq_BuildHistogram or bnq_BuildHistogram
-            reg_vd = reg_vs = "0"
-            reg_dest = reg_source_a = reg_source_b = "000"
-            if expression[2] == "E":
-                immediate = bin(41)[2:]
-            else:
-                if expression[9] == "H":  # bnq_BuildHistogram
-                    immediate = bin(14)[2:]
-                elif expression[9] == "l":  # bnq_Normalize
-                    immediate = bin(28)[2:]
-                else:  # BuildImg
-                    immediate = bin(33)[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "load_8x8":  # load_8x8Rn1,Rv1
-            reg_vd = "0" if expression[12:15] == "Rv1" else "1"
-            reg_vs = "0"
-            reg_dest = reg_source_b = "000"
-            reg_source_a = registers[expression[8:11]]
-            immediate = 16 * "0"
-        elif command == "store_8x8":  # store_8x8Rn1,Rv1
-            reg_vd = "0"
-            reg_vs = "0" if expression[13:16] == "Rv1" else "1"
-            reg_dest = registers[expression[9:12]]
-            reg_source_a = reg_source_b = "000"
-            immediate = 16 * "0"
-        elif command == "mods_8x8":  # divs_8x8Rv1,Rv0,4
-            reg_vd = "0" if expression[8:11] == "Rv1" else "1"
-            reg_vs = "0" if expression[12:15] == "Rv1" else "1"
-            reg_dest = reg_source_a = reg_source_b = "000"
-            j = 16
-            while expression[j] != "/":
-                j += 1
-            immediate = bin(int(expression[16:j]))[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "inc_4x16":  # inc_4x16Rv1,4
-            reg_vd = "0"
-            reg_vs = "0" if expression[7:10] == "Rv1" else "1"
-            reg_dest = reg_source_a = reg_source_b = "000"
-            j = 12
-            while expression[j] != "/":
-                j += 1
-            immediate = bin(int(expression[12:j]))[2:]
-            immediate = ((16 - len(immediate)) * "0") + immediate
-        elif command == "norm":  # normRn4,Rn4
-            reg_vd = reg_vs = "0"
-            reg_dest = registers[expression[4:7]]
-            reg_source_a = registers[expression[8:11]]
-            reg_source_b = "000"
-            immediate = 16 * "0"
-        else:  # get_8x8Rv1,Rv2
-            reg_vd = "0" if expression[7:10] == "Rv1" else "1"
-            reg_vs = "0" if expression[11:13] == "Rv1" else "1"
-            reg_dest = reg_source_a = reg_source_b = "000"
-            immediate = 16 * "0"
-        final_result = opcode + condition + reg_vd + reg_vs + reg_dest + reg_source_a + reg_source_b + immediate
-
-    return final_result
+eliminar_comentarios(infile,tempfile)
+compiler(tempfile,outfile)
 
 

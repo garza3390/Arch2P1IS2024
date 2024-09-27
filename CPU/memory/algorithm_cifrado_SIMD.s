@@ -39,7 +39,7 @@ AddRoundKey vr3 vr2 vr1
 nop
 nop
 nop
-main_loop:
+//main_loop:
 RoundKey vr2 vr2
 nop
 nop
@@ -62,7 +62,7 @@ nop
 nop
 nop
 nop
-//se devuelve n instrucciones (PC - main_loop) si
+//se devuelve n instrucciones (PC - 21(main_loop)) si
 bne 21 r10 r9
 SubBytes vr3 vr3
 nop

@@ -44,6 +44,7 @@ def compiler(file_name,outfile):
         nf.close()
         pass
     with open(os.path.join(os.getcwd(),"CPU","memory",file_name),"r") as f, open(os.path.join(os.getcwd(),"CPU","memory",outfile),"w") as of:
+        cc = 0
         for line in f:
             
             parts = line.strip().split(" ")
@@ -52,15 +53,16 @@ def compiler(file_name,outfile):
             command = parts[0]
             if ":" not in command:
                 if command == "nop":
-                    of.write(instructions[command]+"\n")
+                    of.write(str(cc)+":"+instructions[command]+";"+"\n")
                 elif command in ["str","vstr"]:
-                    of.write(instructions[command]+"0"*5+ registers[parts[1]] + registers[parts[2]]+"\n")
+                    of.write(str(cc)+":"+instructions[command]+"0"*5+ registers[parts[1]] + registers[parts[2]]+";"+"\n")
                 elif command in ["ldr","Add_1","vldr","ShiftRows","MixColumns","RotWord","SubBytes","RoundKey","XorColumns","InverseMixColumns","InverseShiftRows","InverseSubBytes"]:
-                    of.write(instructions[command]+registers[parts[1]] + "0"*5 + registers[parts[2].replace("\n","")]+"\n")
+                    of.write(str(cc)+":"+instructions[command]+registers[parts[1]] + "0"*5 + registers[parts[2].replace("\n","")]+";"+"\n")
                 elif command in ["add","xor","mul","AddRoundKey","Rcon"]:
-                    of.write(instructions[command]+registers[parts[1]] + registers[parts[2]] + registers[parts[3]]+"\n")
+                    of.write(str(cc)+":"+instructions[command]+registers[parts[1]] + registers[parts[2]] + registers[parts[3]]+";"+"\n")
                 elif command in ["bne"]:
-                    of.write(instructions[command]+ str(format(int(parts[1]),"05b")) + registers[parts[2]]+registers[parts[3]]+"\n")
+                    of.write(str(cc)+":"+instructions[command]+ str(format(int(parts[1]),"05b")) + registers[parts[2]]+registers[parts[3]]+";"+"\n")
+                cc += 1
         of.close()
         f.close()
                 

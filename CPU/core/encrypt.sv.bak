@@ -145,7 +145,6 @@ module encrypt (
 	);
 //////////////////////////////////////////////////////////////////////////////////////	 
 		mixColumns mixColumns_inst_0 (
-		  .row(2'b00),
         .col_in0(col_0_in_a_0), 
         .col_in1(col_0_in_a_1), 
         .col_in2(col_0_in_a_2), 
@@ -155,8 +154,7 @@ module encrypt (
         .result(mixColumns_result[7:0]) 
 		);
 		mixColumns mixColumns_inst_1 (
-        .row(2'b01),
-		  .col_in0(col_0_in_a_0), 
+        .col_in0(col_0_in_a_0), 
         .col_in1(col_0_in_a_1), 
         .col_in2(col_0_in_a_2), 
         .col_in3(col_0_in_a_3), 
@@ -166,8 +164,7 @@ module encrypt (
 		);
 		
 		mixColumns mixColumns_inst_2 (
-        .row(2'b10),
-		  .col_in0(col_0_in_a_0), 
+        .col_in0(col_0_in_a_0), 
         .col_in1(col_0_in_a_1), 
         .col_in2(col_0_in_a_2), 
         .col_in3(col_0_in_a_3), 
@@ -177,8 +174,7 @@ module encrypt (
 		);
 		
 		mixColumns mixColumns_inst_3 (
-        .row(2'b11),
-		  .col_in0(col_0_in_a_0), 
+        .col_in0(col_0_in_a_0), 
         .col_in1(col_0_in_a_1), 
         .col_in2(col_0_in_a_2), 
         .col_in3(col_0_in_a_3), 
@@ -188,8 +184,7 @@ module encrypt (
 		);
 		
 		mixColumns mixColumns_inst_4 (
-        .row(2'b00),
-		  .col_in0(col_1_in_a_0), 
+        .col_in0(col_1_in_a_0), 
         .col_in1(col_1_in_a_1), 
         .col_in2(col_1_in_a_2), 
         .col_in3(col_1_in_a_3), 
@@ -198,8 +193,7 @@ module encrypt (
         .result(mixColumns_result[15:8]) 
 		);
 		mixColumns mixColumns_inst_5 (
-        .row(2'b01),
-		  .col_in0(col_1_in_a_0), 
+        .col_in0(col_1_in_a_0), 
         .col_in1(col_1_in_a_1), 
         .col_in2(col_1_in_a_2), 
         .col_in3(col_1_in_a_3), 
@@ -208,8 +202,7 @@ module encrypt (
         .result(mixColumns_result[47:40]) 
 		);
 		mixColumns mixColumns_inst_6 (
-        .row(2'b10),
-		  .col_in0(col_1_in_a_0), 
+        .col_in0(col_1_in_a_0), 
         .col_in1(col_1_in_a_1), 
         .col_in2(col_1_in_a_2), 
         .col_in3(col_1_in_a_3), 
@@ -218,8 +211,7 @@ module encrypt (
         .result(mixColumns_result[79:72]) 
 		);
 		mixColumns mixColumns_inst_7 (
-        .row(2'b11),
-		  .col_in0(col_1_in_a_0), 
+        .col_in0(col_1_in_a_0), 
         .col_in1(col_1_in_a_1), 
         .col_in2(col_1_in_a_2), 
         .col_in3(col_1_in_a_3), 
@@ -229,8 +221,7 @@ module encrypt (
 		);
 		
 		mixColumns mixColumns_inst_8 (
-        .row(2'b00),
-		  .col_in0(col_2_in_a_0), 
+        .col_in0(col_2_in_a_0), 
         .col_in1(col_2_in_a_1), 
         .col_in2(col_2_in_a_2), 
         .col_in3(col_2_in_a_3), 
@@ -239,8 +230,7 @@ module encrypt (
         .result(mixColumns_result[23:16]) 
 		);
 		mixColumns mixColumns_inst_9 (
-        .row(2'b01),
-		  .col_in0(col_2_in_a_0), 
+        .col_in0(col_2_in_a_0), 
         .col_in1(col_2_in_a_1), 
         .col_in2(col_2_in_a_2), 
         .col_in3(col_2_in_a_3), 
@@ -249,8 +239,7 @@ module encrypt (
         .result(mixColumns_result[55:48]) 
 		);
 		mixColumns mixColumns_inst_10 (
-        .row(2'b10),
-		  .col_in0(col_2_in_a_0), 
+        .col_in0(col_2_in_a_0), 
         .col_in1(col_2_in_a_1), 
         .col_in2(col_2_in_a_2), 
         .col_in3(col_2_in_a_3), 
@@ -259,8 +248,7 @@ module encrypt (
         .result(mixColumns_result[87:80]) 
 		);
 		mixColumns mixColumns_inst_11 (
-        .row(2'b11),
-		  .col_in0(col_2_in_a_0), 
+        .col_in0(col_2_in_a_0), 
         .col_in1(col_2_in_a_1), 
         .col_in2(col_2_in_a_2), 
         .col_in3(col_2_in_a_3), 
@@ -270,8 +258,7 @@ module encrypt (
 		);
 		
 		mixColumns mixColumns_inst_12 (
-        .row(2'b00),
-		  .col_in0(col_3_in_a_0), 
+        .col_in0(col_3_in_a_0), 
         .col_in1(col_3_in_a_1), 
         .col_in2(col_3_in_a_2), 
         .col_in3(col_3_in_a_3), 
@@ -280,8 +267,7 @@ module encrypt (
         .result(mixColumns_result[31:24]) 
 		);
 		mixColumns mixColumns_inst_13 (
-        .row(2'b01),
-		  .col_in0(col_3_in_a_0), 
+        .col_in0(col_3_in_a_0), 
         .col_in1(col_3_in_a_1), 
         .col_in2(col_3_in_a_2), 
         .col_in3(col_3_in_a_3), 
@@ -290,8 +276,7 @@ module encrypt (
         .result(mixColumns_result[63:56]) 
 		);
 		mixColumns mixColumns_inst_14 (
-        .row(2'b10),
-		  .col_in0(col_3_in_a_0), 
+        .col_in0(col_3_in_a_0), 
         .col_in1(col_3_in_a_1), 
         .col_in2(col_3_in_a_2), 
         .col_in3(col_3_in_a_3), 
@@ -300,8 +285,7 @@ module encrypt (
         .result(mixColumns_result[95:88]) 
 		);
 		mixColumns mixColumns_inst_15 (
-        .row(2'b11),
-		  .col_in0(col_3_in_a_0), 
+        .col_in0(col_3_in_a_0), 
         .col_in1(col_3_in_a_1), 
         .col_in2(col_3_in_a_2), 
         .col_in3(col_3_in_a_3), 
